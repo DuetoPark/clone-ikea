@@ -1,0 +1,82 @@
+// sass-lint:disable-all
+@font-face {
+  font-family: 'ikea';
+  src: url('./assets/fonts/ikea.eot?ynm3q');
+  src: url('./assets/fonts/ikea.eot?ynm3q#iefix') format('embedded-opentype'),
+    url('./assets/fonts/ikea.ttf?ynm3q') format('truetype'),
+    url('./assets/fonts/ikea.woff?ynm3q') format('woff'),
+    url('./assets/fonts/ikea.svg?ynm3q#ikea') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  font-family: 'ikea' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ic-camera:before {
+  content: '\e900';
+}
+.ic-cart:before {
+  content: '\e901';
+}
+.ic-cart-add:before {
+  content: '\e902';
+}
+.ic-chevron:before {
+  content: '\e903';
+}
+.ic-close:before {
+  content: '\e904';
+}
+.ic-country:before {
+  content: '\e905';
+}
+.ic-delivery:before {
+  content: '\e906';
+}
+.ic-facebook:before {
+  content: '\e907';
+}
+.ic-heart:before {
+  content: '\e908';
+}
+.ic-info:before {
+  content: '\e909';
+}
+.ic-insta:before {
+  content: '\e90a';
+}
+.ic-menu:before {
+  content: '\e90b';
+}
+.ic-phone:before {
+  content: '\e90c';
+}
+.ic-arrow:before {
+  content: '\e90d';
+}
+.ic-profile:before {
+  content: '\e90e';
+}
+.ic-search:before {
+  content: '\e90f';
+}
+.ic-star:before {
+  content: '\e910';
+}
+.ic-store:before {
+  content: '\e911';
+}
+.ic-youtube:before {
+  content: '\e912';
+}
