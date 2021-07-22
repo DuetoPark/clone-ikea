@@ -1,0 +1,24 @@
+{
+  "name": "clone-ikea",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -wr styles/main.scss ./style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DuetoPark/clone-ikea.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DuetoPark/clone-ikea/issues"
+  },
+  "homepage": "https://github.com/DuetoPark/clone-ikea#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.1",
+    "sass-lint": "^1.13.1"
+  }
+}
