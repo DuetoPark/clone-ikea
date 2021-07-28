@@ -1,0 +1,108 @@
+%btn-base {
+  @include inline-flexbox;
+  @include text-style(14);
+  border-radius: 100px;
+  transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out;
+
+  i {
+    font-size: 24px;
+    color: $dark;
+  }
+}
+
+// NOTE: Button styles
+.btn-primary {
+  @extend %btn-base;
+  color: $white;
+  background-color: $blue;
+
+  &:hover {
+    background-color: $blue-dark;
+  }
+}
+
+.btn-secondary {
+  @extend %btn-base;
+  color: $white;
+  background-color: $black;
+
+  &:hover {
+    background-color: $primary;
+  }
+}
+
+.btn-outlined {
+  @extend %btn-base;
+  color: dark;
+  background-color: $white;
+  border: 1px solid $border;
+
+  &:hover {
+    border-color: $secondary;
+  }
+
+  &:active {
+    border-color: $dark;
+  }
+}
+
+.btn-ghost {
+  @extend %btn-base;
+  color: dark;
+  background-color: transparent;
+
+  &:hover {
+    background-color: $background;
+  }
+
+  &:active {
+    background-color: $border;
+  }
+}
+
+// NOTE: Button sizes
+.btn-32 {
+  @extend %btn-base;
+  height: 32px;
+  min-width: 32px;
+}
+
+.btn-34 {
+  @extend %btn-base;
+  height: 34px;
+  min-width: 34px;
+}
+
+.btn-40 {
+  @extend %btn-base;
+  height: 40px;
+  min-width: 40px;
+}
+
+.btn-42 {
+  @extend %btn-base;
+  height: 42px;
+  min-width: 42px;
+}
+
+.btn-44 {
+  @extend %btn-base;
+  height: 44px;
+  min-width: 44px;
+}
+
+.btn-56 {
+  @extend %btn-base;
+  height: 56px;
+  min-width: 56px;
+}
+
+// NOTE: Button effect
+.btn-active {
+  transform: scale(1);
+  transition: transform 200ms ease-in-out;
+
+  &:active {
+    transform: scale(0.97);
+  }
+}
