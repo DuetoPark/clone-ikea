@@ -7,12 +7,16 @@
 
   &-link {
     @include flexbox(start);
-    @include text-style(12, $white);
 
     &:hover {
       span {
         text-decoration: underline;
       }
+    }
+
+    span,
+    i {
+      @include text-style(12, $white);
     }
 
     i {
