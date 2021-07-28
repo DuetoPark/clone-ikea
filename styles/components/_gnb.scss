@@ -1,0 +1,150 @@
+.gnb {
+  .col-xl-1 {
+    @include flexbox;
+  }
+
+  &-wrapper {
+    @include flexbox(between);
+    flex-wrap: wrap;
+  }
+
+  &-logo {
+    @include inline-flexbox;
+    order: 1;
+    padding: 15px 0;
+
+    a {
+      width: 75px;
+      height: 30px;
+    }
+  }
+
+  &-nav {
+    margin-right: 32px;
+
+    &-list {
+      @include flexbox(start);
+    }
+
+    a {
+      @include text-style(14);
+      padding: 10px 15px;
+      font-weight: 700;
+      white-space: nowrap;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &-searchbar {
+    position: relative;
+    order: 3;
+    width: 100%;
+
+    &-input {
+      width: 100%;
+      height: 44px;
+      padding: 0 56px;
+      font-size: 16px;
+      line-height: 24px;
+      background-color: $background;
+      border-radius: 100px;
+      transition: background-color 200ms ease-in-out;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: $border;
+      }
+    }
+
+    .ic-search {
+      @include pos-center-y;
+      left: 24px;
+      font-size: 24px;
+      color: $dark;
+      pointer-events: none;
+    }
+
+    &-button {
+      @include pos-center-y;
+      right: 16px;
+
+      &:hover {
+        background-color: $border;
+      }
+    }
+  }
+
+  &-button-group {
+    @include inline-flexbox(start);
+    order: 2;
+    margin-right: -10px;
+
+    a {
+      margin-right: 2px;
+
+      &:last-child {
+        margin: 0 !important;
+      }
+    }
+  }
+
+  @media screen and (min-width: 700px) {
+    &-wrapper {
+      @include flexbox(start);
+      flex-wrap: nowrap;
+    }
+
+    &-logo {
+      margin-right: 40px;
+    }
+
+    &-searchbar {
+      order: 2;
+      margin-right: 32px;
+    }
+
+    &-button-group {
+      order: 3;
+    }
+  }
+
+  @include responsive('T-PRO') {
+    &-logo {
+      padding: 28px 0;
+
+      a {
+        width: 90px;
+        height: 36px;
+      }
+    }
+
+    &-searchbar {
+      margin-right: 40px;
+
+      &-input {
+        height: 54px;
+      }
+    }
+
+    &-button-group {
+      a {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  @include responsive(D) {
+    &-wrapper > * {
+      order: 0;
+    }
+
+    &-logo,
+    &-searchbar {
+      margin-right: 32px;
+    }
+  }
+}
