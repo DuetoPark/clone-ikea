@@ -1,0 +1,38 @@
+.breadcrumb {
+  padding: 16px 0;
+  border-bottom: 1px solid $border;
+
+  &-list,
+  &-item {
+    @include flexbox(start);
+  }
+
+  &-item {
+    height: 21px;
+    overflow: visible;
+
+    a,
+    p {
+      @include text-style(12, $dark);
+      display: block;
+      padding: 12px 8px;
+      white-space: nowrap;
+    }
+
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    i {
+      display: block;
+      margin: 0 -6px;
+      transform: rotate(-90deg);
+    }
+  }
+
+  @include responsive('T-PRO') {
+    padding: 8px 0 16px 0;
+  }
+}
