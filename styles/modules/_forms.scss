@@ -1,0 +1,120 @@
+%form-base {
+  input {
+    width: 100%;
+    height: 44px;
+    min-width: 44px;
+    padding: 0 56px;
+    font-size: 16px;
+    line-height: 24px;
+    color: $black;
+    border-radius: 100px;
+
+    &::placeholder {
+      color: $placeholder;
+    }
+  }
+
+  i {
+    font-size: 24px;
+    color: $black;
+  }
+
+  button {
+    &:hover {
+      background-color: $border;
+    }
+  }
+}
+
+// NOTE: input
+.input-group {
+  @extend %form-base;
+  position: relative;
+
+  &-left,
+  &-right {
+    @include pos-center-y;
+  }
+
+  &-left {
+    left: 24px;
+    pointer-events: none;
+  }
+
+  &-right {
+    right: 16px;
+  }
+
+  &-left-active,
+  &-right-onChange {
+    display: none;
+  }
+
+  &.is-active,
+  &.on-change {
+    .input-group-left {
+      left: 16px;
+      pointer-events: auto;
+
+      &-default {
+        display: none;
+      }
+
+      &-active {
+        display: block;
+      }
+    }
+  }
+
+  &.on-change {
+    .input-group-right {
+      &-default {
+        display: none;
+      }
+
+      &-onChange {
+        @include flexbox(start);
+
+        button:first-child {
+          position: relative;
+          margin-right: 16px;
+
+          &::before {
+            @include pos-center;
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-color: $background;
+            border-radius: 50%;
+            content: '';
+          }
+
+          &:hover {
+            &::before {
+              background-color: $border;
+            }
+          }
+
+          i {
+            @include pos-center;
+            font-size: 12px;
+          }
+        }
+
+        button:last-child {
+          position: relative;
+
+          &::after {
+            @include pos-center-y;
+            left: -8px;
+            width: 0;
+            height: 16px;
+            pointer-events: none;
+            border-right: 1px solid $border;
+            content: '';
+          }
+        }
+      }
+    }
+  }
+}
