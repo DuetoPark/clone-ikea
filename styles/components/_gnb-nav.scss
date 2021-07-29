@@ -1,0 +1,18 @@
+.gnb-nav {
+  margin-right: 32px;
+
+  &-list {
+    @include flexbox(start);
+  }
+
+  a {
+    @include text-style(14);
+    padding: 10px 15px;
+    font-weight: 700;
+    white-space: nowrap;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
