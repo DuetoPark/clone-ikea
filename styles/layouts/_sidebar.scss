@@ -1,0 +1,178 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $sidebar-level;
+  display: none;
+  width: 100%;
+  height: 100vh;
+  padding: 0 20px;
+  overflow-y: auto;
+  background-color: $white;
+  overscroll-behavior: contain;
+
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  &.is-active {
+    @include column-flexbox(start, start);
+  }
+
+  &-header {
+    @include flexbox(between);
+    position: relative;
+    width: 100%;
+
+    &-logo {
+      width: 75px;
+      height: 30px;
+      margin: 16px 0;
+
+      a {
+        display: block;
+      }
+    }
+
+    &-button {
+      margin-right: -8px;
+    }
+  }
+
+  &-nav {
+    width: 100%;
+    padding: 28px 0;
+
+    a {
+      @include text-style(14, $dark);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &-list-group {
+      padding: 12px 0;
+    }
+
+    &-menu-list {
+      margin-bottom: 40px;
+    }
+
+    &-menu-item {
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin: 0 !important;
+      }
+
+      &.is-main > a {
+        @include text-style(25);
+      }
+
+      a {
+        font-weight: 700;
+      }
+    }
+
+    &-aux-item {
+      a {
+        display: block;
+        padding: 12px 0;
+      }
+    }
+  }
+
+  &-footer {
+    @include flexbox(start);
+    width: 100%;
+    padding: 48px 0 16px 0;
+    margin-top: auto;
+
+    &-language {
+      position: relative;
+      margin-right: 8px;
+
+      &-select {
+        @include text-style(12, $dark);
+        padding: 0 40px 0 20px;
+        font-weight: 700;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+
+        &::-ms-expand {
+          display: none;
+        }
+      }
+
+      i {
+        @include pos-center-y;
+        right: 16px;
+        color: $dark;
+      }
+    }
+
+    &-country {
+      &-link {
+        @include text-style(12, $primary);
+        position: relative;
+        padding: 0 20px 0 40px;
+        font-weight: 700;
+
+        i {
+          @include pos-center-y;
+          left: 12px;
+        }
+      }
+    }
+  }
+
+  @include responsive(T) {
+    padding: 0 32px;
+
+    &-nav {
+      &-menu-item {
+        &.is-main {
+          a {
+            @include text-style(36);
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive('T-PRO') {
+    $sidebar-padding-right: 50px;
+    $sidebar-padding-left: 150px;
+
+    width: 480px;
+    padding-right: $sidebar-padding-right;
+    padding-left: $sidebar-padding-left;
+
+    &-header {
+      &-logo {
+        width: 90px;
+        height: 36px;
+        margin: 28px 0;
+      }
+
+      &-button {
+        @include pos-center-y;
+        left: -$sidebar-padding-left + 54px;
+      }
+    }
+
+    &-nav {
+      padding: 0;
+
+      &-list-group {
+        padding: 32px 0;
+      }
+    }
+
+    &-footer {
+      padding: 32px 0 24px 0;
+      margin-left: -10px;
+    }
+  }
+}
