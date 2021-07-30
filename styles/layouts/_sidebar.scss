@@ -24,16 +24,6 @@
     position: relative;
     width: 100%;
 
-    &-logo {
-      width: 75px;
-      height: 30px;
-      margin: 16px 0;
-
-      a {
-        display: block;
-      }
-    }
-
     &-button {
       margin-right: -8px;
     }
@@ -150,12 +140,6 @@
     padding-left: $sidebar-padding-left;
 
     &-header {
-      &-logo {
-        width: 90px;
-        height: 36px;
-        margin: 28px 0;
-      }
-
       &-button {
         @include pos-center-y;
         left: -$sidebar-padding-left + 54px;

@@ -10,13 +10,9 @@
 
   &-logo {
     @include inline-flexbox;
+    flex-shrink: 0;
     order: 1;
-    padding: 15px 0;
-
-    a {
-      width: 75px;
-      height: 30px;
-    }
+    margin: 15px 0;
   }
 
   &-nav {
@@ -78,15 +74,6 @@
   }
 
   @include responsive('T-PRO') {
-    &-logo {
-      padding: 28px 0;
-
-      a {
-        width: 90px;
-        height: 36px;
-      }
-    }
-
     &-searchbar {
       margin-right: 40px;
 

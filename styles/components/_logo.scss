@@ -1,0 +1,15 @@
+[class$='-logo'] {
+  width: 75px;
+  height: 30px;
+  margin: 16px 0;
+
+  a {
+    display: block;
+  }
+
+  @include responsive('T-PRO') {
+    width: 90px;
+    height: 36px;
+    margin: 28px 0;
+  }
+}
