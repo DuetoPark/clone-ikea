@@ -81,15 +81,10 @@
       margin-right: 8px;
 
       &-select {
+        @include no-chevron;
         @include text-style(12, $dark);
         padding: 0 40px 0 20px;
         font-weight: 700;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-
-        &::-ms-expand {
-          display: none;
-        }
       }
 
       i {

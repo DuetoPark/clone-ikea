@@ -1,0 +1,8 @@
+@mixin no-chevron() {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  &::-ms-expand {
+    display: none;
+  }
+}
