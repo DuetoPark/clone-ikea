@@ -1,4 +1,5 @@
 .sidebar {
+  @include no-scrollbar;
   position: fixed;
   top: 0;
   left: 0;
@@ -10,10 +11,6 @@
   overflow-y: auto;
   background-color: $white;
   overscroll-behavior: contain;
-
-  &::-webkit-scrollbar {
-    display: none !important;
-  }
 
   &.is-active {
     @include column-flexbox(start, start);
