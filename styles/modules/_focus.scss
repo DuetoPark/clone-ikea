@@ -1,0 +1,23 @@
+%focus-base {
+  transition: box-shadow 100ms ease-in-out;
+}
+
+.focus-thin {
+  button,
+  a {
+    &::after {
+      @extend %focus-base;
+      box-shadow: $box-shadow-thin;
+    }
+  }
+}
+
+.focus-thick {
+  button,
+  a {
+    &:focus {
+      @extend %focus-base;
+      box-shadow: $box-shadow-thick;
+    }
+  }
+}
