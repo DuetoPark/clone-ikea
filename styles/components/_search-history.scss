@@ -1,0 +1,78 @@
+.search-history {
+  max-height: 100%;
+  min-height: 76vh;
+  padding: 16px 20px 32px 20px;
+  margin-bottom: 60px;
+  overflow: hidden;
+  background-color: $white;
+
+  &-header {
+    @include flexbox(start);
+    margin-bottom: 30px;
+
+    h1,
+    button {
+      @include text-style(12, $placeholder);
+      font-weight: 400;
+    }
+
+    h1 {
+      margin-right: 4px;
+    }
+
+    button {
+      text-decoration: underline;
+    }
+  }
+
+  &-link {
+    @include flexbox(start);
+    padding: 10px 0;
+    border: 2px solid transparent;
+
+    &-info {
+      @include column-flexbox(start, start);
+      flex-grow: 1;
+      order: 2;
+
+      .product-name {
+        @include text-style(14, $black);
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .product-desc {
+        @include text-style(12, $placeholder);
+      }
+
+      .product-category {
+        @include text-style(14, $black);
+        font-weight: 400;
+      }
+    }
+
+    &-image {
+      position: relative;
+      flex-shrink: 0;
+      order: 1;
+      width: 48px;
+      margin-right: 16px;
+
+      i {
+        @include pos-center-y;
+        right: 0;
+        font-size: 24px;
+        color: $black;
+      }
+    }
+  }
+
+  @include responsive(T) {
+    max-height: auto;
+    min-height: auto;
+    padding: 16px 32px 24px 32px;
+    margin-bottom: 0;
+  }
+}
