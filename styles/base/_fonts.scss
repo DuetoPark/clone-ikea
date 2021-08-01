@@ -1,11 +1,11 @@
 // sass-lint:disable-all
 @font-face {
   font-family: 'ikea';
-  src: url('./assets/fonts/ikea.eot?ynm3q');
-  src: url('./assets/fonts/ikea.eot?ynm3q#iefix') format('embedded-opentype'),
-    url('./assets/fonts/ikea.ttf?ynm3q') format('truetype'),
-    url('./assets/fonts/ikea.woff?ynm3q') format('woff'),
-    url('./assets/fonts/ikea.svg?ynm3q#ikea') format('svg');
+  src: url('./assets/fonts/ikea.eot?37wsae');
+  src: url('./assets/fonts/ikea.eot?37wsae#iefix') format('embedded-opentype'),
+    url('./assets/fonts/ikea.ttf?37wsae') format('truetype'),
+    url('./assets/fonts/ikea.woff?37wsae') format('woff'),
+    url('./assets/fonts/ikea.svg?37wsae#ikea') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -32,51 +32,54 @@ i {
 .ic-cart-add:before {
   content: '\e902';
 }
-.ic-chevron:before {
+.ic-category:before {
   content: '\e903';
 }
-.ic-close:before {
+.ic-chevron:before {
   content: '\e904';
 }
-.ic-country:before {
+.ic-close:before {
   content: '\e905';
 }
-.ic-delivery:before {
+.ic-country:before {
   content: '\e906';
 }
-.ic-facebook:before {
+.ic-delivery:before {
   content: '\e907';
 }
-.ic-heart:before {
+.ic-facebook:before {
   content: '\e908';
 }
-.ic-info:before {
+.ic-heart:before {
   content: '\e909';
 }
-.ic-insta:before {
+.ic-infomation:before {
   content: '\e90a';
 }
-.ic-menu:before {
+.ic-instagram:before {
   content: '\e90b';
 }
-.ic-phone:before {
+.ic-menu:before {
   content: '\e90c';
 }
-.ic-arrow:before {
+.ic-phone:before {
   content: '\e90d';
 }
-.ic-profile:before {
+.ic-pre:before {
   content: '\e90e';
 }
-.ic-search:before {
+.ic-profile:before {
   content: '\e90f';
 }
-.ic-star:before {
+.ic-search:before {
   content: '\e910';
 }
-.ic-store:before {
+.ic-star:before {
   content: '\e911';
 }
-.ic-youtube:before {
+.ic-store:before {
   content: '\e912';
+}
+.ic-youtube:before {
+  content: '\e913';
 }
