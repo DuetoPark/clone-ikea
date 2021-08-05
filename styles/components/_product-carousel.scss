@@ -1,0 +1,36 @@
+.product-slider {
+  .carousel {
+    .slider-list {
+      margin: 0 -20px;
+    }
+
+    .pagenation {
+      @include flexbox(start);
+      margin: 16px 0;
+      background-color: $background;
+
+      button {
+        flex-grow: 1;
+        height: 2px;
+        border-radius: 10px;
+
+        &.is-active {
+          background-color: $black;
+        }
+      }
+    }
+  }
+
+  @include responsive('T-PRO') {
+    .details {
+      @include flexbox(start);
+      flex-wrap: wrap;
+      padding-bottom: 64px;
+
+      button {
+        width: 50%;
+        padding: 0 10px 20px 10px;
+      }
+    }
+  }
+}
