@@ -1,0 +1,15 @@
+.product-show {
+  .breadcrumb {
+    margin-bottom: 40px;
+  }
+
+  .product-slider {
+    margin-bottom: 8px;
+  }
+
+  @include responsive('T') {
+    .breadcrumb {
+      margin-bottom: 64px;
+    }
+  }
+}
