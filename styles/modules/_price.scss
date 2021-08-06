@@ -1,0 +1,43 @@
+%price-base {
+  font-size: 10px;
+  line-height: 14px;
+  color: $black;
+}
+
+.price-group {
+  &::before {
+    @extend %price-base;
+    position: relative;
+    top: -5px;
+    left: 0;
+    margin-right: 1px;
+    content: '￦ ';
+  }
+
+  .price {
+    @extend %price-base;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+  }
+
+  .price-bundle {
+    @extend %price-base;
+
+    &::before {
+      content: '/ ';
+    }
+  }
+
+  @include responsive(T) {
+    .price {
+      @include text-style(22);
+    }
+
+    &::before,
+    .price-bundle {
+      top: -10px;
+      font-size: 11px;
+    }
+  }
+}
