@@ -5,7 +5,7 @@
 .focus-thin {
   button,
   a {
-    &::after {
+    &:focus {
       @extend %focus-base;
       box-shadow: $box-shadow-thin;
     }
