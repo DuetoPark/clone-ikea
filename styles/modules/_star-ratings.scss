@@ -1,0 +1,68 @@
+%star-rating-base {
+  @include flexbox(start);
+
+  div {
+    position: relative;
+    margin-left: -3px;
+
+    &:first-child {
+      margin: 0;
+    }
+
+    i:first-child {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  i {
+    font-size: 17px;
+    color: $background;
+  }
+
+  @include responsive(T) {
+    i {
+      font-size: 18px;
+    }
+  }
+}
+
+// NOTE: 평가 점수가 자연수일 때
+@for $i from 1 through 5 {
+  .star-rating-#{$i} {
+    @extend %star-rating-base;
+
+    @for $j from 1 through $i {
+      div:nth-child(#{$j}) {
+        i:first-child {
+          color: $dark;
+        }
+      }
+    }
+  }
+}
+
+// NOTE: 평가 점수가 소수를 포함할 때
+@for $i from 1 through 4 {
+  .star-rating-#{$i}-half {
+    @extend %star-rating-base;
+
+    @for $j from 1 through $i {
+      div:nth-child(#{$j}) {
+        i:first-child {
+          color: $dark;
+        }
+      }
+    }
+
+    div:nth-child(#{$i + 1}) {
+      i:first-child {
+        display: inline-block;
+        width: 50%;
+        overflow: hidden;
+        color: $dark;
+      }
+    }
+  }
+}
