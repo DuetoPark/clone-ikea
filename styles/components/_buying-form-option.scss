@@ -1,0 +1,65 @@
+.buying-form-option {
+  a {
+    @include inline-flexbox;
+    width: 70px;
+    height: 70px;
+    margin-right: 4px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: border 200ms ease-in-out;
+
+    &:hover {
+      border: 1px solid $tertiary;
+    }
+
+    &.is-active {
+      border: 2px solid $dark;
+
+      &:hover {
+        border-color: $tertiary;
+      }
+    }
+
+    img {
+      width: 54px;
+    }
+  }
+
+  button {
+    @include flexbox(between);
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+    text-align: left;
+
+    &:hover {
+      p {
+        text-decoration: underline;
+      }
+
+      i {
+        color: $dark;
+      }
+    }
+  }
+
+  &-text {
+    p {
+      @include text-style(14, $dark);
+      font-weight: 700;
+    }
+
+    strong {
+      @include text-style(14, $primary);
+      font-weight: 400;
+    }
+  }
+
+  &-icon {
+    transform: rotate(-90deg);
+
+    i {
+      font-size: 24px;
+    }
+  }
+}
