@@ -1,9 +1,19 @@
 .product-show {
+  .col-sm-4 {
+    &.col-xl-4 {
+      order: 2;
+    }
+
+    &.col-xl-8 {
+      order: 1;
+    }
+  }
+
   .breadcrumb {
     margin-bottom: 40px;
   }
 
-  .product-slider {
+  .product-carousel {
     margin-bottom: 8px;
   }
 
