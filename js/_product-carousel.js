@@ -1,8 +1,8 @@
 var productCarousel = tns({
-  container: '.product-slider .slider-list',
+  container: '.product-carousel .slider-list',
   items: 1,
   controls: false,
   mode: 'gallery',
-  navContainer: '.product-slider .pagenation',
+  navContainer: '.product-carousel .pagenation',
   navPosition: 'bottom',
 })
