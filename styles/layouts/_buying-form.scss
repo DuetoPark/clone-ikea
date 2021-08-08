@@ -1,4 +1,5 @@
 .buying-form {
+  @include focus-thin;
   @include column-flexbox(start, start);
 
   & > * {

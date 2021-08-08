@@ -1,4 +1,6 @@
 .gnb {
+  @include focus-thick;
+
   .col-xl-1 {
     @include flexbox;
   }
