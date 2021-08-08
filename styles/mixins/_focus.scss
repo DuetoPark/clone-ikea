@@ -1,23 +1,19 @@
-%focus-base {
-  transition: box-shadow 100ms ease-in-out;
-}
-
-.focus-thin {
+@mixin focus-thin() {
   button,
   a {
     &:focus {
-      @extend %focus-base;
       box-shadow: $box-shadow-thin;
+      transition: box-shadow 100ms ease-in-out;
     }
   }
 }
 
-.focus-thick {
+@mixin focus-thick() {
   button,
   a {
     &:focus {
-      @extend %focus-base;
       box-shadow: $box-shadow-thick;
+      transition: box-shadow 100ms ease-in-out;
     }
   }
 }
