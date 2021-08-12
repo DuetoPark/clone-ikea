@@ -42,34 +42,34 @@
       opacity: 0;
       transition: opacity 100ms ease-in-out;
 
-      .prev,
-      .next {
-        background-color: $dark;
-        transform: rotate(90deg);
-
-        &:hover {
-          background-color: #333;
-        }
-
-        &:active {
-          background-color: $dark;
-        }
-
-        &:disabled {
-          display: none;
-        }
-      }
-
-      .next {
-        margin-left: auto;
-        transform: rotate(-90deg);
-      }
-
       i {
         position: relative;
         top: 2px;
         color: $white;
       }
+    }
+
+    .prev,
+    .next {
+      background-color: $dark;
+      transform: rotate(90deg);
+
+      &:hover {
+        background-color: #333;
+      }
+
+      &:active {
+        background-color: $dark;
+      }
+
+      &:disabled {
+        display: none;
+      }
+    }
+
+    .next {
+      margin-left: auto;
+      transform: rotate(-90deg);
     }
   }
 
@@ -102,7 +102,7 @@
         transition: background-color 100ms ease-in-out, height 100ms ease-in-out;
       }
 
-      &[class$='active'] {
+      &.tns-nav-active {
         &::after {
           background-color: $dark;
           border-radius: 100px;
