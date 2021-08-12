@@ -29,43 +29,43 @@
     @include flexbox(start);
     padding: 10px 0;
     border: 2px solid transparent;
+  }
 
-    &-info {
-      @include column-flexbox(start, start);
-      flex-grow: 1;
-      order: 2;
+  .link-image {
+    position: relative;
+    flex-shrink: 0;
+    order: 1;
+    width: 48px;
+    margin-right: 16px;
 
-      .product-name {
-        @include text-style(14, $black);
+    i {
+      @include pos-center-y;
+      right: 0;
+      font-size: 24px;
+      color: $black;
+    }
+  }
 
-        &:hover {
-          text-decoration: underline;
-        }
-      }
+  .link-info {
+    @include column-flexbox(start, start);
+    flex-grow: 1;
+    order: 2;
 
-      .product-desc {
-        @include text-style(12, $placeholder);
-      }
+    .info-name {
+      @include text-style(14, $black);
 
-      .product-category {
-        @include text-style(14, $black);
-        font-weight: 400;
+      &:hover {
+        text-decoration: underline;
       }
     }
 
-    &-image {
-      position: relative;
-      flex-shrink: 0;
-      order: 1;
-      width: 48px;
-      margin-right: 16px;
+    .info-desc {
+      @include text-style(12, $placeholder);
+    }
 
-      i {
-        @include pos-center-y;
-        right: 0;
-        font-size: 24px;
-        color: $black;
-      }
+    .info-category {
+      @include text-style(14, $black);
+      font-weight: 400;
     }
   }
 
