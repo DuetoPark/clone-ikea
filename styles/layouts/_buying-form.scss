@@ -11,61 +11,61 @@
     flex-wrap: wrap;
     order: 2;
     border-bottom: 1px solid $border;
+  }
 
-    &-product {
-      @include flexbox(between, start);
-      flex-grow: 1;
-      margin-bottom: 8px;
+  .summary-product {
+    @include flexbox(between, start);
+    flex-grow: 1;
+    margin-bottom: 8px;
+  }
+
+  .summary-title {
+    flex-grow: 1;
+
+    h1 {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 27px;
+      color: $black;
+      word-break: keep-all;
     }
 
-    &-title {
-      flex-grow: 1;
-
-      h1 {
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 27px;
-        color: $black;
-        word-break: keep-all;
-      }
-
-      strong {
-        @include text-style(14, $primary);
-        font-weight: 400;
-      }
+    strong {
+      @include text-style(14, $primary);
+      font-weight: 400;
     }
+  }
 
-    &-price {
-      flex-shrink: 0;
-    }
+  .summary-price {
+    flex-shrink: 0;
+  }
 
-    &-star {
-      a {
-        @include flexbox(start);
-        height: 20px;
+  .summary-star {
+    a {
+      @include flexbox(start);
+      height: 20px;
 
-        &:hover {
-          span {
-            position: relative;
-            text-decoration: underline;
+      &:hover {
+        span {
+          position: relative;
+          text-decoration: underline;
 
-            &::after {
-              position: absolute;
-              bottom: 2px;
-              display: block;
-              width: 100%;
-              height: 1px;
-              background-color: $primary;
-              content: '';
-            }
+          &::after {
+            position: absolute;
+            bottom: 2px;
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: $primary;
+            content: '';
           }
         }
       }
+    }
 
-      .review {
-        @include text-style(12, $primary);
-        margin-left: 8px;
-      }
+    .review {
+      @include text-style(12, $primary);
+      margin-left: 8px;
     }
   }
 
@@ -104,11 +104,9 @@
   }
 
   @include responsive(T) {
-    &-summary {
-      &-title {
-        h1 {
-          @include text-style(22);
-        }
+    .summary-title {
+      h1 {
+        @include text-style(22);
       }
     }
 
