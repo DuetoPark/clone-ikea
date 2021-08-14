@@ -1,0 +1,78 @@
+.description {
+  &-header {
+    padding: 40px 0;
+
+    p {
+      @include text-style(20, $primary);
+      margin-bottom: 24px;
+      font-weight: 400;
+    }
+
+    h2 {
+      @include text-style(12, $primary);
+      margin-bottom: 8px;
+    }
+  }
+
+  &-details {
+    button {
+      @include flexbox(between);
+      width: 100%;
+      min-height: 90px;
+      padding: 24px 0;
+      border-top: 1px solid $border;
+
+      &:hover {
+        p {
+          text-decoration: underline;
+        }
+
+        .ic-pre {
+          color: $black;
+        }
+      }
+    }
+
+    p {
+      @include text-style(16, $dark);
+      font-weight: 700;
+      text-align: left;
+    }
+
+    .ic-pre {
+      display: block;
+      font-size: 24px;
+      transform: rotate(180deg);
+    }
+  }
+
+  @include responsive(T) {
+    &-header {
+      padding-bottom: 48px;
+
+      p {
+        max-width: 87.5%;
+      }
+    }
+  }
+
+  @include responsive('T-PRO') {
+    &-header {
+      padding-top: 0;
+    }
+
+    &-details {
+      button {
+        padding: 40px 0;
+      }
+
+      p {
+        @include text-style(25, $dark);
+      }
+
+      .ic-pre {
+        font-size: 32px;
+      }
+    }
+  }
+}
