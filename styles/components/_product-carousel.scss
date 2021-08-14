@@ -20,17 +20,4 @@
       }
     }
   }
-
-  @include responsive('T-PRO') {
-    .details {
-      @include flexbox(start);
-      flex-wrap: wrap;
-      padding-bottom: 64px;
-
-      button {
-        width: 50%;
-        padding: 0 10px 20px 10px;
-      }
-    }
-  }
 }
