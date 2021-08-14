@@ -1,36 +1,38 @@
 .breadcrumb {
   @include focus-thick;
-  padding: 16px 0;
-  border-bottom: 1px solid $border;
 
-  &-list,
-  &-item {
+  &-list {
     @include flexbox(start);
+    padding: 16px 0;
+    border-bottom: 1px solid $border;
   }
 
   &-item {
+    @include flexbox(start);
+    position: relative;
+    left: -8px;
     height: 21px;
     overflow: visible;
+  }
 
-    a,
-    p {
-      @include text-style(12, $dark);
-      display: block;
-      padding: 12px 8px;
-      white-space: nowrap;
-    }
+  a,
+  p {
+    @include text-style(12, $dark);
+    display: block;
+    padding: 12px 8px;
+    white-space: nowrap;
+  }
 
-    a {
-      &:hover {
-        text-decoration: underline;
-      }
+  a {
+    &:hover {
+      text-decoration: underline;
     }
+  }
 
-    i {
-      display: block;
-      margin: 0 -6px;
-      transform: rotate(-90deg);
-    }
+  i {
+    display: block;
+    margin: 0 -6px;
+    transform: rotate(-90deg);
   }
 
   @include responsive('T-PRO') {

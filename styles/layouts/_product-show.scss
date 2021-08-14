@@ -1,23 +1,29 @@
 .product-show {
-  .col-sm-4 {
-    &.col-xl-4 {
-      order: 2;
-    }
+  .row:nth-child(2) {
+    .col-sm-4 {
+      &.col-xl-4 {
+        order: 2;
+      }
 
-    &.col-xl-8 {
-      order: 1;
+      &.col-xl-8 {
+        order: 3;
+      }
     }
   }
 
   .breadcrumb {
     margin-bottom: 40px;
+
+    .row {
+      flex-direction: row-reverse;
+    }
   }
 
   .product-carousel {
     padding-bottom: 8px;
   }
 
-  @include responsive('T') {
+  @include responsive(T) {
     .breadcrumb {
       margin-bottom: 64px;
     }
