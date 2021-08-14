@@ -413,8 +413,6 @@
     <main class="product-show">
       <div class="container">
         <div class="row">
-          <div class="col-xl-1"></div>
-
           <div class="col-sm-4 col-xl-12">
             <nav class="breadcrumb">
               <h1 class="visually-hidden">메뉴 경로</h1>
@@ -449,11 +447,11 @@
               </ol>
             </nav>
           </div>
+
+          <div class="col-xl-1 xl-only"></div>
         </div>
 
         <div class="row">
-          <div class="col-xl-1 xl-only"></div>
-
           <div class="col-sm-4 col-lg-5 col-xl-4">
             <form class="buying-form">
               <section class="buying-form-summary">
@@ -598,11 +596,11 @@
             </form>
           </div>
 
-          <div class="col-sm-4 col-lg-7 col-xl-8">
+          <div class="col-sm-4 lg-hidden xl-hidden">
             <section class="product-carousel">
               <h1 class="visually-hidden">상세 이미지 슬라이더</h1>
 
-              <div class="slider lg-hidden xl-hidden">
+              <div class="slider">
                 <ul class="slider-list">
                   <li class="slider-item">
                     <button type="button">
@@ -657,8 +655,14 @@
                   </button>
                 </div>
               </div>
+            </section>
+          </div>
 
-              <div class="details sm-hidden md-hidden">
+          <div class="col-sm-4 col-lg-7 col-xl-8">
+            <section class="product-carousel sm-hidden md-hidden">
+              <h1 class="visually-hidden">상세 이미지 슬라이더</h1>
+
+              <div class="details">
                 <button type="button">
                   <figure>
                     <img
@@ -758,6 +762,8 @@
               </div>
             </section>
           </div>
+
+          <div class="col-xl-1 xl-only"></div>
         </div>
       </div>
 
