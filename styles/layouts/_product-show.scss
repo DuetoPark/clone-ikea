@@ -1,13 +1,15 @@
 .product-show {
-  .row:nth-child(2) {
-    .col-sm-4 {
-      &.col-xl-4 {
-        order: 2;
-      }
+  &-content {
+    .lg-hidden {
+      order: 1;
+    }
 
-      &.col-xl-8 {
-        order: 3;
-      }
+    .col-xl-4 {
+      order: 2;
+    }
+
+    .col-xl-8 {
+      order: 3;
     }
   }
 
@@ -27,6 +29,21 @@
   @include responsive(T) {
     .breadcrumb {
       margin-bottom: 64px;
+    }
+  }
+
+  @include responsive('T-PRO') {
+    &-content {
+      .row {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+      }
+
+      .lg-hidden,
+      .col-xl-4,
+      .col-xl-8 {
+        order: 0;
+      }
     }
   }
 }
