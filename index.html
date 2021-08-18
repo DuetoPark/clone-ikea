@@ -160,10 +160,10 @@
         </div>
       </div>
 
-      <section class="search-modal is-exist">
+      <section class="search-modal is-active is-exist">
         <h1 class="visually-hidden">검색창</h1>
 
-        <header class="search-modal-header">
+        <header class="modal-header">
           <div class="input-group is-active">
             <input type="text" placeholder="검색어 입력" />
 
@@ -210,202 +210,204 @@
           </div>
         </header>
 
-        <div class="search-history is-empty">
-          <header class="visually-hidden">
-            <h1>추천 검색어</h1>
-          </header>
+        <div class="modal-contents">
+          <div class="search-history is-empty">
+            <header class="visually-hidden">
+              <h1>추천 검색어</h1>
+            </header>
 
-          <ol class="search-history-list">
-            <li class="search-history-item">
-              <a
-                class="search-history-link"
-                href="./index.html"
-                aria-label="책상 페이지로 이동하기"
+            <ol class="search-history-list">
+              <li class="search-history-item">
+                <a
+                  class="search-history-link"
+                  href="./index.html"
+                  aria-label="책상 페이지로 이동하기"
+                >
+                  <div class="link-info">
+                    <strong class="info-name">책상</strong>
+                  </div>
+
+                  <div class="link-image">
+                    <i class="ic-search"></i>
+                  </div>
+                </a>
+              </li>
+              <li class="search-history-item">
+                <a
+                  class="search-history-link"
+                  href="./index.html"
+                  aria-label="의자 페이지로 이동하기"
+                >
+                  <div class="link-info">
+                    <strong class="info-name">의자</strong>
+                  </div>
+
+                  <div class="link-image">
+                    <i class="ic-search"></i>
+                  </div>
+                </a>
+              </li>
+              <li class="search-history-item">
+                <a
+                  class="search-history-link"
+                  href="./index.html"
+                  aria-label="선반 페이지로 이동하기"
+                >
+                  <div class="link-info">
+                    <strong class="info-name">선반</strong>
+                  </div>
+
+                  <div class="link-image">
+                    <i class="ic-search"></i>
+                  </div>
+                </a>
+              </li>
+              <li class="search-history-item">
+                <a
+                  class="search-history-link"
+                  href="./index.html"
+                  aria-label="수납장 페이지로 이동하기"
+                >
+                  <div class="link-info">
+                    <strong class="info-name">수납장</strong>
+                  </div>
+
+                  <div class="link-image">
+                    <i class="ic-search"></i>
+                  </div>
+                </a>
+              </li>
+              <li class="search-history-item">
+                <a
+                  class="search-history-link"
+                  href="./index.html"
+                  aria-label="서랍장 카테고리 페이지로 이동하기"
+                >
+                  <div class="link-info">
+                    <strong class="info-category">서랍장</strong>
+                  </div>
+
+                  <div class="link-image">
+                    <i class="ic-category"></i>
+                  </div>
+                </a>
+              </li>
+              <li class="search-history-item">
+                <a
+                  class="search-history-link"
+                  href="./index.html"
+                  aria-label="스프링매트리스 카테고리 페이지로 이동하기"
+                >
+                  <div class="link-info">
+                    <strong class="info-category">스프링매트리스</strong>
+                  </div>
+
+                  <div class="link-image">
+                    <i class="ic-category"></i>
+                  </div>
+                </a>
+              </li>
+              <li class="search-history-item">
+                <a
+                  class="search-history-link"
+                  href="./index.html"
+                  aria-label="선반유닛 카테고리 페이지로 이동하기"
+                >
+                  <div class="link-info">
+                    <strong class="info-category">선반유닛</strong>
+                  </div>
+
+                  <div class="link-image">
+                    <i class="ic-category"></i>
+                  </div>
+                </a>
+              </li>
+              <li class="search-history-item">
+                <a
+                  class="search-history-link"
+                  href="./index.html"
+                  aria-label="침대(싱글, 수퍼싱글) 카테고리 페이지로 이동하기"
+                >
+                  <div class="link-info">
+                    <strong class="info-category">싱글/수퍼싱글+ 침대</strong>
+                  </div>
+
+                  <div class="link-image">
+                    <i class="ic-category"></i>
+                  </div>
+                </a>
+              </li>
+            </ol>
+          </div>
+
+          <div class="search-history is-exist">
+            <header class="search-history-header">
+              <h1>내 검색 기록</h1>
+              <button
+                class="search-history-delete"
+                type="button"
+                aria-label="내 검색 기록 삭제하기 버튼"
               >
-                <div class="link-info">
-                  <strong class="info-name">책상</strong>
-                </div>
+                삭제
+              </button>
+            </header>
 
-                <div class="link-image">
-                  <i class="ic-search"></i>
-                </div>
-              </a>
-            </li>
-            <li class="search-history-item">
-              <a
-                class="search-history-link"
-                href="./index.html"
-                aria-label="의자 페이지로 이동하기"
-              >
-                <div class="link-info">
-                  <strong class="info-name">의자</strong>
-                </div>
+            <ol class="search-history-list">
+              <li class="search-history-item">
+                <a
+                  class="search-history-link"
+                  href="./index.html"
+                  aria-label="클리판 2인용소파 페이지로 이동"
+                >
+                  <div class="link-info">
+                    <strong class="info-name">KLIPPAN 클리판</strong>
+                    <span class="info-desc">2인용소파</span>
+                  </div>
 
-                <div class="link-image">
-                  <i class="ic-search"></i>
-                </div>
-              </a>
-            </li>
-            <li class="search-history-item">
-              <a
-                class="search-history-link"
-                href="./index.html"
-                aria-label="선반 페이지로 이동하기"
-              >
-                <div class="link-info">
-                  <strong class="info-name">선반</strong>
-                </div>
+                  <div class="link-image">
+                    <img
+                      src="./assets/images/Img-search-01.jpg"
+                      alt="클리판 2인용 소파"
+                    />
+                  </div>
+                </a>
+              </li>
+              <li class="search-history-item">
+                <a
+                  class="search-history-link"
+                  href="./index.html"
+                  aria-label="소파 페이지로 이동"
+                >
+                  <div class="link-info">
+                    <strong class="info-name">소파</strong>
+                  </div>
 
-                <div class="link-image">
-                  <i class="ic-search"></i>
-                </div>
-              </a>
-            </li>
-            <li class="search-history-item">
-              <a
-                class="search-history-link"
-                href="./index.html"
-                aria-label="수납장 페이지로 이동하기"
-              >
-                <div class="link-info">
-                  <strong class="info-name">수납장</strong>
-                </div>
+                  <div class="link-image">
+                    <i class="ic-search"></i>
+                  </div>
+                </a>
+              </li>
+              <li class="search-history-item">
+                <a
+                  class="search-history-link"
+                  href="./index.html"
+                  aria-label="에네뤼다 손잡이 페이지로 이동"
+                >
+                  <div class="link-info">
+                    <strong class="info-name">ENERYDA 에네뤼다</strong>
+                    <span class="info-desc">손잡이</span>
+                  </div>
 
-                <div class="link-image">
-                  <i class="ic-search"></i>
-                </div>
-              </a>
-            </li>
-            <li class="search-history-item">
-              <a
-                class="search-history-link"
-                href="./index.html"
-                aria-label="서랍장 카테고리 페이지로 이동하기"
-              >
-                <div class="link-info">
-                  <strong class="info-category">서랍장</strong>
-                </div>
-
-                <div class="link-image">
-                  <i class="ic-category"></i>
-                </div>
-              </a>
-            </li>
-            <li class="search-history-item">
-              <a
-                class="search-history-link"
-                href="./index.html"
-                aria-label="스프링매트리스 카테고리 페이지로 이동하기"
-              >
-                <div class="link-info">
-                  <strong class="info-category">스프링매트리스</strong>
-                </div>
-
-                <div class="link-image">
-                  <i class="ic-category"></i>
-                </div>
-              </a>
-            </li>
-            <li class="search-history-item">
-              <a
-                class="search-history-link"
-                href="./index.html"
-                aria-label="선반유닛 카테고리 페이지로 이동하기"
-              >
-                <div class="link-info">
-                  <strong class="info-category">선반유닛</strong>
-                </div>
-
-                <div class="link-image">
-                  <i class="ic-category"></i>
-                </div>
-              </a>
-            </li>
-            <li class="search-history-item">
-              <a
-                class="search-history-link"
-                href="./index.html"
-                aria-label="침대(싱글, 수퍼싱글) 카테고리 페이지로 이동하기"
-              >
-                <div class="link-info">
-                  <strong class="info-category">싱글/수퍼싱글+ 침대</strong>
-                </div>
-
-                <div class="link-image">
-                  <i class="ic-category"></i>
-                </div>
-              </a>
-            </li>
-          </ol>
-        </div>
-
-        <div class="search-history is-exist">
-          <header class="search-history-header">
-            <h1>내 검색 기록</h1>
-            <button
-              class="search-history-delete"
-              type="button"
-              aria-label="내 검색 기록 삭제하기 버튼"
-            >
-              삭제
-            </button>
-          </header>
-
-          <ol class="search-history-list">
-            <li class="search-history-item">
-              <a
-                class="search-history-link"
-                href="./index.html"
-                aria-label="클리판 2인용소파 페이지로 이동"
-              >
-                <div class="link-info">
-                  <strong class="info-name">KLIPPAN 클리판</strong>
-                  <span class="info-desc">2인용소파</span>
-                </div>
-
-                <div class="link-image">
-                  <img
-                    src="./assets/images/Img-search-01.jpg"
-                    alt="클리판 2인용 소파"
-                  />
-                </div>
-              </a>
-            </li>
-            <li class="search-history-item">
-              <a
-                class="search-history-link"
-                href="./index.html"
-                aria-label="소파 페이지로 이동"
-              >
-                <div class="link-info">
-                  <strong class="info-name">소파</strong>
-                </div>
-
-                <div class="link-image">
-                  <i class="ic-search"></i>
-                </div>
-              </a>
-            </li>
-            <li class="search-history-item">
-              <a
-                class="search-history-link"
-                href="./index.html"
-                aria-label="에네뤼다 손잡이 페이지로 이동"
-              >
-                <div class="link-info">
-                  <strong class="info-name">ENERYDA 에네뤼다</strong>
-                  <span class="info-desc">손잡이</span>
-                </div>
-
-                <div class="link-image">
-                  <img
-                    src="./assets/images/Img-search-02.jpg"
-                    alt="에네뤼다 손잡이"
-                  />
-                </div>
-              </a>
-            </li>
-          </ol>
+                  <div class="link-image">
+                    <img
+                      src="./assets/images/Img-search-02.jpg"
+                      alt="에네뤼다 손잡이"
+                    />
+                  </div>
+                </a>
+              </li>
+            </ol>
+          </div>
         </div>
       </section>
     </header>
@@ -777,9 +779,9 @@
       <section class="carousel-modal">
         <h1 class="visually-hidden">상품 슬라이더 상세 이미지 창</h1>
 
-        <header class="carousel-modal-header">
+        <header class="modal-header">
           <button
-            class="btn-ghost btn-40"
+            class="btn-ghost btn-40 close-button"
             type="button"
             aria-label="상세 이미지 창 닫기 버튼"
           >
@@ -787,72 +789,83 @@
           </button>
         </header>
 
-        <div class="slider">
-          <ul class="slider-list">
-            <li class="slider-item">
-              <button type="button">
-                <figure>
-                  <img src="./assets/images/img-recommandation-01.jpg" alt="" />
-                  <figcaption class="visually-hidden">
-                    에네뤼다 손잡이 상세 이미지 1
-                  </figcaption>
-                </figure>
-              </button>
-            </li>
-            <li class="slider-item">
-              <button type="button">
-                <figure>
-                  <img src="./assets/images/img-recommandation-02.jpg" alt="" />
-                  <figcaption class="visually-hidden">
-                    에네뤼다 손잡이 상세 이미지 2
-                  </figcaption>
-                </figure>
-              </button>
-            </li>
-            <li class="slider-item">
-              <button type="button">
-                <figure>
-                  <img src="./assets/images/img-recommandation-03.jpg" alt="" />
-                  <figcaption class="visually-hidden">
-                    에네뤼다 손잡이 상세 이미지 3
-                  </figcaption>
-                </figure>
-              </button>
-            </li>
-          </ul>
+        <div class="modal-contents">
+          <div class="slider">
+            <ul class="slider-list">
+              <li class="slider-item">
+                <button type="button">
+                  <figure>
+                    <img
+                      src="./assets/images/img-recommandation-01.jpg"
+                      alt=""
+                    />
+                    <figcaption class="visually-hidden">
+                      에네뤼다 손잡이 상세 이미지 1
+                    </figcaption>
+                  </figure>
+                </button>
+              </li>
+              <li class="slider-item">
+                <button type="button">
+                  <figure>
+                    <img
+                      src="./assets/images/img-recommandation-02.jpg"
+                      alt=""
+                    />
+                    <figcaption class="visually-hidden">
+                      에네뤼다 손잡이 상세 이미지 2
+                    </figcaption>
+                  </figure>
+                </button>
+              </li>
+              <li class="slider-item">
+                <button type="button">
+                  <figure>
+                    <img
+                      src="./assets/images/img-recommandation-03.jpg"
+                      alt=""
+                    />
+                    <figcaption class="visually-hidden">
+                      에네뤼다 손잡이 상세 이미지 3
+                    </figcaption>
+                  </figure>
+                </button>
+              </li>
+            </ul>
 
-          <div class="slider-controls">
-            <button
-              class="btn-40 prev"
-              type="button"
-              aria-label="이전 이미지로 넘김 버튼"
-            >
-              <i class="ic-chevron"></i>
-            </button>
+            <div class="slider-controls">
+              <button
+                class="btn-40 prev"
+                type="button"
+                aria-label="이전 이미지로 넘김 버튼"
+              >
+                <i class="ic-chevron"></i>
+              </button>
 
-            <button
-              class="btn-40 next"
-              type="button"
-              aria-label="다음 이미지로 넘김 버튼"
-            >
-              <i class="ic-chevron"></i>
-            </button>
+              <button
+                class="btn-40 next"
+                type="button"
+                aria-label="다음 이미지로 넘김 버튼"
+              >
+                <i class="ic-chevron"></i>
+              </button>
+            </div>
           </div>
-        </div>
 
-        <div class="pagenation">
-          <button type="button"></button>
-          <button type="button"></button>
-          <button type="button"></button>
+          <div class="pagenation">
+            <button type="button"></button>
+            <button type="button"></button>
+            <button type="button"></button>
+          </div>
         </div>
       </section>
 
-      <section class="option-modal is-active is-color">
+      <section class="option-modal is-color">
         <h1 class="visually-hidden">옵션 선택 창</h1>
 
-        <header class="option-modal-header">
+        <header class="modal-header">
           <button
-            class="btn-ghost btn-40"
+            class="btn-ghost btn-40 close-button"
             type="button"
             aria-label="창 닫기 버튼"
           >
@@ -860,7 +873,7 @@
           </button>
         </header>
 
-        <div class="option-modal-contents">
+        <div class="modal-contents">
           <article class="option-size">
             <h2>규격</h2>
 
@@ -1016,7 +1029,7 @@
       </footer>
     </aside>
 
-    <div class="overlay"></div>
+    <div class="overlay is-active"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script src="./js/_product-carousel.js"></script>
