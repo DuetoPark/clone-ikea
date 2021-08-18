@@ -1,4 +1,4 @@
-.option-modal-contents {
+.modal-contents {
   h2 {
     height: 50px;
     font-size: 18px;
@@ -32,6 +32,11 @@
     &.is-selected {
       border: 2px solid $blue;
     }
+
+    img {
+      width: 50px;
+      margin-right: 20px;
+    }
   }
 
   .option {
@@ -44,11 +49,6 @@
   .secondary-price {
     @include text-style(12, $primary);
     font-weight: 400;
-  }
-
-  img {
-    width: 50px;
-    margin-right: 20px;
   }
 
   .option-color {

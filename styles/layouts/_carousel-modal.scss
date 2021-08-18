@@ -1,5 +1,8 @@
 .carousel-modal {
+  $modal-padding: 20px;
+
   @include modal-pos(bottom, bottom, center);
+  @include modal-style-20;
   z-index: $carousel-modal-level;
   display: none;
 
@@ -7,25 +10,15 @@
     display: block;
   }
 
-  &-header {
-    @include flexbox(end);
-    @include focus-thick;
-    height: 60px;
-    padding: 0 24px;
-
-    button {
-      @include flexbox;
-      margin-right: -12px;
-    }
-
-    i {
-      color: $black;
-    }
+  .modal-contents {
+    @include column-flexbox;
+    margin: 0 -#{$modal-padding};
   }
 
   .slider {
     @include focus-thin;
     position: relative;
+    width: 100%;
     padding: 4px 0 24px 0;
 
     &:hover {
@@ -112,11 +105,6 @@
   }
 
   @include responsive(T) {
-    &-header {
-      height: 88px;
-      margin-bottom: 32px;
-    }
-
     .slider-item {
       text-align: center;
 
@@ -127,14 +115,12 @@
   }
 
   @include responsive('T-PRO') {
-    &-header {
-      padding: 0 64px;
+    .modal-contents {
+      margin: 0 0;
     }
-  }
 
-  @include responsive(D) {
-    &-header {
-      padding: 0 48px;
+    .pagenation {
+      width: calc(100% - (100px - #{$modal-padding}) * 2);
     }
   }
 }

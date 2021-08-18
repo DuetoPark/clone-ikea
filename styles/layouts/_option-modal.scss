@@ -1,8 +1,8 @@
 .option-modal {
   @include modal-pos(bottom, right);
+  @include modal-style-24;
   z-index: $option-modal-level;
   display: none;
-  padding: 0 24px;
 
   &.is-active {
     display: block;
@@ -20,28 +20,8 @@
     }
   }
 
-  &-header {
-    @include flexbox(start);
-    flex-direction: row-reverse;
-    height: 60px;
-
-    button {
-      margin-right: -12px;
-    }
-  }
-
-  &-contents {
-    .option-size,
-    .option-color {
-      display: none;
-    }
-  }
-
-  @include responsive('T-PRO') {
-    padding: 0 48px;
-
-    &-header {
-      height: 88px;
-    }
+  .option-size,
+  .option-color {
+    display: none;
   }
 }
