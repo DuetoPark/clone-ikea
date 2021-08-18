@@ -1,0 +1,52 @@
+%modal-style-base {
+  .modal-header {
+    @include flexbox(end);
+    @include focus-thick;
+    height: 60px;
+  }
+
+  .close-button {
+    margin-right: -12px;
+
+    i {
+      color: $dark;
+    }
+  }
+
+  .modal-contents {
+    @include focus-thin;
+  }
+}
+
+@mixin modal-style-20() {
+  @extend %modal-style-base;
+  padding: 0 20px;
+
+  @include responsive(T) {
+    .modal-header {
+      height: 88px;
+      margin-bottom: 32px;
+    }
+  }
+
+  @include responsive('T-PRO') {
+    padding: 0 48px;
+
+    .modal-header {
+      height: 88px;
+    }
+  }
+}
+
+@mixin modal-style-24() {
+  @extend %modal-style-base;
+  padding: 0 24px;
+
+  @include responsive('T-PRO') {
+    padding: 0 48px;
+
+    .modal-header {
+      height: 88px;
+    }
+  }
+}
