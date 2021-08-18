@@ -30,6 +30,7 @@
 .input-group {
   @extend %form-base;
   position: relative;
+  width: 100%;
 
   &-left,
   &-right {
