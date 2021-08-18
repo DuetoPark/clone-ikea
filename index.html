@@ -846,6 +846,73 @@
           <button type="button"></button>
         </div>
       </section>
+
+      <section class="option-modal is-active is-color">
+        <h1 class="visually-hidden">옵션 선택 창</h1>
+
+        <header class="option-modal-header">
+          <button class="btn-ghost btn-40" type="button">
+            <i class="ic-close"></i>
+          </button>
+        </header>
+
+        <div class="option-modal-contents">
+          <article class="option-size">
+            <h2>규격</h2>
+
+            <div>
+              <a class="option-link" href="./index.html">
+                <strong class="option">
+                  20 <span aria-label="밀리미터">mm</span>
+                </strong>
+                <strong class="secondary-price">
+                  <span aria-label="공제">-</span>
+                  <span aria-hidden="true">￦</span>
+                  <span aria-label="2500원">2,500</span>
+                </strong>
+              </a>
+
+              <a class="option-link is-selected" href="./index.html">
+                <strong class="option">
+                  27 <span aria-label="밀리미터">mm</span>
+                </strong>
+              </a>
+
+              <a class="option-link" href="./index.html">
+                <strong class="option">
+                  35 <span aria-label="밀리미터">mm</span>
+                </strong>
+                <strong class="secondary-price">
+                  <span aria-label="추가">+</span>
+                  <span aria-hidden="true">￦</span>
+                  <span aria-label="2500원">2,500</span>
+                </strong>
+              </a>
+            </div>
+          </article>
+
+          <article class="option-color">
+            <h2>색상</h2>
+
+            <div>
+              <a class="option-link is-selected" href="./index.html">
+                <strong class="option">크롬도금</strong>
+                <img src="./assets/images/img-option-01.jpg" alt="크롬도금" />
+              </a>
+
+              <a class="option-link" href="./index.html">
+                <strong class="option">황동색</strong>
+                <img src="./assets/images/img-option-02.jpg" alt="황동색" />
+              </a>
+
+              <a class="option-link" href="./index.html">
+                <strong class="option">블랙</strong>
+                <img src="./assets/images/img-option-03.jpg" alt="블랙" />
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
     </main>
 
     <aside class="sidebar">
@@ -937,7 +1004,7 @@
       </footer>
     </aside>
 
-    <div class="overlay"></div>
+    <div class="overlay is-active"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script src="./js/_product-carousel.js"></script>
