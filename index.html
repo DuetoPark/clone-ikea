@@ -851,8 +851,12 @@
         <h1 class="visually-hidden">옵션 선택 창</h1>
 
         <header class="option-modal-header">
-          <button class="btn-ghost btn-40" type="button">
-            <i class="ic-close"></i>
+          <button
+            class="btn-ghost btn-40"
+            type="button"
+            aria-label="창 닫기 버튼"
+          >
+            <i class="ic-close" aria-hidden="true"></i>
           </button>
         </header>
 
@@ -872,7 +876,11 @@
                 </strong>
               </a>
 
-              <a class="option-link is-selected" href="./index.html">
+              <a
+                class="option-link is-selected"
+                href="./index.html"
+                aria-current="page"
+              >
                 <strong class="option">
                   27 <span aria-label="밀리미터">mm</span>
                 </strong>
@@ -895,7 +903,11 @@
             <h2>색상</h2>
 
             <div>
-              <a class="option-link is-selected" href="./index.html">
+              <a
+                class="option-link is-selected"
+                href="./index.html"
+                aria-current="page"
+              >
                 <strong class="option">크롬도금</strong>
                 <img src="./assets/images/img-option-01.jpg" alt="크롬도금" />
               </a>
@@ -1004,7 +1016,7 @@
       </footer>
     </aside>
 
-    <div class="overlay is-active"></div>
+    <div class="overlay"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script src="./js/_product-carousel.js"></script>
