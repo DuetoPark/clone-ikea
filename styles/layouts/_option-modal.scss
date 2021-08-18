@@ -1,5 +1,5 @@
 .option-modal {
-  @include modal(bottom, right);
+  @include modal-pos(bottom, right);
   z-index: $option-modal-level;
   display: none;
   padding: 0 24px;

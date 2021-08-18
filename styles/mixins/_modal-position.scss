@@ -82,7 +82,7 @@
   overscroll-behavior: contain;
 }
 
-@mixin modal($sm: full, $md: right, $lg: right) {
+@mixin modal-pos($sm: full, $md: right, $lg: right) {
   //NOTE: sm은 full, top, bottom만을 인수로 받는다.
   @if ($sm == full) {
     @include modal-full;

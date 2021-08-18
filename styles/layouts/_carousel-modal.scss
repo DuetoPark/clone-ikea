@@ -1,5 +1,5 @@
 .carousel-modal {
-  @include modal(bottom, bottom, center);
+  @include modal-pos(bottom, bottom, center);
   z-index: $carousel-modal-level;
   display: none;
 
