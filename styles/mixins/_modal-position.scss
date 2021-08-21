@@ -96,7 +96,6 @@
     @include modal-bottom;
   }
 
-  // NOTE: md이상은 left, right, center만을 인수로 받는다.
   @if ($md == left) {
     @include responsive(T) {
       @include modal-left;
@@ -112,6 +111,12 @@
   @if ($md == center) {
     @include responsive(T) {
       @include modal-center;
+    }
+  }
+
+  @if ($lg == full) {
+    @include responsive('T-PRO') {
+      @include modal-full;
     }
   }
 
