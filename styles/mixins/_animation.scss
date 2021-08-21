@@ -1,0 +1,58 @@
+@keyframes slidein-left {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slidein-bottom {
+  from {
+    transform: translateY(50%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slidein-right {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@mixin animation-left-to-right() {
+  animation-name: slidein-left;
+}
+
+@mixin animation-bottom-to-top() {
+  animation-name: slidein-bottom;
+}
+
+@mixin animation-right-to-left() {
+  animation-name: slidein-right;
+}
+
+@mixin animation($start: left) {
+  animation-duration: 250ms;
+  animation-timing-function: ease-out;
+
+  @if ($start == 'left') {
+    @include animation-left-to-right;
+  }
+
+  @if ($start == 'bottom') {
+    @include animation-bottom-to-top;
+  }
+
+  @if ($start == 'right') {
+    @include animation-right-to-left;
+  }
+}

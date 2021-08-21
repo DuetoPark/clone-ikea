@@ -2,6 +2,7 @@
   $modal-padding: 20px;
 
   @include modal-pos(bottom, bottom, center);
+  @include animation(start);
   @include modal-style-20;
   z-index: $carousel-modal-level;
   display: none;
@@ -105,6 +106,8 @@
   }
 
   @include responsive(T) {
+    animation: none;
+
     .slider-item {
       text-align: center;
 

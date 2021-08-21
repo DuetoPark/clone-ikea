@@ -1,5 +1,6 @@
 .option-modal {
   @include modal-pos(bottom, right);
+  @include animation(bottom);
   @include modal-style-24;
   z-index: $option-modal-level;
   display: none;
@@ -23,5 +24,9 @@
   .option-size,
   .option-color {
     display: none;
+  }
+
+  @include responsive(T) {
+    @include animation(right);
   }
 }
