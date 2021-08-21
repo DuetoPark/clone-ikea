@@ -1,17 +1,11 @@
 .sidebar {
+  @include modal-pos(full, full, left);
+  @include animation(left);
   @include no-scrollbar;
   @include focus-thick;
-  position: fixed;
-  top: 0;
-  left: 0;
   z-index: $sidebar-level;
   display: none;
-  width: 100%;
-  height: 100vh;
   padding: 0 20px;
-  overflow-y: auto;
-  background-color: $white;
-  overscroll-behavior: contain;
 
   &.is-active {
     @include column-flexbox(start, start);
