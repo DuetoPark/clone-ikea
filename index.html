@@ -11,7 +11,7 @@
       content="원기옥을 쓰듯 알고있는 것을 총동원하여 이케아 제품 상세 페이지를 클론코딩합니다."
     />
 
-    <title>ENERYDA 에네뤼다 손잡이, 크롬도금, 27 mm - IKEA</title>
+    <title>ENERYDA 에네뤼다 손잡이, 크롬도금, 27 mPm - IKEA</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -63,7 +63,11 @@
         <div class="container">
           <div class="row">
             <div class="col-xl-1">
-              <button class="btn-ghost btn-40 btn-active xl-only" type="button">
+              <button
+                class="btn-ghost btn-40 btn-active xl-only"
+                data-trigger="menu"
+                type="button"
+              >
                 <i class="ic-menu"></i>
               </button>
             </div>
@@ -90,7 +94,11 @@
 
                 <div class="gnb-searchbar">
                   <div class="input-group">
-                    <input type="text" placeholder="검색어 입력" />
+                    <input
+                      type="text"
+                      data-trigger="search"
+                      placeholder="검색어 입력"
+                    />
 
                     <div class="input-group-left">
                       <i class="ic-search" aria-hidden="true"></i>
@@ -147,6 +155,7 @@
 
                   <button
                     class="btn-ghost btn-40 btn-active xl-hidden"
+                    data-trigger="menu"
                     type="button"
                     aria-label="메뉴 열기 버튼"
                     title="메뉴"
@@ -160,7 +169,7 @@
         </div>
       </div>
 
-      <section class="search-modal is-active is-exist">
+      <section class="search-modal is-exist">
         <h1 class="visually-hidden">검색창</h1>
 
         <header class="modal-header">
@@ -170,7 +179,8 @@
             <div class="input-group-left">
               <div class="input-group-left-active">
                 <button
-                  class="btn-ghost btn-32"
+                  class="btn-ghost btn-32 close-button"
+                  data-close="search"
                   type="button"
                   aria-label="검색취소 버튼"
                 >
@@ -539,15 +549,18 @@
                   </div>
 
                   <div class="sm-hidden md-hidden">
-                    <button type="button">
-                      <div class="buying-form-option-text">
+                    <button
+                      class="modal-trigger-option"
+                      data-trigger="option"
+                      type="button"
+                      aria-label="색상 선택 창 열기"
+                    >
+                      <div>
                         <p>색상</p>
                         <strong>크롬도금</strong>
                       </div>
 
-                      <div class="buying-form-option-icon">
-                        <i class="ic-chevron"></i>
-                      </div>
+                      <i class="ic-chevron"></i>
                     </button>
                   </div>
                 </section>
@@ -555,15 +568,18 @@
                 <section class="buying-form-option is-size">
                   <h2 class="visually-hidden">규격 선택</h2>
 
-                  <button type="button">
-                    <div class="buying-form-option-text">
+                  <button
+                    class="modal-trigger-option"
+                    data-trigger="option"
+                    type="button"
+                    aria-label="규격 선택 창 열기"
+                  >
+                    <div>
                       <p>규격</p>
                       <strong aria-label="27밀리미터">27mm</strong>
                     </div>
 
-                    <div class="buying-form-option-icon">
-                      <i class="ic-chevron"></i>
-                    </div>
+                    <i class="ic-chevron"></i>
                   </button>
                 </section>
 
@@ -613,7 +629,7 @@
                 <div class="slider">
                   <ul class="slider-list">
                     <li class="slider-item">
-                      <button type="button">
+                      <button type="button" data-trigger="carousel">
                         <figure>
                           <img
                             src="./assets/images/img-recommandation-01.jpg"
@@ -626,7 +642,7 @@
                       </button>
                     </li>
                     <li class="slider-item">
-                      <button type="button">
+                      <button type="button" data-trigger="carousel">
                         <figure>
                           <img
                             src="./assets/images/img-recommandation-02.jpg"
@@ -639,7 +655,7 @@
                       </button>
                     </li>
                     <li class="slider-item">
-                      <button type="button">
+                      <button type="button" data-trigger="carousel">
                         <figure>
                           <img
                             src="./assets/images/img-recommandation-03.jpg"
@@ -672,7 +688,7 @@
               <section class="image-details sm-hidden md-hidden">
                 <h1 class="visually-hidden">상세 이미지 보기</h1>
 
-                <button type="button">
+                <button type="button" data-trigger="carousel">
                   <figure>
                     <img
                       src="./assets/images/img-recommandation-01.jpg"
@@ -684,7 +700,7 @@
                   </figure>
                 </button>
 
-                <button type="button">
+                <button type="button" data-trigger="carousel">
                   <figure>
                     <img
                       src="./assets/images/img-recommandation-02.jpg"
@@ -696,7 +712,7 @@
                   </figure>
                 </button>
 
-                <button type="button">
+                <button type="button" data-trigger="carousel">
                   <figure>
                     <img
                       src="./assets/images/img-recommandation-03.jpg"
@@ -726,42 +742,59 @@
                 </header>
 
                 <div class="description-details">
-                  <button type="button">
+                  <button
+                    class="modal-trigger-desc"
+                    data-trigger="description"
+                    type="button"
+                  >
                     <p>제품 설명</p>
 
                     <i class="ic-pre"></i>
                   </button>
 
-                  <button type="button">
+                  <button
+                    class="modal-trigger-desc"
+                    data-trigger="description"
+                    type="button"
+                  >
                     <p>제품 크기</p>
 
                     <i class="ic-pre"></i>
                   </button>
 
-                  <button type="button">
-                    <div>
+                  <button
+                    class="modal-trigger-desc"
+                    data-trigger="description"
+                    type="button"
+                  >
+                    <div class="text">
                       <p>상품평</p>
-                      <div class="star-rating-3" aria-label="평점 3점">
-                        <div>
-                          <i class="ic-star" aria-hidden="true"></i>
-                          <i class="ic-star" aria-hidden="true"></i>
+                      <div class="review-group">
+                        <div class="star-rating-3" aria-label="평점 3점">
+                          <div>
+                            <i class="ic-star" aria-hidden="true"></i>
+                            <i class="ic-star" aria-hidden="true"></i>
+                          </div>
+                          <div>
+                            <i class="ic-star" aria-hidden="true"></i>
+                            <i class="ic-star" aria-hidden="true"></i>
+                          </div>
+                          <div>
+                            <i class="ic-star" aria-hidden="true"></i>
+                            <i class="ic-star" aria-hidden="true"></i>
+                          </div>
+                          <div>
+                            <i class="ic-star" aria-hidden="true"></i>
+                            <i class="ic-star" aria-hidden="true"></i>
+                          </div>
+                          <div>
+                            <i class="ic-star" aria-hidden="true"></i>
+                            <i class="ic-star" aria-hidden="true"></i>
+                          </div>
                         </div>
-                        <div>
-                          <i class="ic-star" aria-hidden="true"></i>
-                          <i class="ic-star" aria-hidden="true"></i>
-                        </div>
-                        <div>
-                          <i class="ic-star" aria-hidden="true"></i>
-                          <i class="ic-star" aria-hidden="true"></i>
-                        </div>
-                        <div>
-                          <i class="ic-star" aria-hidden="true"></i>
-                          <i class="ic-star" aria-hidden="true"></i>
-                        </div>
-                        <div>
-                          <i class="ic-star" aria-hidden="true"></i>
-                          <i class="ic-star" aria-hidden="true"></i>
-                        </div>
+                        <span class="review-count" aria-level="리뷰 4개"
+                          >(4)</span
+                        >
                       </div>
                     </div>
 
@@ -782,6 +815,7 @@
         <header class="modal-header">
           <button
             class="btn-ghost btn-40 close-button"
+            data-close="carousel"
             type="button"
             aria-label="상세 이미지 창 닫기 버튼"
           >
@@ -866,6 +900,7 @@
         <header class="modal-header">
           <button
             class="btn-ghost btn-40 close-button"
+            data-close="option"
             type="button"
             aria-label="창 닫기 버튼"
           >
@@ -951,7 +986,11 @@
         </h1>
 
         <div class="sidebar-header-button">
-          <button class="btn-ghost btn-40" type="button">
+          <button
+            class="btn-ghost btn-40 close-button"
+            data-close="menu"
+            type="button"
+          >
             <i class="ic-close" aria-hidden="true"></i>
           </button>
         </div>
@@ -1029,8 +1068,9 @@
       </footer>
     </aside>
 
-    <div class="overlay is-active"></div>
+    <div class="overlay"></div>
 
+    <script src="./js/_modal.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script src="./js/_product-carousel.js"></script>
   </body>
