@@ -28,61 +28,65 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="input-group is-active on-change">
-      <input type="text" placeholder="검색어 입력" />
+    <div class="forms">
+      <div class="input-group is-active on-change">
+        <input type="text" placeholder="검색어 입력" />
 
-      <div class="input-group-left">
-        <div class="input-group-left-default">
-          <i class="ic-search" aria-hidden="true"></i>
-        </div>
-
-        <div class="input-group-left-active">
-          <button
-            class="btn-ghost btn-32"
-            type="button"
-            aria-label="검색취소 버튼"
-          >
-            <i class="ic-close" aria-hidden="true"></i>
-          </button>
-        </div>
-      </div>
-
-      <div class="input-group-right">
-        <div class="input-group-right-default">
-          <button
-            class="btn-ghost btn-32"
-            type="button"
-            aria-label="이미지로 검색하기 버튼"
-          >
-            <i class="ic-camera" aria-hidden="true"></i>
-          </button>
-        </div>
-
-        <div class="input-group-right-onChange">
-          <button
-            class="btn-ghost btn-32"
-            type="button"
-            aria-label="입력 텍스트 삭제하기 버튼"
-          >
-            <i class="ic-close" aria-hidden="true"></i>
-          </button>
-          <button
-            class="btn-ghost btn-32"
-            type="button"
-            aria-label="검색하기 버튼"
-          >
+        <div class="input-group-left">
+          <div class="input-group-left-default">
             <i class="ic-search" aria-hidden="true"></i>
-          </button>
+          </div>
+
+          <div class="input-group-left-active">
+            <button
+              class="btn-ghost btn-32"
+              type="button"
+              aria-label="검색취소 버튼"
+            >
+              <i class="ic-close" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="input-group-right">
+          <div class="input-group-right-default">
+            <button
+              class="btn-ghost btn-32"
+              type="button"
+              aria-label="이미지로 검색하기 버튼"
+            >
+              <i class="ic-camera" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div class="input-group-right-onChange">
+            <button
+              class="btn-ghost btn-32"
+              type="button"
+              aria-label="입력 텍스트 삭제하기 버튼"
+            >
+              <i class="ic-close" aria-hidden="true"></i>
+            </button>
+            <button
+              class="btn-ghost btn-32"
+              type="button"
+              aria-label="검색하기 버튼"
+            >
+              <i class="ic-search" aria-hidden="true"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="price-group">
-      <strong class="price" aria-label="7500원">7,500</strong>
-      <strong class="price-bundle" aria-label="2개 묶음">2개</strong>
+    <div class="price">
+      <div class="price-group">
+        <strong class="price" aria-label="7500원">7,500</strong>
+        <strong class="price-bundle" aria-label="2개 묶음">2개</strong>
+      </div>
     </div>
 
-    <div class="star">
+    <div class="star-ratings">
       <div class="star-rating-1" aria-label="평점 1점">
         <div>
           <i class="ic-star" aria-hidden="true"></i>
@@ -223,5 +227,61 @@
     </div>
 
     <strong class="badge">703.475.35</strong>
+
+    <div class="modal-trigger">
+      <button class="modal-trigger-option" type="button">
+        <div>
+          <p>규격</p>
+          <strong aria-label="27밀리미터">27mm</strong>
+        </div>
+
+        <i class="ic-chevron"></i>
+      </button>
+
+      <button class="modal-trigger-desc" type="button">
+        <p>규격</p>
+
+        <i class="ic-pre"></i>
+      </button>
+
+      <button class="modal-trigger-desc" type="button">
+        <div class="text">
+          <p>상품평</p>
+          <div class="review-group">
+            <div class="star-rating-3" aria-label="평점 3점">
+              <div>
+                <i class="ic-star" aria-hidden="true"></i>
+                <i class="ic-star" aria-hidden="true"></i>
+              </div>
+              <div>
+                <i class="ic-star" aria-hidden="true"></i>
+                <i class="ic-star" aria-hidden="true"></i>
+              </div>
+              <div>
+                <i class="ic-star" aria-hidden="true"></i>
+                <i class="ic-star" aria-hidden="true"></i>
+              </div>
+              <div>
+                <i class="ic-star" aria-hidden="true"></i>
+                <i class="ic-star" aria-hidden="true"></i>
+              </div>
+              <div>
+                <i class="ic-star" aria-hidden="true"></i>
+                <i class="ic-star" aria-hidden="true"></i>
+              </div>
+            </div>
+            <span class="review-count" aria-level="리뷰 4개">(4)</span>
+          </div>
+        </div>
+
+        <i class="ic-pre"></i>
+      </button>
+
+      <button class="modal-trigger-details" type="button">
+        <p>소재 & 관리</p>
+
+        <i class="ic-chevron"></i>
+      </button>
+    </div>
   </body>
 </html>

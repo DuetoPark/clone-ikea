@@ -1,0 +1,99 @@
+%trigger-base {
+  @include flexbox(between);
+  width: 100%;
+  text-align: left;
+
+  p {
+    font-weight: 700;
+  }
+
+  .ic-pre,
+  .ic-chevron {
+    display: block;
+    font-size: 24px;
+  }
+
+  &:hover {
+    p,
+    .ic-pre,
+    .ic-chevron {
+      color: $dark;
+    }
+
+    p {
+      text-decoration: underline;
+    }
+  }
+}
+
+.modal-trigger-option {
+  @extend %trigger-base;
+  min-height: 88px;
+  padding: 20px 0;
+
+  p {
+    @include text-style(14, $dark);
+  }
+
+  strong {
+    @include text-style(14, $primary);
+    font-weight: 400;
+  }
+
+  .ic-chevron {
+    transform: rotate(-90deg);
+  }
+}
+
+.modal-trigger-desc {
+  @extend %trigger-base;
+  min-height: 90px;
+  padding: 24px 0;
+
+  p {
+    @include text-style(16, $dark);
+    margin-bottom: 4px;
+    text-align: left;
+  }
+
+  .review-group {
+    @include flexbox(start);
+
+    div[class^='star-rating-'] {
+      margin-right: 8px;
+    }
+
+    .review-count {
+      @include text-style(12, $primary);
+    }
+  }
+
+  .ic-pre {
+    position: relative;
+    right: -4px;
+    transform: rotate(180deg);
+  }
+
+  @include responsive('T-PRO') {
+    padding: 40px 0;
+
+    p {
+      @include text-style(25, $dark);
+    }
+
+    .ic-pre {
+      right: -5px;
+      font-size: 32px;
+    }
+  }
+}
+
+.modal-trigger-details {
+  @extend %trigger-base;
+  min-height: 88px;
+  padding: 24px 0;
+
+  p {
+    @include text-style(14, $primary);
+  }
+}
