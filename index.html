@@ -67,14 +67,20 @@
                 class="btn-ghost btn-40 btn-active xl-only"
                 data-trigger="menu"
                 type="button"
+                aria-label="메뉴 열기 버튼"
+                title="메뉴"
               >
-                <i class="ic-menu"></i>
+                <i class="ic-menu" aria-hidden="true"></i>
               </button>
             </div>
             <div class="col-sm-4 col-xl-12">
               <div class="gnb-wrapper">
                 <h1 class="gnb-logo">
-                  <a href="./index.html">
+                  <a
+                    href="./index.html"
+                    aria-current="page"
+                    aria-label="홈으로 이동"
+                  >
                     <img src="./assets/images/Logo.svg" alt="이케아 로고" />
                   </a>
                 </h1>
@@ -238,7 +244,7 @@
                   </div>
 
                   <div class="link-image">
-                    <i class="ic-search"></i>
+                    <i class="ic-search" aria-hidden="true"></i>
                   </div>
                 </a>
               </li>
@@ -253,7 +259,7 @@
                   </div>
 
                   <div class="link-image">
-                    <i class="ic-search"></i>
+                    <i class="ic-search" aria-hidden="true"></i>
                   </div>
                 </a>
               </li>
@@ -268,7 +274,7 @@
                   </div>
 
                   <div class="link-image">
-                    <i class="ic-search"></i>
+                    <i class="ic-search" aria-hidden="true"></i>
                   </div>
                 </a>
               </li>
@@ -283,7 +289,7 @@
                   </div>
 
                   <div class="link-image">
-                    <i class="ic-search"></i>
+                    <i class="ic-search" aria-hidden="true"></i>
                   </div>
                 </a>
               </li>
@@ -298,7 +304,7 @@
                   </div>
 
                   <div class="link-image">
-                    <i class="ic-category"></i>
+                    <i class="ic-category" aria-hidden="true"></i>
                   </div>
                 </a>
               </li>
@@ -313,7 +319,7 @@
                   </div>
 
                   <div class="link-image">
-                    <i class="ic-category"></i>
+                    <i class="ic-category" aria-hidden="true"></i>
                   </div>
                 </a>
               </li>
@@ -328,7 +334,7 @@
                   </div>
 
                   <div class="link-image">
-                    <i class="ic-category"></i>
+                    <i class="ic-category" aria-hidden="true"></i>
                   </div>
                 </a>
               </li>
@@ -343,7 +349,7 @@
                   </div>
 
                   <div class="link-image">
-                    <i class="ic-category"></i>
+                    <i class="ic-category" aria-hidden="true"></i>
                   </div>
                 </a>
               </li>
@@ -393,7 +399,7 @@
                   </div>
 
                   <div class="link-image">
-                    <i class="ic-search"></i>
+                    <i class="ic-search" aria-hidden="true"></i>
                   </div>
                 </a>
               </li>
@@ -560,7 +566,7 @@
                         <strong>크롬도금</strong>
                       </div>
 
-                      <i class="ic-chevron"></i>
+                      <i class="ic-chevron" aria-hidden="true"></i>
                     </button>
                   </div>
                 </section>
@@ -579,7 +585,7 @@
                       <strong aria-label="27밀리미터">27mm</strong>
                     </div>
 
-                    <i class="ic-chevron"></i>
+                    <i class="ic-chevron" aria-hidden="true"></i>
                   </button>
                 </section>
 
@@ -629,7 +635,11 @@
                 <div class="slider">
                   <ul class="slider-list">
                     <li class="slider-item">
-                      <button type="button" data-trigger="carousel">
+                      <button
+                        type="button"
+                        data-trigger="carousel"
+                        aria-label="이미지1 크게 보기 버튼"
+                      >
                         <figure>
                           <img
                             src="./assets/images/img-recommandation-01.jpg"
@@ -642,7 +652,11 @@
                       </button>
                     </li>
                     <li class="slider-item">
-                      <button type="button" data-trigger="carousel">
+                      <button
+                        type="button"
+                        data-trigger="carousel"
+                        aria-label="이미지2 크게 보기 버튼"
+                      >
                         <figure>
                           <img
                             src="./assets/images/img-recommandation-02.jpg"
@@ -655,7 +669,11 @@
                       </button>
                     </li>
                     <li class="slider-item">
-                      <button type="button" data-trigger="carousel">
+                      <button
+                        type="button"
+                        data-trigger="carousel"
+                        aria-label="이미지3 크게 보기 버튼"
+                      >
                         <figure>
                           <img
                             src="./assets/images/img-recommandation-03.jpg"
@@ -688,7 +706,11 @@
               <section class="image-details sm-hidden md-hidden">
                 <h1 class="visually-hidden">상세 이미지 보기</h1>
 
-                <button type="button" data-trigger="carousel">
+                <button
+                  type="button"
+                  data-trigger="carousel"
+                  aria-label="이미지1 크게 보기 버튼"
+                >
                   <figure>
                     <img
                       src="./assets/images/img-recommandation-01.jpg"
@@ -700,7 +722,11 @@
                   </figure>
                 </button>
 
-                <button type="button" data-trigger="carousel">
+                <button
+                  type="button"
+                  data-trigger="carousel"
+                  aria-label="이미지2 크게 보기 버튼"
+                >
                   <figure>
                     <img
                       src="./assets/images/img-recommandation-02.jpg"
@@ -712,7 +738,11 @@
                   </figure>
                 </button>
 
-                <button type="button" data-trigger="carousel">
+                <button
+                  type="button"
+                  data-trigger="carousel"
+                  aria-label="이미지3 크게 보기 버튼"
+                >
                   <figure>
                     <img
                       src="./assets/images/img-recommandation-03.jpg"
@@ -746,26 +776,29 @@
                     class="modal-trigger-desc"
                     data-trigger="description"
                     type="button"
+                    aria-label="제품 설명 창 열기"
                   >
                     <p>제품 설명</p>
 
-                    <i class="ic-pre"></i>
+                    <i class="ic-pre" aria-hidden="true"></i>
                   </button>
 
                   <button
                     class="modal-trigger-desc"
                     data-trigger="description"
                     type="button"
+                    aria-label="제품 크기 안내 창 열기"
                   >
                     <p>제품 크기</p>
 
-                    <i class="ic-pre"></i>
+                    <i class="ic-pre" aria-hidden="true"></i>
                   </button>
 
                   <button
                     class="modal-trigger-desc"
                     data-trigger="description"
                     type="button"
+                    aria-label="상품평 창 열기"
                   >
                     <div class="text">
                       <p>상품평</p>
@@ -798,7 +831,7 @@
                       </div>
                     </div>
 
-                    <i class="ic-pre"></i>
+                    <i class="ic-pre" aria-hidden="true"></i>
                   </button>
                 </div>
               </section>
@@ -817,9 +850,9 @@
             class="btn-ghost btn-40 close-button"
             data-close="carousel"
             type="button"
-            aria-label="상세 이미지 창 닫기 버튼"
+            aria-label="창 닫기 버튼"
           >
-            <i class="ic-close"></i>
+            <i class="ic-close" aria-hidden="true"></i>
           </button>
         </header>
 
@@ -827,7 +860,7 @@
           <div class="slider">
             <ul class="slider-list">
               <li class="slider-item">
-                <button type="button">
+                <button type="button" aria-label="클릭하여 이미지1 크게보기">
                   <figure>
                     <img
                       src="./assets/images/img-recommandation-01.jpg"
@@ -840,7 +873,7 @@
                 </button>
               </li>
               <li class="slider-item">
-                <button type="button">
+                <button type="button" aria-label="클릭하여 이미지2 크게보기">
                   <figure>
                     <img
                       src="./assets/images/img-recommandation-02.jpg"
@@ -853,7 +886,7 @@
                 </button>
               </li>
               <li class="slider-item">
-                <button type="button">
+                <button type="button" aria-label="클릭하여 이미지3 크게보기">
                   <figure>
                     <img
                       src="./assets/images/img-recommandation-03.jpg"
@@ -873,7 +906,7 @@
                 type="button"
                 aria-label="이전 이미지로 넘김 버튼"
               >
-                <i class="ic-chevron"></i>
+                <i class="ic-chevron" aria-hidden="true"></i>
               </button>
 
               <button
@@ -881,7 +914,7 @@
                 type="button"
                 aria-label="다음 이미지로 넘김 버튼"
               >
-                <i class="ic-chevron"></i>
+                <i class="ic-chevron" aria-hidden="true"></i>
               </button>
             </div>
           </div>
@@ -980,7 +1013,7 @@
 
       <header class="sidebar-header">
         <h1 class="sidebar-header-logo">
-          <a href="./index.html">
+          <a href="./index.html" aria-label="홈으로 이동">
             <img src="./assets/images/Logo.svg" alt="로고" />
           </a>
         </h1>
@@ -990,6 +1023,7 @@
             class="btn-ghost btn-40 close-button"
             data-close="menu"
             type="button"
+            aria-label="창 닫기"
           >
             <i class="ic-close" aria-hidden="true"></i>
           </button>
@@ -1061,7 +1095,7 @@
             class="sidebar-footer-country-link btn-outlined btn-40"
             href="./index.html"
           >
-            <i class="ic-country"></i>
+            <i class="ic-country" aria-hidden="true"></i>
             국가 변경
           </a>
         </div>
