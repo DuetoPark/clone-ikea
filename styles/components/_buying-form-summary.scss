@@ -16,7 +16,7 @@
       word-break: keep-all;
     }
 
-    strong {
+    div {
       @include text-style(14, $primary);
       font-weight: 400;
     }

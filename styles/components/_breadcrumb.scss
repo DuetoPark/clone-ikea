@@ -16,10 +16,11 @@
   }
 
   a,
-  p {
+  h4 {
     @include text-style(12, $dark);
     display: block;
     padding: 12px 8px;
+    font-weight: 400;
     white-space: nowrap;
   }
 

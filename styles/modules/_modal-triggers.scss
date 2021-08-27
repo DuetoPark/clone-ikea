@@ -3,7 +3,8 @@
   width: 100%;
   text-align: left;
 
-  p {
+  .option-title {
+    display: block;
     font-weight: 700;
   }
 
@@ -14,13 +15,13 @@
   }
 
   &:hover {
-    p,
+    .option-title,
     .ic-pre,
     .ic-chevron {
       color: $dark;
     }
 
-    p {
+    .option-title {
       text-decoration: underline;
     }
   }
@@ -31,11 +32,11 @@
   min-height: 88px;
   padding: 20px 0;
 
-  p {
+  .option-title {
     @include text-style(14, $dark);
   }
 
-  strong {
+  .option-selected {
     @include text-style(14, $primary);
     font-weight: 400;
   }
@@ -50,7 +51,7 @@
   min-height: 90px;
   padding: 24px 0;
 
-  p {
+  .option-title {
     @include text-style(16, $dark);
     margin-bottom: 4px;
     text-align: left;
@@ -77,7 +78,7 @@
   @include responsive('T-PRO') {
     padding: 40px 0;
 
-    p {
+    .option-title {
       @include text-style(25, $dark);
     }
 
@@ -93,7 +94,7 @@
   min-height: 88px;
   padding: 24px 0;
 
-  p {
+  .option-title {
     @include text-style(14, $primary);
   }
 }

@@ -38,13 +38,22 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-4">
-              <div class="hnf-content">
-                <a class="hnf-link sm-hidden md-hidden" href="./index.html">
+              <!-- NOTE: 모바일부터 태블릿용 HNF -->
+              <div class="hnf-content lg-hidden xl-hidden" >
+                <a class="hnf-link" href="./index.html">
+                  <i class="ic-cart" aria-hidden="true"></i>
+                  <span>IKEA 인기제품</span>
+                </a>
+              </div>
+
+              <!-- NOTE: 태블릿(PRO)이후 HNF -->
+              <div class="hnf-content sm-hidden md-hidden">
+                <a class="hnf-link href="./index.html">
                   <i class="ic-infomation" aria-hidden="true"></i>
                   <span>코로나 19 대응 공지</span>
                 </a>
 
-                <a class="hnf-link sm-hidden md-hidden" href="./index.html">
+                <a class="hnf-link" href="./index.html">
                   <i class="ic-phone" aria-hidden="true"></i>
                   <span>비대면 전화주문 서비스</span>
                 </a>
@@ -122,9 +131,50 @@
                   </div>
                 </div>
 
-                <div class="gnb-button-group">
+                <!-- NOTE: 모바일&태블릿용 gnb 버튼 그룹 -->
+                <div class="gnb-button-group xl-hidden">
                   <a
-                    class="btn-ghost btn-40 btn-active xl-only"
+                    class="btn-ghost btn-40 btn-active"
+                    href="./index.html"
+                    aria-label="내 프로필 페이지로 이동"
+                    title="내 프로필"
+                  >
+                    <i class="ic-profile" aria-hidden="true"></i>
+                  </a>
+
+                  <a
+                    class="btn-ghost btn-40 btn-active"
+                    href="./index.html"
+                    aria-label="위시리스트 페이지로 이동"
+                    title="위시리스트"
+                  >
+                    <i class="ic-heart" aria-hidden="true"></i>
+                  </a>
+
+                  <a
+                    class="btn-ghost btn-40 btn-active"
+                    href="./index.html"
+                    aria-label="장바구니 페이지로 이동"
+                    title="장바구니"
+                  >
+                    <i class="ic-cart" aria-hidden="true"></i>
+                  </a>
+
+                  <button
+                    class="btn-ghost btn-40 btn-active"
+                    data-trigger="menu"
+                    type="button"
+                    aria-label="메뉴 열기 버튼"
+                    title="메뉴"
+                  >
+                    <i class="ic-menu" aria-hidden="true"></i>
+                  </button>
+                </div>
+
+                <!-- NOTE: 데스크탑용 gnb 버튼 그룹 -->
+                <div class="gnb-button-group xl-only">
+                  <a
+                    class="btn-ghost btn-40 btn-active"
                     href="./index.html"
                     aria-label="배송 조회 페이지로 이동"
                     title="배송 조회"
@@ -158,16 +208,6 @@
                   >
                     <i class="ic-cart" aria-hidden="true"></i>
                   </a>
-
-                  <button
-                    class="btn-ghost btn-40 btn-active xl-hidden"
-                    data-trigger="menu"
-                    type="button"
-                    aria-label="메뉴 열기 버튼"
-                    title="메뉴"
-                  >
-                    <i class="ic-menu" aria-hidden="true"></i>
-                  </button>
                 </div>
               </div>
             </div>
@@ -234,13 +274,9 @@
 
             <ol class="search-history-list">
               <li class="search-history-item">
-                <a
-                  class="search-history-link"
-                  href="./index.html"
-                  aria-label="책상 페이지로 이동하기"
-                >
+                <a class="search-history-link" href="./index.html">
                   <div class="link-info">
-                    <strong class="info-name">책상</strong>
+                    <h4 class="info-name">책상</h4>
                   </div>
 
                   <div class="link-image">
@@ -249,13 +285,9 @@
                 </a>
               </li>
               <li class="search-history-item">
-                <a
-                  class="search-history-link"
-                  href="./index.html"
-                  aria-label="의자 페이지로 이동하기"
-                >
+                <a class="search-history-link" href="./index.html">
                   <div class="link-info">
-                    <strong class="info-name">의자</strong>
+                    <h4 class="info-name">의자</h4>
                   </div>
 
                   <div class="link-image">
@@ -264,13 +296,9 @@
                 </a>
               </li>
               <li class="search-history-item">
-                <a
-                  class="search-history-link"
-                  href="./index.html"
-                  aria-label="선반 페이지로 이동하기"
-                >
+                <a class="search-history-link" href="./index.html">
                   <div class="link-info">
-                    <strong class="info-name">선반</strong>
+                    <h4 class="info-name">선반</h4>
                   </div>
 
                   <div class="link-image">
@@ -279,13 +307,9 @@
                 </a>
               </li>
               <li class="search-history-item">
-                <a
-                  class="search-history-link"
-                  href="./index.html"
-                  aria-label="수납장 페이지로 이동하기"
-                >
+                <a class="search-history-link" href="./index.html">
                   <div class="link-info">
-                    <strong class="info-name">수납장</strong>
+                    <h4 class="info-name">수납장</h4>
                   </div>
 
                   <div class="link-image">
@@ -294,13 +318,9 @@
                 </a>
               </li>
               <li class="search-history-item">
-                <a
-                  class="search-history-link"
-                  href="./index.html"
-                  aria-label="서랍장 카테고리 페이지로 이동하기"
-                >
+                <a class="search-history-link" href="./index.html">
                   <div class="link-info">
-                    <strong class="info-category">서랍장</strong>
+                    <h4 class="info-category">서랍장</h4>
                   </div>
 
                   <div class="link-image">
@@ -309,13 +329,9 @@
                 </a>
               </li>
               <li class="search-history-item">
-                <a
-                  class="search-history-link"
-                  href="./index.html"
-                  aria-label="스프링매트리스 카테고리 페이지로 이동하기"
-                >
+                <a class="search-history-link" href="./index.html">
                   <div class="link-info">
-                    <strong class="info-category">스프링매트리스</strong>
+                    <h4 class="info-category">스프링매트리스</h4>
                   </div>
 
                   <div class="link-image">
@@ -324,13 +340,9 @@
                 </a>
               </li>
               <li class="search-history-item">
-                <a
-                  class="search-history-link"
-                  href="./index.html"
-                  aria-label="선반유닛 카테고리 페이지로 이동하기"
-                >
+                <a class="search-history-link" href="./index.html">
                   <div class="link-info">
-                    <strong class="info-category">선반유닛</strong>
+                    <h4 class="info-category">선반유닛</h4>
                   </div>
 
                   <div class="link-image">
@@ -339,13 +351,9 @@
                 </a>
               </li>
               <li class="search-history-item">
-                <a
-                  class="search-history-link"
-                  href="./index.html"
-                  aria-label="침대(싱글, 수퍼싱글) 카테고리 페이지로 이동하기"
-                >
+                <a class="search-history-link" href="./index.html">
                   <div class="link-info">
-                    <strong class="info-category">싱글/수퍼싱글+ 침대</strong>
+                    <h4 class="info-category">싱글/수퍼싱글+ 침대</h4>
                   </div>
 
                   <div class="link-image">
@@ -370,13 +378,9 @@
 
             <ol class="search-history-list">
               <li class="search-history-item">
-                <a
-                  class="search-history-link"
-                  href="./index.html"
-                  aria-label="클리판 2인용소파 페이지로 이동"
-                >
+                <a class="search-history-link" href="./index.html">
                   <div class="link-info">
-                    <strong class="info-name">KLIPPAN 클리판</strong>
+                    <h4 class="info-name">KLIPPAN 클리판</h4>
                     <span class="info-desc">2인용소파</span>
                   </div>
 
@@ -389,13 +393,9 @@
                 </a>
               </li>
               <li class="search-history-item">
-                <a
-                  class="search-history-link"
-                  href="./index.html"
-                  aria-label="소파 페이지로 이동"
-                >
+                <a class="search-history-link" href="./index.html">
                   <div class="link-info">
-                    <strong class="info-name">소파</strong>
+                    <h4 class="info-name">소파</h4>
                   </div>
 
                   <div class="link-image">
@@ -404,13 +404,9 @@
                 </a>
               </li>
               <li class="search-history-item">
-                <a
-                  class="search-history-link"
-                  href="./index.html"
-                  aria-label="에네뤼다 손잡이 페이지로 이동"
-                >
+                <a class="search-history-link" href="./index.html">
                   <div class="link-info">
-                    <strong class="info-name">ENERYDA 에네뤼다</strong>
+                    <h4 class="info-name">ENERYDA 에네뤼다</h4>
                     <span class="info-desc">손잡이</span>
                   </div>
 
@@ -436,16 +432,28 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-4 col-xl-12">
-                <ol class="breadcrumb-list">
-                  <li class="breadcrumb-item sm-hidden md-hidden">
+                <!-- NOTE: 모바일부터 태블릿용 Breadcrumb -->
+                <ol class="breadcrumb-list lg-hidden xl-hidden">
+                  <li class="breadcrumb-item">
+                    <a href="./index.html">PAX/팍스 시스템</a>
+                    <i class="ic-chevron" aria-hidden="true"></i>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="./index.html">손잡이</a>
+                  </li>                  
+                </ol>
+
+                <!-- NOTE: 태블릿(PRO)이후 Breadcrumb -->
+                <ol class="breadcrumb-list sm-hidden md-hidden">
+                  <li class="breadcrumb-item">
                     <a href="./index.html">제품</a>
                     <i class="ic-chevron" aria-hidden="true"></i>
                   </li>
-                  <li class="breadcrumb-item sm-hidden md-hidden">
+                  <li class="breadcrumb-item">
                     <a href="./index.html">수납/정리</a>
                     <i class="ic-chevron" aria-hidden="true"></i>
                   </li>
-                  <li class="breadcrumb-item sm-hidden md-hidden">
+                  <li class="breadcrumb-item">
                     <a href="./index.html">수납 솔루션 시스템</a>
                     <i class="ic-chevron" aria-hidden="true"></i>
                   </li>
@@ -455,18 +463,13 @@
                   </li>
                   <li class="breadcrumb-item">
                     <a href="./index.html">손잡이</a>
-                    <i
-                      class="ic-chevron sm-hidden md-hidden"
-                      aria-hidden="true"
-                    ></i>
+                    <i class="ic-chevron" aria-hidden="true"></i>
                   </li>
-                  <li class="breadcrumb-item sm-hidden md-hidden">
-                    <p>ENERYDA 에네뤼다 손잡이</p>
+                  <li class="breadcrumb-item">
+                    <h4>ENERYDA 에네뤼다 손잡이</h4>
                   </li>
                 </ol>
               </div>
-
-              <div class="col-xl-1 xl-only"></div>
             </div>
           </div>
         </nav>
@@ -481,18 +484,16 @@
                   <div class="summary-product">
                     <div class="summary-title">
                       <h1>ENERYDA 에네뤼다</h1>
-                      <strong>
+                      <div>
                         손잡이, 크롬도금,
                         <span aria-label="27밀리미터">27mm</span>
-                      </strong>
+                      </div>
                     </div>
 
                     <div class="summary-price">
                       <div class="price-group">
                         <strong class="price" aria-label="7500원">7,500</strong
-                        ><strong class="price-bundle" aria-label="2개 묶음"
-                          >2개</strong
-                        >
+                        ><strong class="price-bundle">2개</strong>
                       </div>
                     </div>
                   </div>
@@ -524,7 +525,7 @@
                           <i class="ic-star" aria-hidden="true"></i>
                         </div>
                       </div>
-                      <span class="review" aria-label="리뷰 4건">(4)</span>
+                      <span class="review">(4)</span>
                     </a>
                   </div>
                 </section>
@@ -532,7 +533,7 @@
                 <section class="buying-form-option is-color">
                   <h2 class="visually-hidden">색상 선택</h2>
 
-                  <!-- NOTE: Option 모달과 동일한 내용이므로 화면크기 lg(breakpoint: 900px)이상에선 생략 -->
+                  <!-- NOTE: Option 모달과 동일한 내용, 태블릿(PRO)부터 생략 -->
                   <div class="lg-hidden xl-hidden">
                     <a class="is-active" href="./index.html">
                       <img
@@ -554,6 +555,7 @@
                     </a>
                   </div>
 
+                  <!-- NOTE: 태블릿(PRO)이후 모달 트리거(색상) 출력 -->
                   <div class="sm-hidden md-hidden">
                     <button
                       class="modal-trigger-option"
@@ -562,8 +564,8 @@
                       aria-label="색상 선택 창 열기"
                     >
                       <div>
-                        <p>색상</p>
-                        <strong>크롬도금</strong>
+                        <span class="option-title">색상</span>
+                        <span class="option-selected">크롬도금</span>
                       </div>
 
                       <i class="ic-chevron" aria-hidden="true"></i>
@@ -581,8 +583,8 @@
                     aria-label="규격 선택 창 열기"
                   >
                     <div>
-                      <p>규격</p>
-                      <strong aria-label="27밀리미터">27mm</strong>
+                      <span class="option-title">규격</span>
+                      <span class="option-selected" aria-label="27밀리미터">27mm</span>
                     </div>
 
                     <i class="ic-chevron" aria-hidden="true"></i>
@@ -619,15 +621,12 @@
                   <h2 class="visually-hidden">재고 및 재입고 날짜</h2>
 
                   <i class="ic-store" aria-hidden="true"></i>
-                  <a
-                    href="./index.html"
-                    aria-label="매장 재고 및 재입고 날짜 확인 페이지로 이동"
-                    >매장 재고 및 재입고 날짜 확인</a
-                  >
+                  <a href="./index.html">매장 재고 및 재입고 날짜 확인</a>
                 </section>
               </form>
             </div>
 
+            <!-- NOTE: 모바일부터 태플릿용 Carousel -->
             <div class="col-sm-4 lg-hidden xl-hidden">
               <section class="product-carousel">
                 <h1 class="visually-hidden">이미지 슬라이더</h1>
@@ -635,11 +634,7 @@
                 <div class="slider">
                   <ul class="slider-list">
                     <li class="slider-item">
-                      <button
-                        type="button"
-                        data-trigger="carousel"
-                        aria-label="이미지1 크게 보기 버튼"
-                      >
+                      <button type="button" data-trigger="carousel">
                         <figure>
                           <img
                             src="./assets/images/img-recommandation-01.jpg"
@@ -652,11 +647,7 @@
                       </button>
                     </li>
                     <li class="slider-item">
-                      <button
-                        type="button"
-                        data-trigger="carousel"
-                        aria-label="이미지2 크게 보기 버튼"
-                      >
+                      <button type="button" data-trigger="carousel">
                         <figure>
                           <img
                             src="./assets/images/img-recommandation-02.jpg"
@@ -669,11 +660,7 @@
                       </button>
                     </li>
                     <li class="slider-item">
-                      <button
-                        type="button"
-                        data-trigger="carousel"
-                        aria-label="이미지3 크게 보기 버튼"
-                      >
+                      <button type="button" data-trigger="carousel">
                         <figure>
                           <img
                             src="./assets/images/img-recommandation-03.jpg"
@@ -703,14 +690,11 @@
             </div>
 
             <div class="col-sm-4 col-lg-7 col-xl-8">
+              <!-- NOTE: 태블릿(PRO)부터 Image-details 출력 -->
               <section class="image-details sm-hidden md-hidden">
-                <h1 class="visually-hidden">상세 이미지 보기</h1>
+                <h2 class="visually-hidden">상세 이미지 보기</h2>
 
-                <button
-                  type="button"
-                  data-trigger="carousel"
-                  aria-label="이미지1 크게 보기 버튼"
-                >
+                <button type="button" data-trigger="carousel">
                   <figure>
                     <img
                       src="./assets/images/img-recommandation-01.jpg"
@@ -722,11 +706,7 @@
                   </figure>
                 </button>
 
-                <button
-                  type="button"
-                  data-trigger="carousel"
-                  aria-label="이미지2 크게 보기 버튼"
-                >
+                <button type="button" data-trigger="carousel">
                   <figure>
                     <img
                       src="./assets/images/img-recommandation-02.jpg"
@@ -738,11 +718,7 @@
                   </figure>
                 </button>
 
-                <button
-                  type="button"
-                  data-trigger="carousel"
-                  aria-label="이미지3 크게 보기 버튼"
-                >
+                <button type="button" data-trigger="carousel">
                   <figure>
                     <img
                       src="./assets/images/img-recommandation-03.jpg"
@@ -756,7 +732,7 @@
               </section>
 
               <section class="description">
-                <h1 class="visually-hidden">제품설명</h1>
+                <h2 class="visually-hidden">제품설명</h2>
 
                 <header class="description-header">
                   <p>
@@ -776,9 +752,8 @@
                     class="modal-trigger-desc"
                     data-trigger="description"
                     type="button"
-                    aria-label="제품 설명 창 열기"
                   >
-                    <p>제품 설명</p>
+                    <span class="option-title">제품 설명</span>
 
                     <i class="ic-pre" aria-hidden="true"></i>
                   </button>
@@ -787,9 +762,8 @@
                     class="modal-trigger-desc"
                     data-trigger="description"
                     type="button"
-                    aria-label="제품 크기 안내 창 열기"
                   >
-                    <p>제품 크기</p>
+                    <span class="option-title">제품 크기</span>
 
                     <i class="ic-pre" aria-hidden="true"></i>
                   </button>
@@ -798,10 +772,9 @@
                     class="modal-trigger-desc"
                     data-trigger="description"
                     type="button"
-                    aria-label="상품평 창 열기"
                   >
                     <div class="text">
-                      <p>상품평</p>
+                      <span class="option-title">상품평</span>
                       <div class="review-group">
                         <div class="star-rating-3" aria-label="평점 3점">
                           <div>
@@ -836,8 +809,6 @@
                 </div>
               </section>
             </div>
-
-            <div class="col-xl-1 xl-only"></div>
           </div>
         </div>
       </div>
@@ -860,7 +831,7 @@
           <div class="slider">
             <ul class="slider-list">
               <li class="slider-item">
-                <button type="button" aria-label="클릭하여 이미지1 크게보기">
+                <button type="button">
                   <figure>
                     <img
                       src="./assets/images/img-recommandation-01.jpg"
@@ -873,7 +844,7 @@
                 </button>
               </li>
               <li class="slider-item">
-                <button type="button" aria-label="클릭하여 이미지2 크게보기">
+                <button type="button">
                   <figure>
                     <img
                       src="./assets/images/img-recommandation-02.jpg"
@@ -886,7 +857,7 @@
                 </button>
               </li>
               <li class="slider-item">
-                <button type="button" aria-label="클릭하여 이미지3 크게보기">
+                <button type="button">
                   <figure>
                     <img
                       src="./assets/images/img-recommandation-03.jpg"
@@ -947,14 +918,14 @@
 
             <div>
               <a class="option-link" href="./index.html">
-                <strong class="option">
+                <div class="option">
                   20 <span aria-label="밀리미터">mm</span>
-                </strong>
-                <strong class="secondary-price">
+                </div>
+                <div class="secondary-price">
                   <span aria-label="공제">-</span>
                   <span aria-hidden="true">￦</span>
                   <span aria-label="2500원">2,500</span>
-                </strong>
+                </div>
               </a>
 
               <a
@@ -962,20 +933,20 @@
                 href="./index.html"
                 aria-current="page"
               >
-                <strong class="option">
+                <div class="option">
                   27 <span aria-label="밀리미터">mm</span>
-                </strong>
+                </div>
               </a>
 
               <a class="option-link" href="./index.html">
-                <strong class="option">
+                <div class="option">
                   35 <span aria-label="밀리미터">mm</span>
-                </strong>
-                <strong class="secondary-price">
+                </div>
+                <div class="secondary-price">
                   <span aria-label="추가">+</span>
                   <span aria-hidden="true">￦</span>
                   <span aria-label="2500원">2,500</span>
-                </strong>
+                </div>
               </a>
             </div>
           </article>
@@ -989,17 +960,17 @@
                 href="./index.html"
                 aria-current="page"
               >
-                <strong class="option">크롬도금</strong>
+                <span class="option">크롬도금</span>
                 <img src="./assets/images/img-option-01.jpg" alt="크롬도금" />
               </a>
 
               <a class="option-link" href="./index.html">
-                <strong class="option">황동색</strong>
+                <span class="option">황동색</span>
                 <img src="./assets/images/img-option-02.jpg" alt="황동색" />
               </a>
 
               <a class="option-link" href="./index.html">
-                <strong class="option">블랙</strong>
+                <span class="option">블랙</span>
                 <img src="./assets/images/img-option-03.jpg" alt="블랙" />
               </a>
             </div>

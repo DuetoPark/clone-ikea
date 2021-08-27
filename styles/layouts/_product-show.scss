@@ -1,11 +1,11 @@
 .product-show {
   &-content {
-    .lg-hidden {
-      order: 1;
-    }
-
     .col-xl-4 {
       order: 2;
+    }
+
+    .xl-hidden {
+      order: 1;
     }
 
     .col-xl-8 {
@@ -18,7 +18,6 @@
 
     .row {
       flex-direction: row-reverse;
-      justify-content: flex-end;
     }
   }
 
@@ -36,7 +35,6 @@
     &-content {
       .row {
         flex-direction: row-reverse;
-        justify-content: flex-end;
       }
 
       .lg-hidden,
