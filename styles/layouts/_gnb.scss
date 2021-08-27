@@ -1,8 +1,10 @@
 .gnb {
   @include focus-thick;
 
-  .col-xl-1 {
+  .gnb-menu {
     @include flexbox;
+    width: 100%;
+    height: 100%;
   }
 
   &-wrapper {
