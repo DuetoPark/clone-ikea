@@ -29,7 +29,6 @@
 @import './modules/modal-triggers';
 
 @import './components/gnb-nav';
-@import './components/breadcrumb';
 @import './components/sidebar-nav';
 @import './components/search-history';
 @import './components/product-carousel';
@@ -38,6 +37,8 @@
 @import './components/buying-form-info';
 @import './components/buying-form-summary';
 @import './components/option-modal-contents';
+@import './components/buying-form';
+@import './components/description';
 
 @import './layouts/grids';
 @import './layouts/hnf';
@@ -46,7 +47,6 @@
 @import './layouts/overlay';
 @import './layouts/search-modal';
 @import './layouts/product-show';
-@import './layouts/buying-form';
 @import './layouts/carousel-modal';
-@import './layouts/description';
 @import './layouts/option-modal';
+@import './layouts/breadcrumb';
