@@ -225,46 +225,44 @@
           <div class="input-group is-active">
             <input type="text" placeholder="검색어 입력" />
 
-            <div class="input-group-left">
-              <div class="input-group-left-active">
-                <button
-                  class="btn-ghost btn-32 close-button"
-                  data-close="search"
-                  type="button"
-                  aria-label="검색취소 버튼"
-                >
-                  <i class="ic-close" aria-hidden="true"></i>
-                </button>
-              </div>
+            <div class="input-group-left is-active">
+              <button
+                class="btn-ghost btn-32 close-button"
+                data-close="search"
+                type="button"
+                aria-label="검색취소 버튼"
+              >
+                <i class="ic-close" aria-hidden="true"></i>
+              </button>
             </div>
 
-            <div class="input-group-right">
-              <div class="input-group-right-default">
-                <button
-                  class="btn-ghost btn-32"
-                  type="button"
-                  aria-label="이미지로 검색하기 버튼"
-                >
-                  <i class="ic-camera" aria-hidden="true"></i>
-                </button>
-              </div>
+            <!-- NOTE: 입력하지 않을 때 -->
+            <div class="input-group-right is-default">
+              <button
+                class="btn-ghost btn-32"
+                type="button"
+                aria-label="이미지로 검색하기 버튼"
+              >
+                <i class="ic-camera" aria-hidden="true"></i>
+              </button>
+            </div>
 
-              <div class="input-group-right-onChange">
-                <button
-                  class="btn-ghost btn-32"
-                  type="button"
-                  aria-label="입력 텍스트 삭제하기 버튼"
-                >
-                  <i class="ic-close" aria-hidden="true"></i>
-                </button>
-                <button
-                  class="btn-ghost btn-32"
-                  type="button"
-                  aria-label="검색하기 버튼"
-                >
-                  <i class="ic-search" aria-hidden="true"></i>
-                </button>
-              </div>
+            <!-- NOTE: 입력할 때 -->
+            <div class="input-group-right on-change">
+              <button
+                class="btn-ghost btn-32"
+                type="button"
+                aria-label="입력 텍스트 삭제하기 버튼"
+              >
+                <i class="ic-close" aria-hidden="true"></i>
+              </button>
+              <button
+                class="btn-ghost btn-32"
+                type="button"
+                aria-label="검색하기 버튼"
+              >
+                <i class="ic-search" aria-hidden="true"></i>
+              </button>
             </div>
           </div>
         </header>

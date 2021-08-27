@@ -32,23 +32,59 @@
   position: relative;
   width: 100%;
 
-  &-left,
-  &-right {
-    @include pos-center-y;
-  }
-
   &-left {
+    @include pos-center-y;
     left: 24px;
     pointer-events: none;
   }
 
   &-right {
+    @include pos-center-y;
     right: 16px;
-  }
 
-  &-left-active,
-  &-right-onChange {
-    display: none;
+    &.on-change {
+      display: none;
+
+      button:first-child {
+        position: relative;
+        margin-right: 16px;
+
+        &::before {
+          @include pos-center;
+          display: block;
+          width: 20px;
+          height: 20px;
+          background-color: $background;
+          border-radius: 50%;
+          content: '';
+        }
+
+        &:hover {
+          &::before {
+            background-color: $border;
+          }
+        }
+
+        i {
+          @include pos-center;
+          font-size: 12px;
+        }
+      }
+
+      button:last-child {
+        position: relative;
+
+        &::after {
+          @include pos-center-y;
+          left: -8px;
+          width: 0;
+          height: 16px;
+          pointer-events: none;
+          border-right: 1px solid $border;
+          content: '';
+        }
+      }
+    }
   }
 
   &.is-active,
@@ -56,65 +92,17 @@
     .input-group-left {
       left: 16px;
       pointer-events: auto;
-
-      &-default {
-        display: none;
-      }
-
-      &-active {
-        display: block;
-      }
     }
   }
 
   &.on-change {
     .input-group-right {
-      &-default {
+      &.is-default {
         display: none;
       }
 
-      &-onChange {
+      &.on-change {
         @include flexbox(start);
-
-        button:first-child {
-          position: relative;
-          margin-right: 16px;
-
-          &::before {
-            @include pos-center;
-            display: block;
-            width: 20px;
-            height: 20px;
-            background-color: $background;
-            border-radius: 50%;
-            content: '';
-          }
-
-          &:hover {
-            &::before {
-              background-color: $border;
-            }
-          }
-
-          i {
-            @include pos-center;
-            font-size: 12px;
-          }
-        }
-
-        button:last-child {
-          position: relative;
-
-          &::after {
-            @include pos-center-y;
-            left: -8px;
-            width: 0;
-            height: 16px;
-            pointer-events: none;
-            border-right: 1px solid $border;
-            content: '';
-          }
-        }
       }
     }
   }
