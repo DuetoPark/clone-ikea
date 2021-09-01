@@ -10,23 +10,86 @@
   }
 
   &.is-size {
-    .option-size {
+    .modal-contents .option-size {
       display: block;
     }
   }
 
   &.is-color {
-    .option-color {
+    .modal-contents .option-color {
       display: block;
     }
   }
 
-  .option-size,
-  .option-color {
-    display: none;
+  .modal-contents {
+    h2 {
+      height: 50px;
+    }
+
+    .option-size,
+    .option-color {
+      display: none;
+    }
+
+    .option-color {
+      .option-link {
+        flex-direction: row-reverse;
+      }
+    }
+
+    .option-link {
+      @include flexbox(start);
+      width: 100%;
+      min-height: 90px;
+      padding: 20px;
+      margin-bottom: 20px;
+      border: 1px solid $border;
+      border-radius: 4px;
+      transition: border-color 100ms ease-in-out;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:hover {
+        border-color: $tertiary;
+      }
+
+      &:active {
+        border-color: $dark;
+      }
+
+      &.is-selected {
+        border: 2px solid $blue;
+      }
+
+      img {
+        width: 50px;
+        margin-right: 20px;
+      }
+    }
+
+    .option {
+      @include text-style(14, $primary);
+      flex-grow: 1;
+      font-weight: 400;
+      text-align: left;
+    }
+
+    .secondary-price {
+      @include text-style(12, $primary);
+      font-weight: 400;
+    }
   }
 
   @include responsive(T) {
     @include animation(right);
+  }
+
+  @include responsive('T-PRO') {
+    h2 {
+      height: auto;
+      margin-bottom: 32px;
+    }
   }
 }

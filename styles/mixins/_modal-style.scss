@@ -15,6 +15,19 @@
 
   .modal-contents {
     @include focus-thin;
+
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 26px;
+      color: $dark;
+    }
+  }
+
+  @include responsive('T-PRO') {
+    h2 {
+      @include text-style(25);
+    }
   }
 }
 
