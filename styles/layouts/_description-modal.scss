@@ -1,0 +1,189 @@
+.description-modal {
+  $desc-hidden-line-height: 22px;
+  $desc-hidden-p-margin: 32px;
+  $desc-hidden-dl-margin: 20px;
+  $desc-hidden-elem-count: 3;
+
+  @function _calculate-desc-hidden-height() {
+    @return $desc-hidden-line-height * $desc-hidden-elem-count +
+      $desc-hidden-p-margin + $desc-hidden-dl-margin;
+  }
+
+  @include modal-pos(bottom, right, right);
+  @include modal-style-24;
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+
+  .description-info {
+    @include text-style(14, $primary);
+    padding: 32px 0 40px 0;
+
+    .desc-summary {
+      margin-bottom: 32px;
+
+      p {
+        margin-bottom: 32px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .desc-etc {
+      @include column-flexbox(end, start);
+      flex-direction: column-reverse;
+      margin-bottom: 32px;
+
+      button {
+        @include text-style(14, $black);
+        text-decoration: underline;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+
+      p {
+        margin-bottom: 32px;
+      }
+
+      dl {
+        margin-bottom: 20px;
+      }
+
+      dt {
+        font-weight: 700;
+      }
+
+      .desc-hidden {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        transition: height 150ms ease-in-out;
+
+        &.is-open {
+          height: _calculate-desc-hidden-height();
+        }
+      }
+    }
+
+    .badge {
+      p {
+        margin-bottom: 4px;
+      }
+    }
+  }
+
+  .drawer {
+    &-item {
+      border-top: 1px solid $border;
+
+      &.is-open {
+        .drawer-contents {
+          height: auto;
+          padding: 8px 0 40px 0;
+        }
+
+        .modal-trigger-details {
+          .ic-chevron {
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      .material {
+        p {
+          @include text-style(14, $primary);
+          margin-bottom: 40px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .package {
+        header {
+          padding-top: 8px;
+
+          h3 {
+            @include text-style(14, $dark);
+            font-weight: 700;
+          }
+
+          span {
+            @include text-style(14, $primary);
+          }
+        }
+
+        .badge {
+          @include column-flexbox(center, start);
+          height: 88px;
+        }
+
+        dl {
+          @include text-style(14, $primary);
+
+          div {
+            @include flexbox(start);
+          }
+        }
+
+        dt {
+          margin-right: 8px;
+          font-weight: 700;
+
+          &::after {
+            position: relative;
+            left: 4px;
+            font-weight: 400;
+            content: ':';
+          }
+        }
+      }
+
+      .compliance {
+        dl {
+          @include text-style(14, $primary);
+
+          div {
+            margin-bottom: 40px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+
+        dt {
+          font-weight: 700;
+          color: $dark;
+        }
+      }
+
+      .drawer-contents {
+        height: 0;
+        overflow: hidden;
+        transition: height 150ms ease-in-out, padding 150ms ease-in-out;
+      }
+
+      .modal-trigger-details {
+        .ic-chevron {
+          transition: transform 150ms ease-in-out;
+        }
+      }
+    }
+  }
+
+  @include responsive('T-PRO') {
+    .modal-contents {
+      h2 {
+        @include text-style(25, $dark);
+      }
+    }
+  }
+}
