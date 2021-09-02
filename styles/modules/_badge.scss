@@ -6,6 +6,7 @@
 
   .number {
     @include text-style(12, $white);
+    display: inline-block;
     padding: 4px 12px;
     font-weight: 700;
     background-color: $dark;
