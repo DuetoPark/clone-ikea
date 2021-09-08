@@ -6,6 +6,7 @@ const modal = {
   carousel: document.querySelector('.carousel-modal'),
   option: document.querySelector('.option-modal'),
   description: document.querySelector('.description-modal'),
+  size: document.querySelector('.size-modal'),
 };
 
 const triggers = document.querySelectorAll('*[data-trigger]');
