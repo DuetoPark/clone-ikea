@@ -2,7 +2,7 @@
   @include modal-pos(top);
   @include modal-style-20;
   @include no-scrollbar;
-  z-index: $search-modal-level;
+  z-index: $modal-level;
   display: none;
 
   &.is-active {

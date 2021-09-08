@@ -2,7 +2,7 @@
   @include modal-pos(bottom, right);
   @include animation(bottom);
   @include modal-style-24;
-  z-index: $option-modal-level;
+  z-index: $modal-level;
   display: none;
 
   &.is-active {

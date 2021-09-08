@@ -4,7 +4,7 @@
   @include modal-pos(bottom, bottom, center);
   @include animation(start);
   @include modal-style-20;
-  z-index: $carousel-modal-level;
+  z-index: $modal-level;
   display: none;
 
   &.is-active {
