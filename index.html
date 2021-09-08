@@ -983,7 +983,7 @@
         </div>
       </section>
 
-      <section class="description-modal is-active">
+      <section class="description-modal">
         <h1 class="visually-hidden">제품 설명 창</h1>
 
         <header class="modal-header">
@@ -1013,9 +1013,11 @@
               </div>
 
               <div class="desc-etc">
-                <button type="button">자세히 보기</button>
+                <button type="button" data-open="desc-hidden">
+                  자세히 보기
+                </button>
 
-                <div class="desc-hidden is-open">
+                <div class="desc-hidden">
                   <p>나사 포함.</p>
 
                   <dl>
@@ -1035,7 +1037,11 @@
               <ol class="drawer-list">
                 <li class="drawer-item">
                   <div class="material">
-                    <button class="modal-trigger-details" type="button">
+                    <button
+                      class="modal-trigger-details"
+                      data-drawer-open="material"
+                      type="button"
+                    >
                       <span class="option-title">소재 & 관리</span>
                       <i class="ic-chevron" aria-hidden="true"></i>
                     </button>
@@ -1054,7 +1060,11 @@
                 </li>
                 <li class="drawer-item">
                   <div class="package">
-                    <button class="modal-trigger-details" type="button">
+                    <button
+                      class="modal-trigger-details"
+                      data-drawer-open="package"
+                      type="button"
+                    >
                       <span class="option-title">포장</span>
                       <i class="ic-chevron" aria-hidden="true"></i>
                     </button>
@@ -1095,9 +1105,13 @@
                     </div>
                   </div>
                 </li>
-                <li class="drawer-item is-open">
+                <li class="drawer-item">
                   <div class="compliance">
-                    <button class="modal-trigger-details" type="button">
+                    <button
+                      class="modal-trigger-details"
+                      data-drawer-open="compliance"
+                      type="button"
+                    >
                       <span class="option-title">고시 정보</span>
                       <i class="ic-chevron" aria-hidden="true"></i>
                     </button>
@@ -1278,6 +1292,7 @@
     <div class="overlay"></div>
 
     <script src="./js/_modal.js"></script>
+    <script src="./js/_drawer.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script src="./js/_product-carousel.js"></script>
   </body>

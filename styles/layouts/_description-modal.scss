@@ -83,15 +83,19 @@
     &-item {
       border-top: 1px solid $border;
 
-      &.is-open {
-        .drawer-contents {
-          height: auto;
-          padding: 8px 0 40px 0;
-        }
+      .material,
+      .package,
+      .compliance {
+        &.is-open {
+          .drawer-contents {
+            height: auto;
+            padding: 8px 0 40px 0;
+          }
 
-        .modal-trigger-details {
-          .ic-chevron {
-            transform: rotate(180deg);
+          .modal-trigger-details {
+            .ic-chevron {
+              transform: rotate(180deg);
+            }
           }
         }
       }
@@ -173,6 +177,10 @@
       }
 
       .modal-trigger-details {
+        > * {
+          pointer-events: none;
+        }
+
         .ic-chevron {
           transition: transform 150ms ease-in-out;
         }
