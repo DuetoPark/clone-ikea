@@ -11,6 +11,7 @@
 
   @include modal-pos(bottom, right, right);
   @include modal-style-24;
+  z-index: $description-modal-level;
   display: none;
 
   &.is-active {
