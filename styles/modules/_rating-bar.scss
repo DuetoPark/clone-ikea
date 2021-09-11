@@ -1,0 +1,63 @@
+%rating-bar-base {
+  position: relative;
+  // width: 77px;
+  height: 8px;
+  background-color: $background;
+  border-radius: 1px;
+
+  &::before {
+    @include pos-center-y;
+    left: 0;
+    height: 100%;
+    background-color: $dark;
+    border-radius: 1px;
+    content: '';
+  }
+
+  .rating-bar-dot {
+    @include flexbox(start, center);
+    width: 100%;
+    height: 100%;
+
+    .dot {
+      position: relative;
+      flex-grow: 1;
+      height: 100%;
+
+      &::after {
+        @include pos-center-y;
+        right: -2px;
+        display: block;
+        width: 4px;
+        height: 4px;
+        background-color: $white;
+        border-radius: 50%;
+        content: '';
+      }
+
+      &:nth-child(5)::after {
+        display: none;
+      }
+    }
+  }
+}
+
+@for $i from 1 through 5 {
+  .rating-bar-#{$i} {
+    @extend %rating-bar-base;
+
+    &::before {
+      width: calc(100% * (#{$i} / 5));
+    }
+  }
+
+  @for $j from 1 through 9 {
+    .rating-bar-#{$i}-#{$j} {
+      @extend %rating-bar-base;
+
+      &::before {
+        width: calc(100% * ((#{$i} + #{$j} * 0.1) / 5));
+      }
+    }
+  }
+}
