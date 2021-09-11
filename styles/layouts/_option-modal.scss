@@ -1,6 +1,6 @@
 .option-modal {
   @include modal-pos(bottom, right);
-  @include animation(bottom);
+  @include animation(bottom, right);
   @include modal-style-24;
   z-index: $modal-level;
   display: none;
@@ -80,10 +80,6 @@
       @include text-style(12, $primary);
       font-weight: 400;
     }
-  }
-
-  @include responsive(T) {
-    @include animation(right);
   }
 
   @include responsive('T-PRO') {

@@ -40,19 +40,35 @@
   animation-name: slidein-right;
 }
 
-@mixin animation($start: left) {
+@mixin animation($mobile: left, $tablet: left) {
   animation-duration: 250ms;
   animation-timing-function: ease-out;
 
-  @if ($start == 'left') {
+  // NOTE: MOBILE Animation
+  @if ($mobile == 'left') {
     @include animation-left-to-right;
   }
 
-  @if ($start == 'bottom') {
+  @if ($mobile == 'bottom') {
     @include animation-bottom-to-top;
   }
 
-  @if ($start == 'right') {
+  @if ($mobile == 'right') {
     @include animation-right-to-left;
+  }
+
+  // NOTE: TABLET Animation
+  @include responsive(T) {
+    @if ($tablet == 'left') {
+      @include animation-left-to-right;
+    }
+
+    @if ($tablet == 'bottom') {
+      @include animation-bottom-to-top;
+    }
+
+    @if ($tablet == 'right') {
+      @include animation-right-to-left;
+    }
   }
 }
