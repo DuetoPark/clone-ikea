@@ -1,0 +1,76 @@
+.review-modal {
+  @include modal-pos(bottom, right, right);
+  @include modal-style-24;
+  @include animation(bottom, right);
+  z-index: $modal-level;
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+
+  .summary {
+    padding: 32px 0;
+  }
+
+  .grade-point {
+    margin-bottom: 40px;
+
+    .rating {
+      @include text-style(25, $dark);
+      font-weight: 700;
+    }
+
+    .star-rating {
+      @include flexbox(start);
+
+      .star-rating-3 {
+        margin-right: 8px;
+      }
+
+      .review-count {
+        @include text-style(12, $primary);
+      }
+    }
+  }
+
+  .review-item {
+    padding: 32px 0;
+    border-top: 1px solid $border;
+  }
+
+  .review-header {
+    @include flexbox(between);
+    margin-bottom: 32px;
+
+    .date {
+      @include text-style(12, $primary);
+    }
+  }
+
+  .review {
+    margin-bottom: 32px;
+
+    h5,
+    p {
+      @include text-style(14, $primary);
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    p {
+      font-weight: 400;
+    }
+  }
+
+  .recommandation {
+    @include flexbox(start);
+    @include text-style(12, $primary);
+    margin-bottom: 32px;
+
+    i {
+      margin-right: 4px;
+      font-size: 21px;
+    }
+  }
+}

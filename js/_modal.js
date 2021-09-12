@@ -1,4 +1,4 @@
-const overlay = document.querySelector('.overlay');
+const overlay = document.querySelector('.overlay')
 
 const modal = {
   menu: document.querySelector('.sidebar'),
@@ -7,25 +7,26 @@ const modal = {
   option: document.querySelector('.option-modal'),
   description: document.querySelector('.description-modal'),
   size: document.querySelector('.size-modal'),
-};
+  review: document.querySelector('.review-modal'),
+}
 
-const triggers = document.querySelectorAll('*[data-trigger]');
-const closeButtons = document.querySelectorAll('.close-button');
+const triggers = document.querySelectorAll('*[data-trigger]')
+const closeButtons = document.querySelectorAll('.close-button')
 
 function openModal() {
-  modal[this.dataset.trigger].classList.add('is-active');
-  overlay.classList.add('is-active');
+  modal[this.dataset.trigger].classList.add('is-active')
+  overlay.classList.add('is-active')
 }
 
 function closeModal() {
-  modal[this.dataset.close].classList.remove('is-active');
-  overlay.classList.remove('is-active');
+  modal[this.dataset.close].classList.remove('is-active')
+  overlay.classList.remove('is-active')
 }
 
 triggers.forEach((trigger) => {
-  trigger.addEventListener('click', openModal.bind(trigger));
-});
+  trigger.addEventListener('click', openModal.bind(trigger))
+})
 
 closeButtons.forEach((close) => {
-  close.addEventListener('click', closeModal.bind(close));
-});
+  close.addEventListener('click', closeModal.bind(close))
+})
