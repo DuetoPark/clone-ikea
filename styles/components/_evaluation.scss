@@ -32,4 +32,20 @@
       padding: 0 20px;
     }
   }
+
+  @include responsive(T) {
+    &-item {
+      dt {
+        width: 50%;
+      }
+
+      .point {
+        width: 10%;
+      }
+
+      .bar {
+        width: 40%;
+      }
+    }
+  }
 }
