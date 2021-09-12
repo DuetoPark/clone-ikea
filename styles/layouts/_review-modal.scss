@@ -73,4 +73,23 @@
       font-size: 21px;
     }
   }
+
+  @include responsive(T) {
+    .modal-header {
+      height: 88px;
+    }
+
+    .review {
+      h2 {
+        @include text-style(25, $dark);
+        padding-top: 24px;
+      }
+    }
+
+    .grade-point {
+      .rating {
+        @include text-style(36, $dark);
+      }
+    }
+  }
 }
