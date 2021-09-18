@@ -1,6 +1,14 @@
 .highlight {
   display: inline-block;
+  height: 26px;
   padding: 0 5px;
   background-color: $yellow;
   box-shadow: 2px 2px 0 #e00751;
+
+  @include responsive(T) {
+    & > * {
+      position: relative;
+      bottom: 6px;
+    }
+  }
 }
