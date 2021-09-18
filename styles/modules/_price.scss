@@ -6,6 +6,8 @@
 }
 
 .price-group {
+  white-space: nowrap;
+
   .price {
     @extend %price-base;
     font-size: 16px;
