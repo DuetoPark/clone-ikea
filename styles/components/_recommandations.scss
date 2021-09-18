@@ -1,7 +1,9 @@
 .recommandations {
+  $slider-gutter: 20px;
+
   padding-top: 40px;
 
-  h1 {
+  h2 {
     margin-bottom: 76px;
     font-size: 18px;
     font-weight: 700;
@@ -19,17 +21,19 @@
         opacity: 1;
       }
     }
-  }
 
-  .slider-list {
-    padding: 4px 0 32px 0;
-  }
+    &-list {
+      padding: 4px 0 24px 0;
+    }
 
-  .slider-item {
-    &:hover {
-      .recommandations-header {
-        .title {
-          text-decoration: underline;
+    &-item {
+      position: relative;
+
+      &:hover {
+        .recommandations-header {
+          .title {
+            text-decoration: underline;
+          }
         }
       }
     }
@@ -37,7 +41,7 @@
 
   &-link {
     @include column-flexbox(start, start);
-    margin-bottom: 24px;
+    padding: 40px 0 72px 0;
 
     &:hover {
       .image-group {
@@ -70,34 +74,6 @@
     .category {
       @include text-style(14, $primary);
       margin-bottom: 8px;
-    }
-  }
-
-  .add {
-    @include flexbox(end);
-    order: 5;
-    width: 100%;
-    padding-top: 16px;
-
-    &:hover {
-      .cart-add {
-        background-color: $blue-dark;
-      }
-    }
-
-    .cart-add {
-      width: 40px;
-      height: 40px;
-      margin-top: -4px;
-      font-size: 24px;
-      color: $white;
-      background-color: $blue;
-      border-radius: 100px;
-
-      .ic-cart-add {
-        font-size: 24px;
-        color: $white;
-      }
     }
   }
 
@@ -136,6 +112,9 @@
 
   .like {
     @include flexbox(end);
+    position: absolute;
+    top: 0;
+    right: $slider-gutter;
     width: 100%;
 
     button {
@@ -151,6 +130,35 @@
     .ic-heart {
       font-size: 24px;
       color: $tertiary;
+    }
+  }
+
+  .add {
+    @include flexbox(end);
+    position: absolute;
+    right: $slider-gutter;
+    bottom: 16px;
+    width: 100%;
+
+    &:hover {
+      .cart-add {
+        background-color: $blue-dark;
+      }
+    }
+
+    .cart-add {
+      width: 40px;
+      height: 40px;
+      margin-top: -4px;
+      font-size: 24px;
+      color: $white;
+      background-color: $blue;
+      border-radius: 100px;
+
+      .ic-cart-add {
+        font-size: 24px;
+        color: $white;
+      }
     }
   }
 
@@ -208,6 +216,43 @@
     [class$='-active'] {
       height: 100%;
       background-color: $dark;
+    }
+  }
+
+  @include responsive(T) {
+    h2 {
+      @include text-style(25, $dark);
+    }
+
+    .slider {
+      margin: 0 -32px;
+    }
+
+    &-header {
+      .title {
+        @include text-style(14, $black);
+      }
+    }
+  }
+
+  @include responsive('T-PRO') {
+    .slider {
+      margin: 0;
+
+      &-item {
+        &:hover {
+          .like,
+          .add {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .like,
+    .add {
+      opacity: 0;
+      transition: opacity 150ms ease-in-out;
     }
   }
 }
