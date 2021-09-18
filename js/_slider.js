@@ -1,8 +1,8 @@
 var recommandationsSlider = tns({
-  container: '.recommandations .slider-list',
+  container: '.recommendations .slider-list',
   items: 2.5,
   loop: false,
-  controlsContainer: '.recommandations .slider-controls',
+  controlsContainer: '.recommendations .slider-controls',
   navPosition: 'bottom',
   gutter: '20',
   slideBy: 2,

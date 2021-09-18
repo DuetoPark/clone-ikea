@@ -1,4 +1,4 @@
-.recommandations {
+.recommendations {
   $slider-gutter: 20px;
 
   padding-top: 40px;
@@ -30,7 +30,7 @@
       position: relative;
 
       &:hover {
-        .recommandations-header {
+        .recommendations-header {
           .title {
             text-decoration: underline;
           }
