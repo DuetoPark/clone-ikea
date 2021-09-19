@@ -1,0 +1,10 @@
+.slider-group {
+  .row {
+    flex-direction: row-reverse;
+
+    .recommendations {
+      padding: 0;
+      margin: 40px 0 64px 0;
+    }
+  }
+}
