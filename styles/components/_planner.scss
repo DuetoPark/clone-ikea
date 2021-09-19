@@ -1,0 +1,94 @@
+.planner {
+  margin: 100px 0;
+
+  .card-link {
+    @include flexbox(start, start);
+    flex-direction: column-reverse;
+
+    &:hover {
+      .card-title {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .card-info {
+    width: 100%;
+    padding: 24px;
+    word-break: keep-all;
+    background-color: $background;
+
+    h2 {
+      @include text-style(12, $primary);
+      margin-bottom: 8px;
+      font-weight: 400;
+    }
+
+    .card-title {
+      margin-bottom: 16px;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 26px;
+      color: $dark;
+    }
+
+    .card-desc {
+      @include text-style(14, $primary);
+    }
+
+    .fake-button {
+      @include text-style(12, $white);
+      padding-right: 24px;
+      padding-left: 16px;
+      margin: 24px 0;
+      font-weight: 700;
+
+      .ic-pancel {
+        margin-right: 10px;
+        font-size: 24px;
+      }
+    }
+  }
+
+  .card-image {
+    position: relative;
+    width: 100%;
+    padding-top: 56%;
+    overflow: hidden;
+
+    img {
+      @include pos-center;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  @include responsive(T) {
+    .card-info {
+      padding: 40px;
+
+      .card-title {
+        @include text-style(25, $dark);
+      }
+    }
+  }
+
+  @include responsive(D) {
+    .card-link {
+      @include flexbox(start, start);
+      flex-direction: row-reverse;
+    }
+
+    .card-info {
+      padding: 48px;
+      padding-right: 64px;
+    }
+
+    .card-image {
+      align-self: stretch;
+      min-width: 60%;
+      padding-top: 0;
+    }
+  }
+}
