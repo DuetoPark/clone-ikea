@@ -6,6 +6,7 @@
 }
 
 .price-group {
+  @include inline-flexbox(start, end);
   white-space: nowrap;
 
   .price {
