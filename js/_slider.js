@@ -14,7 +14,8 @@ var recommandationsSlider = tns({
       edgePadding: 32,
     },
     900: {
-      items: 4.3,
+      items: 4.1,
+      slideBy: 4,
     },
   },
 })
