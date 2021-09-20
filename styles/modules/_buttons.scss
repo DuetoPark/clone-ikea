@@ -34,7 +34,7 @@
 .btn-outlined {
   @extend %btn-base;
   color: dark;
-  background-color: $white;
+  background-color: transparent;
   border: 1px solid $border;
 
   &:hover {
