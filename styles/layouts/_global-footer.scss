@@ -1,0 +1,280 @@
+.global-footer {
+  padding: 64px 0 40px 0;
+  background-color: $background;
+
+  .footer-top {
+    margin-bottom: 40px;
+  }
+
+  .footer-header {
+    padding: 20px 0 40px 0;
+
+    .title {
+      @include text-style(16, $dark);
+      margin-bottom: 12px;
+    }
+
+    p {
+      @include text-style(14, $primary);
+      margin-bottom: 15px;
+
+      a {
+        text-decoration: underline;
+      }
+    }
+
+    .sign-in-button {
+      @include text-style(12, $white);
+      padding-right: 20px;
+      padding-left: 20px;
+      font-weight: 700;
+    }
+  }
+
+  .footer-drawer {
+    $link-height: 22px;
+    $link-margin: 32px;
+    $drawer-content-padding-top: 20px;
+    $drawer-content-padding-bottom: 32px;
+
+    @function _calculate-height($elem-count) {
+      @return ($link-height + $link-margin) * $elem-count +
+        $drawer-content-padding-top + $drawer-content-padding-bottom;
+    }
+
+    border-bottom: 1px solid $border;
+
+    .modal-trigger-details {
+      min-height: 96px;
+      padding: 32px 0;
+      border-top: 1px solid $border;
+
+      p {
+        @include text-style(14, $dark);
+        font-weight: 700;
+        pointer-events: none;
+      }
+
+      .ic-chevron {
+        pointer-events: none;
+        transition: transform 150ms ease-in-out;
+      }
+    }
+
+    .drawer-item {
+      > div.is-open {
+        &.customer-sevice {
+          .drawer-content {
+            height: _calculate-height(10);
+          }
+        }
+
+        &.shopping {
+          .drawer-content {
+            height: _calculate-height(8);
+          }
+        }
+
+        &.service {
+          .drawer-content {
+            height: _calculate-height(8);
+          }
+        }
+
+        &.ikea-story {
+          .drawer-content {
+            height: _calculate-height(6);
+          }
+        }
+
+        .modal-trigger-details {
+          .ic-chevron {
+            transform: rotate(180deg);
+          }
+        }
+
+        .drawer-content {
+          padding: 20px 0 32px 0;
+        }
+      }
+    }
+
+    .drawer-content {
+      height: 0;
+      overflow: hidden;
+      transition: height 150ms ease-in-out;
+    }
+
+    .footer-nav-item {
+      @include text-style(14, $primary);
+      margin-bottom: 32px;
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .footer-middle {
+    margin-bottom: 32px;
+  }
+
+  .footer-contact {
+    @include flexbox(start);
+    margin-bottom: 32px;
+
+    a {
+      margin-right: 20px;
+
+      i {
+        color: $primary;
+      }
+    }
+  }
+
+  .footer-language {
+    @include flexbox(start);
+
+    a {
+      @include text-style(12, $primary);
+      position: relative;
+      padding-right: 20px;
+      padding-left: 40px;
+      margin-right: 20px;
+      font-weight: 700;
+
+      .ic-country {
+        @include pos-center-y;
+        left: 12px;
+      }
+    }
+
+    .select-group {
+      position: relative;
+
+      select {
+        @include no-chevron();
+        @include text-style(12, $dark);
+        display: inline-block;
+        padding-right: 40px;
+        padding-left: 20px;
+        font-weight: 700;
+      }
+
+      .ic-chevron {
+        @include pos-center-y;
+        right: 18px;
+        font-size: 24px;
+        pointer-events: none;
+      }
+    }
+  }
+
+  .copyright {
+    @include text-style(12, $primary);
+    margin-bottom: 20px;
+  }
+
+  .footer-policy {
+    .policy-list {
+      @include flexbox(start);
+      flex-wrap: wrap;
+    }
+
+    .policy-item {
+      padding: 10px 20px 10px 0;
+
+      a {
+        @include text-style(12, $dark);
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .footer-info {
+    @include text-style(12, $primary);
+
+    .info-item {
+      @include flexbox(start);
+
+      dt {
+        margin-right: 8px;
+
+        &::after {
+          position: relative;
+          left: 4px;
+          content: ':';
+        }
+      }
+
+      a {
+        color: $dark;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @include responsive('T-PRO') {
+    .footer-top {
+      @include flexbox(start, start);
+      margin-bottom: 32px;
+    }
+
+    .footer-header {
+      min-width: 30%;
+
+      p {
+        margin-right: 48px;
+        margin-bottom: 30px;
+      }
+    }
+
+    .footer-drawer {
+      min-width: 70%;
+      border: 0;
+
+      .drawer-list {
+        @include flexbox(start, start);
+      }
+
+      .drawer-item {
+        flex-grow: 1;
+      }
+
+      .drawer-content {
+        height: auto;
+
+        .title {
+          @include flexbox(start, center);
+          @include text-style(14, $dark);
+          height: 32px;
+          margin-bottom: 16px;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .footer-middle {
+      @include flexbox(between, start);
+      border-bottom: 1px solid $border;
+    }
+
+    .footer-bottom {
+      @include flexbox(between, start);
+      margin-bottom: 20px;
+    }
+
+    .copyright {
+      padding-top: 8px;
+    }
+
+    .footer-policy {
+      .policy-item {
+        padding: 10px 0 10px 20px;
+      }
+    }
+  }
+}
