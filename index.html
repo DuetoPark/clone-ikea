@@ -562,7 +562,7 @@
                   <div class="sm-hidden md-hidden">
                     <button
                       class="modal-trigger-option"
-                      data-trigger="option"
+                      data-trigger="colorOption"
                       type="button"
                       aria-label="색상 선택 창 열기"
                     >
@@ -581,7 +581,7 @@
 
                   <button
                     class="modal-trigger-option"
-                    data-trigger="option"
+                    data-trigger="sizeOption"
                     type="button"
                     aria-label="규격 선택 창 열기"
                   >
@@ -3243,6 +3243,7 @@
       </div>
     </footer>
 
+    <!-- NOTE: MODALs -->
     <aside class="sidebar">
       <h1 class="visually-hidden">사이드 바</h1>
 
@@ -3413,13 +3414,13 @@
       </div>
     </section>
 
-    <section class="option-modal is-color">
-      <h1 class="visually-hidden">옵션 선택 창</h1>
+    <section class="size-option-modal">
+      <h1 class="visually-hidden">규격 옵션 선택 창</h1>
 
       <header class="modal-header">
         <button
           class="btn-ghost btn-40 close-button"
-          data-close="option"
+          data-close="sizeOption"
           type="button"
           aria-label="창 닫기 버튼"
         >
@@ -3459,7 +3460,24 @@
             </a>
           </div>
         </article>
+      </div>
+    </section>
 
+    <section class="color-option-modal">
+      <h1 class="visually-hidden">색상 옵션 선택 창</h1>
+
+      <header class="modal-header">
+        <button
+          class="btn-ghost btn-40 close-button"
+          data-close="colorOption"
+          type="button"
+          aria-label="창 닫기 버튼"
+        >
+          <i class="ic-close" aria-hidden="true"></i>
+        </button>
+      </header>
+
+      <div class="modal-contents">
         <article class="option-color">
           <h2>색상</h2>
 

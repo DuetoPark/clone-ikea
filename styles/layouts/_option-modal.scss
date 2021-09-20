@@ -1,4 +1,5 @@
-.option-modal {
+.color-option-modal,
+.size-option-modal {
   @include modal-pos(bottom, right);
   @include animation(bottom, right);
   @include modal-style-24;
@@ -9,26 +10,9 @@
     display: block;
   }
 
-  &.is-size {
-    .modal-contents .option-size {
-      display: block;
-    }
-  }
-
-  &.is-color {
-    .modal-contents .option-color {
-      display: block;
-    }
-  }
-
   .modal-contents {
     h2 {
       height: 50px;
-    }
-
-    .option-size,
-    .option-color {
-      display: none;
     }
 
     .option-color {
