@@ -1,6 +1,25 @@
 .gnb {
   @include focus-thick;
 
+  &.is-fixed {
+    position: fixed;
+    top: 0;
+    z-index: $fixed-level;
+    width: 100%;
+    background-color: $white;
+    transform: translateY(-100%);
+  }
+
+  &.is-down {
+    transform: translateY(-100%);
+    transition: transform 150ms ease-in-out;
+  }
+
+  &.is-up {
+    transform: translateY(0);
+    transition: transform 150ms ease-in-out;
+  }
+
   .gnb-menu {
     @include flexbox;
     width: 100%;
