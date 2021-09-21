@@ -1,15 +1,19 @@
 const gnb = document.querySelector('.gnb');
+const gnbMenu = document.querySelector('.gnb-menu button');
 const main = document.querySelector('main');
 
 let lastScrollTop = 0;
 const coords = {
-  gnbTop: gnb.offsetTop,
-  gnbBottom: gnb.offsetTop + gnb.offsetHeight,
+  gnb: {
+    top: gnb.offsetTop,
+    bottom: gnb.offsetTop + gnb.offsetHeight,
+    height: gnb.offsetHeight,
+  },
 };
 
 function fixGNB() {
   gnb.classList.add('is-fixed');
-  main.style.paddingTop = gnb.offsetHeight + 'px';
+  main.style.paddingTop = coords.gnb.height + 'px';
 }
 
 function breakGNB() {
@@ -32,7 +36,7 @@ function upScrollGNB() {
 function scrollHandler() {
   let scrollTop = window.pageYOffset;
 
-  if (scrollTop > coords.gnbBottom) {
+  if (scrollTop > coords.gnb.bottom) {
     fixGNB();
 
     if (scrollTop > lastScrollTop) {
@@ -40,7 +44,7 @@ function scrollHandler() {
     } else {
       upScrollGNB();
     }
-  } else if (scrollTop <= coords.gnbTop) {
+  } else if (scrollTop <= coords.gnb.top) {
     breakGNB();
   }
 
