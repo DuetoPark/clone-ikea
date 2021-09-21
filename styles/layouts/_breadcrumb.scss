@@ -4,7 +4,6 @@
   &-list {
     @include flexbox(start);
     padding: 16px 0;
-    border-bottom: 1px solid $border;
   }
 
   &-item {
@@ -34,9 +33,5 @@
     display: block;
     margin: 0 -6px;
     transform: rotate(-90deg);
-  }
-
-  @include responsive('T-PRO') {
-    padding: 8px 0 16px 0;
   }
 }

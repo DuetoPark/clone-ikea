@@ -10,6 +10,7 @@
   &-wrapper {
     @include flexbox(between);
     flex-wrap: wrap;
+    border-bottom: 1px solid $border;
   }
 
   &-logo {
@@ -25,6 +26,7 @@
   &-searchbar {
     order: 3;
     width: 100%;
+    margin-bottom: 16px;
 
     .input-group {
       background-color: $background;
@@ -69,6 +71,7 @@
     &-searchbar {
       order: 2;
       margin-right: 32px;
+      margin-bottom: 0;
     }
 
     &-button-group {
