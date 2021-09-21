@@ -10,7 +10,6 @@
   &-wrapper {
     @include flexbox(between);
     flex-wrap: wrap;
-    border-bottom: 1px solid $border;
   }
 
   &-logo {
