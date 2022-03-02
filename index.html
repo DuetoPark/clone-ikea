@@ -1,0 +1,4416 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Dueto Park" />
+    <meta name="keywords" content="IKEA, clone coding" />
+    <meta
+      name="description"
+      content="원기옥을 쓰듯 알고있는 것을 총동원하여 이케아 제품 상세 페이지를 클론코딩합니다."
+    />
+
+    <title>ENERYDA 에네뤼다 손잡이, 크롬도금, 27 mPm - IKEA</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/clone-ikea/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/clone-ikea/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/clone-ikea/favicon-16x16.png" />
+    <link rel="manifest" href="/clone-ikea/site.webmanifest" />
+    <link rel="mask-icon" href="/clone-ikea/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="global-header">
+      <aside class="hnf">
+        <h2 class="visually-hidden">공지 및 서비스 이용 안내</h2>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <!-- NOTE: 모바일부터 태블릿용 HNF -->
+              <div class="hnf-content lg-hidden xl-hidden">
+                <a class="hnf-link" href="./index.html">
+                  <i class="ic-cart" aria-hidden="true"></i>
+                  <span>IKEA 인기제품</span>
+                </a>
+              </div>
+
+              <!-- NOTE: 태블릿(PRO)이후 HNF -->
+              <div class="hnf-content sm-hidden md-hidden">
+                <a class="hnf-link" href="./index.html">
+                  <i class="ic-infomation" aria-hidden="true"></i>
+                  <span>코로나 19 대응 공지</span>
+                </a>
+
+                <a class="hnf-link" href="./index.html">
+                  <i class="ic-phone" aria-hidden="true"></i>
+                  <span>비대면 전화주문 서비스</span>
+                </a>
+
+                <a class="hnf-link" href="./index.html">
+                  <i class="ic-cart" aria-hidden="true"></i>
+                  <span>IKEA 인기제품</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <div class="gnb">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-1">
+              <div class="gnb-menu">
+                <button
+                  class="btn-ghost btn-40 btn-active xl-only"
+                  data-trigger="menu"
+                  type="button"
+                  aria-label="메뉴 열기 버튼"
+                  title="메뉴"
+                >
+                  <i class="ic-menu" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="col-sm-4 col-xl-12">
+              <div class="gnb-wrapper">
+                <h1 class="gnb-logo">
+                  <a
+                    href="./index.html"
+                    aria-current="page"
+                    aria-label="홈으로 이동"
+                  >
+                    <img src="./assets/images/Logo.svg" alt="이케아 로고" />
+                  </a>
+                </h1>
+
+                <nav class="gnb-nav xl-only">
+                  <h2 class="visually-hidden">페이지 이동</h2>
+
+                  <ul class="gnb-nav-list">
+                    <li class="gnb-nav-item">
+                      <a href="./index.html">모든 제품</a>
+                    </li>
+                    <li class="gnb-nav-item">
+                      <a href="./index.html">디지털 쇼룸</a>
+                    </li>
+                  </ul>
+                </nav>
+
+                <div class="gnb-searchbar">
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      data-trigger="search"
+                      placeholder="검색어 입력"
+                    />
+
+                    <div class="input-group-left">
+                      <i class="ic-search" aria-hidden="true"></i>
+                    </div>
+
+                    <div class="input-group-right">
+                      <button
+                        class="btn-ghost btn-32"
+                        type="button"
+                        aria-label="이미지로 검색하기 버튼"
+                      >
+                        <i class="ic-camera" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- NOTE: 모바일&태블릿용 gnb 버튼 그룹 -->
+                <div class="gnb-button-group xl-hidden">
+                  <a
+                    class="btn-ghost btn-40 btn-active"
+                    href="./index.html"
+                    aria-label="내 프로필 페이지로 이동"
+                    title="내 프로필"
+                  >
+                    <i class="ic-profile" aria-hidden="true"></i>
+                  </a>
+
+                  <a
+                    class="btn-ghost btn-40 btn-active"
+                    href="./index.html"
+                    aria-label="위시리스트 페이지로 이동"
+                    title="위시리스트"
+                  >
+                    <i class="ic-heart" aria-hidden="true"></i>
+                  </a>
+
+                  <a
+                    class="btn-ghost btn-40 btn-active"
+                    href="./index.html"
+                    aria-label="장바구니 페이지로 이동"
+                    title="장바구니"
+                  >
+                    <i class="ic-cart" aria-hidden="true"></i>
+                  </a>
+
+                  <button
+                    class="btn-ghost btn-40 btn-active"
+                    data-trigger="menu"
+                    type="button"
+                    aria-label="메뉴 열기 버튼"
+                    title="메뉴"
+                  >
+                    <i class="ic-menu" aria-hidden="true"></i>
+                  </button>
+                </div>
+
+                <!-- NOTE: 데스크탑용 gnb 버튼 그룹 -->
+                <div class="gnb-button-group xl-only">
+                  <a
+                    class="btn-ghost btn-40 btn-active"
+                    href="./index.html"
+                    aria-label="배송 조회 페이지로 이동"
+                    title="배송 조회"
+                  >
+                    <i class="ic-delivery" aria-hidden="true"></i>
+                  </a>
+
+                  <a
+                    class="btn-ghost btn-40 btn-active"
+                    href="./index.html"
+                    aria-label="내 프로필 페이지로 이동"
+                    title="내 프로필"
+                  >
+                    <i class="ic-profile" aria-hidden="true"></i>
+                  </a>
+
+                  <a
+                    class="btn-ghost btn-40 btn-active"
+                    href="./index.html"
+                    aria-label="위시리스트 페이지로 이동"
+                    title="위시리스트"
+                  >
+                    <i class="ic-heart" aria-hidden="true"></i>
+                  </a>
+
+                  <a
+                    class="btn-ghost btn-40 btn-active"
+                    href="./index.html"
+                    aria-label="장바구니 페이지로 이동"
+                    title="장바구니"
+                  >
+                    <i class="ic-cart" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="search-modal is-exist">
+        <h1 class="visually-hidden">검색창</h1>
+
+        <header class="modal-header">
+          <div class="input-group is-active">
+            <input type="text" placeholder="검색어 입력" />
+
+            <div class="input-group-left is-active">
+              <button
+                class="btn-ghost btn-32 close-button"
+                data-close="search"
+                type="button"
+                aria-label="검색취소 버튼"
+              >
+                <i class="ic-close" aria-hidden="true"></i>
+              </button>
+            </div>
+
+            <!-- NOTE: 입력하지 않을 때 -->
+            <div class="input-group-right is-default">
+              <button
+                class="btn-ghost btn-32"
+                type="button"
+                aria-label="이미지로 검색하기 버튼"
+              >
+                <i class="ic-camera" aria-hidden="true"></i>
+              </button>
+            </div>
+
+            <!-- NOTE: 입력할 때 -->
+            <div class="input-group-right on-change">
+              <button
+                class="btn-ghost btn-32"
+                type="button"
+                aria-label="입력 텍스트 삭제하기 버튼"
+              >
+                <i class="ic-close" aria-hidden="true"></i>
+              </button>
+              <button
+                class="btn-ghost btn-32"
+                type="button"
+                aria-label="검색하기 버튼"
+              >
+                <i class="ic-search" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </header>
+
+        <div class="modal-contents">
+          <!-- NOTE: 검색 내역 없을 때 -->
+          <div class="search-history is-empty">
+            <header class="visually-hidden">
+              <h1>추천 검색어</h1>
+            </header>
+
+            <ol class="search-history-list">
+              <li class="search-history-item">
+                <a class="search-history-link" href="./index.html">
+                  <div class="link-info">
+                    <h4 class="info-name">책상</h4>
+                  </div>
+
+                  <div class="link-image">
+                    <i class="ic-search" aria-hidden="true"></i>
+                  </div>
+                </a>
+              </li>
+              <li class="search-history-item">
+                <a class="search-history-link" href="./index.html">
+                  <div class="link-info">
+                    <h4 class="info-name">의자</h4>
+                  </div>
+
+                  <div class="link-image">
+                    <i class="ic-search" aria-hidden="true"></i>
+                  </div>
+                </a>
+              </li>
+              <li class="search-history-item">
+                <a class="search-history-link" href="./index.html">
+                  <div class="link-info">
+                    <h4 class="info-name">선반</h4>
+                  </div>
+
+                  <div class="link-image">
+                    <i class="ic-search" aria-hidden="true"></i>
+                  </div>
+                </a>
+              </li>
+              <li class="search-history-item">
+                <a class="search-history-link" href="./index.html">
+                  <div class="link-info">
+                    <h4 class="info-name">수납장</h4>
+                  </div>
+
+                  <div class="link-image">
+                    <i class="ic-search" aria-hidden="true"></i>
+                  </div>
+                </a>
+              </li>
+              <li class="search-history-item">
+                <a class="search-history-link" href="./index.html">
+                  <div class="link-info">
+                    <h4 class="info-category">서랍장</h4>
+                  </div>
+
+                  <div class="link-image">
+                    <i class="ic-category" aria-hidden="true"></i>
+                  </div>
+                </a>
+              </li>
+              <li class="search-history-item">
+                <a class="search-history-link" href="./index.html">
+                  <div class="link-info">
+                    <h4 class="info-category">스프링매트리스</h4>
+                  </div>
+
+                  <div class="link-image">
+                    <i class="ic-category" aria-hidden="true"></i>
+                  </div>
+                </a>
+              </li>
+              <li class="search-history-item">
+                <a class="search-history-link" href="./index.html">
+                  <div class="link-info">
+                    <h4 class="info-category">선반유닛</h4>
+                  </div>
+
+                  <div class="link-image">
+                    <i class="ic-category" aria-hidden="true"></i>
+                  </div>
+                </a>
+              </li>
+              <li class="search-history-item">
+                <a class="search-history-link" href="./index.html">
+                  <div class="link-info">
+                    <h4 class="info-category">싱글/수퍼싱글+ 침대</h4>
+                  </div>
+
+                  <div class="link-image">
+                    <i class="ic-category" aria-hidden="true"></i>
+                  </div>
+                </a>
+              </li>
+            </ol>
+          </div>
+
+          <!-- NOTE: 검색 내역 있을 때 -->
+          <div class="search-history is-exist">
+            <header class="search-history-header">
+              <h1>내 검색 기록</h1>
+              <button
+                class="search-history-delete"
+                type="button"
+                aria-label="내 검색 기록 삭제하기 버튼"
+              >
+                삭제
+              </button>
+            </header>
+
+            <ol class="search-history-list">
+              <li class="search-history-item">
+                <a class="search-history-link" href="./index.html">
+                  <div class="link-info">
+                    <h4 class="info-name">KLIPPAN 클리판</h4>
+                    <span class="info-desc">2인용소파</span>
+                  </div>
+
+                  <div class="link-image">
+                    <img
+                      src="./assets/images/Img-search-01.jpg"
+                      alt="클리판 2인용 소파"
+                    />
+                  </div>
+                </a>
+              </li>
+              <li class="search-history-item">
+                <a class="search-history-link" href="./index.html">
+                  <div class="link-info">
+                    <h4 class="info-name">소파</h4>
+                  </div>
+
+                  <div class="link-image">
+                    <i class="ic-search" aria-hidden="true"></i>
+                  </div>
+                </a>
+              </li>
+              <li class="search-history-item">
+                <a class="search-history-link" href="./index.html">
+                  <div class="link-info">
+                    <h4 class="info-name">ENERYDA 에네뤼다</h4>
+                    <span class="info-desc">손잡이</span>
+                  </div>
+
+                  <div class="link-image">
+                    <img
+                      src="./assets/images/Img-search-02.jpg"
+                      alt="에네뤼다 손잡이"
+                    />
+                  </div>
+                </a>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main class="product-show">
+      <header class="product-show-header">
+        <nav class="breadcrumb">
+          <h1 class="visually-hidden">메뉴 경로</h1>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-4 col-xl-12">
+                <!-- NOTE: 모바일부터 태블릿용 Breadcrumb -->
+                <ol class="breadcrumb-list lg-hidden xl-hidden">
+                  <li class="breadcrumb-item">
+                    <a href="./index.html">PAX/팍스 시스템</a>
+                    <i class="ic-chevron" aria-hidden="true"></i>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="./index.html">손잡이</a>
+                  </li>
+                </ol>
+
+                <!-- NOTE: 태블릿(PRO)이후 Breadcrumb -->
+                <ol class="breadcrumb-list sm-hidden md-hidden">
+                  <li class="breadcrumb-item">
+                    <a href="./index.html">제품</a>
+                    <i class="ic-chevron" aria-hidden="true"></i>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="./index.html">수납/정리</a>
+                    <i class="ic-chevron" aria-hidden="true"></i>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="./index.html">수납 솔루션 시스템</a>
+                    <i class="ic-chevron" aria-hidden="true"></i>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="./index.html">PAX/팍스 시스템</a>
+                    <i class="ic-chevron" aria-hidden="true"></i>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="./index.html">손잡이</a>
+                    <i class="ic-chevron" aria-hidden="true"></i>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <h4>ENERYDA 에네뤼다 손잡이</h4>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <div class="product-show-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4 col-lg-5 col-xl-4">
+              <form class="order-form">
+                <section class="order-form-summary">
+                  <div class="summary-product">
+                    <div class="summary-title">
+                      <h1>ENERYDA 에네뤼다</h1>
+                      <div>
+                        손잡이, 크롬도금,
+                        <span aria-label="27밀리미터">27mm</span>
+                      </div>
+                    </div>
+
+                    <div class="summary-price">
+                      <div class="price-group">
+                        <strong class="price" aria-label="7500원">7,500</strong
+                        ><strong class="price-bundle">2개</strong>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="summary-star">
+                    <a
+                      href="./index.html"
+                      aria-label="제품 리뷰 페이지로 이동하기"
+                    >
+                      <div class="star-rating-3" aria-label="평점 3점">
+                        <div>
+                          <i class="ic-star" aria-hidden="true"></i>
+                          <i class="ic-star" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                          <i class="ic-star" aria-hidden="true"></i>
+                          <i class="ic-star" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                          <i class="ic-star" aria-hidden="true"></i>
+                          <i class="ic-star" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                          <i class="ic-star" aria-hidden="true"></i>
+                          <i class="ic-star" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                          <i class="ic-star" aria-hidden="true"></i>
+                          <i class="ic-star" aria-hidden="true"></i>
+                        </div>
+                      </div>
+                      <span class="review">(4)</span>
+                    </a>
+                  </div>
+                </section>
+
+                <section class="order-form-option is-color">
+                  <h2 class="visually-hidden">색상 선택</h2>
+
+                  <!-- NOTE: Option 모달과 동일한 내용, 태블릿(PRO)부터 생략 -->
+                  <div class="lg-hidden xl-hidden">
+                    <a class="is-active" href="./index.html">
+                      <img
+                        src="./assets/images/img-option-01.jpg"
+                        alt="옵션 색상 크롬도금"
+                      />
+                    </a>
+                    <a href="./index.html">
+                      <img
+                        src="./assets/images/img-option-02.jpg"
+                        alt="옵션 색상 황동색"
+                      />
+                    </a>
+                    <a href="./index.html">
+                      <img
+                        src="./assets/images/img-option-03.jpg"
+                        alt="옵션 색상 검정색"
+                      />
+                    </a>
+                  </div>
+
+                  <!-- NOTE: 태블릿(PRO)이후 모달 트리거(색상) 출력 -->
+                  <div class="sm-hidden md-hidden">
+                    <button
+                      class="modal-trigger-option"
+                      data-trigger="colorOption"
+                      type="button"
+                      aria-label="색상 선택 창 열기"
+                    >
+                      <div>
+                        <span class="option-title">색상</span>
+                        <span class="option-selected">크롬도금</span>
+                      </div>
+
+                      <i class="ic-chevron" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </section>
+
+                <section class="order-form-option is-size">
+                  <h2 class="visually-hidden">규격 선택</h2>
+
+                  <button
+                    class="modal-trigger-option"
+                    data-trigger="sizeOption"
+                    type="button"
+                    aria-label="규격 선택 창 열기"
+                  >
+                    <div>
+                      <span class="option-title">규격</span>
+                      <span class="option-selected" aria-label="27밀리미터"
+                        >27mm</span
+                      >
+                    </div>
+
+                    <i class="ic-chevron" aria-hidden="true"></i>
+                  </button>
+                </section>
+
+                <section class="order-form-finish">
+                  <h2 class="visually-hidden">구매버튼</h2>
+
+                  <button
+                    class="btn-primary btn-56 finish-button"
+                    type="submit"
+                  >
+                    구매하기
+                  </button>
+
+                  <button
+                    class="btn-outlined btn-56 wish-button"
+                    type="button"
+                    aria-label="위시리스트에 추가"
+                  >
+                    <i class="ic-heart" aria-hidden="true"></i>
+                  </button>
+                </section>
+
+                <section class="order-form-info is-delivery">
+                  <h2 class="visually-hidden">배송 안내</h2>
+
+                  <i class="ic-delivery" aria-hidden="true"></i>
+                  <p>배송 여부는 결제 단계에서 확인하실 수 있습니다.</p>
+                </section>
+
+                <section class="order-form-info is-stock">
+                  <h2 class="visually-hidden">재고 및 재입고 날짜</h2>
+
+                  <i class="ic-store" aria-hidden="true"></i>
+                  <a href="./index.html">매장 재고 및 재입고 날짜 확인</a>
+                </section>
+              </form>
+            </div>
+
+            <!-- NOTE: 모바일부터 태플릿용 Carousel -->
+            <div class="col-sm-4 lg-hidden xl-hidden">
+              <section class="product-carousel">
+                <h1 class="visually-hidden">이미지 슬라이더</h1>
+
+                <div class="slider">
+                  <ul class="slider-list">
+                    <li class="slider-item">
+                      <button type="button" data-trigger="carousel">
+                        <figure>
+                          <img src="./assets/images/img-slider-01.jpg" alt="" />
+                          <figcaption class="visually-hidden">
+                            에네뤼다 손잡이 상세 이미지 1
+                          </figcaption>
+                        </figure>
+                      </button>
+                    </li>
+                    <li class="slider-item">
+                      <button type="button" data-trigger="carousel">
+                        <figure>
+                          <img src="./assets/images/img-slider-02.jpg" alt="" />
+                          <figcaption class="visually-hidden">
+                            에네뤼다 손잡이 상세 이미지 2
+                          </figcaption>
+                        </figure>
+                      </button>
+                    </li>
+                    <li class="slider-item">
+                      <button type="button" data-trigger="carousel">
+                        <figure>
+                          <img src="./assets/images/img-slider-03.jpg" alt="" />
+                          <figcaption class="visually-hidden">
+                            에네뤼다 손잡이 상세 이미지 3
+                          </figcaption>
+                        </figure>
+                      </button>
+                    </li>
+                  </ul>
+
+                  <div class="pagenation">
+                    <button class="is-active" type="button">
+                      <span class="visually-hidden">상세 이미지 1</span>
+                    </button>
+                    <button type="button">
+                      <span class="visually-hidden">상세 이미지 2</span>
+                    </button>
+                    <button type="button">
+                      <span class="visually-hidden">상세 이미지 3</span>
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-sm-4 col-lg-7 col-xl-8">
+              <!-- NOTE: 태블릿(PRO)부터 Image-details 출력 -->
+              <section class="image-details sm-hidden md-hidden">
+                <h2 class="visually-hidden">상세 이미지 보기</h2>
+
+                <button type="button" data-trigger="carousel">
+                  <figure>
+                    <img src="./assets/images/img-slider-01.jpg" alt="" />
+                    <figcaption class="visually-hidden">
+                      에네뤼다 손잡이 상세 이미지 1
+                    </figcaption>
+                  </figure>
+                </button>
+
+                <button type="button" data-trigger="carousel">
+                  <figure>
+                    <img src="./assets/images/img-slider-02.jpg" alt="" />
+                    <figcaption class="visually-hidden">
+                      에네뤼다 손잡이 상세 이미지 2
+                    </figcaption>
+                  </figure>
+                </button>
+
+                <button type="button" data-trigger="carousel">
+                  <figure>
+                    <img src="./assets/images/img-slider-03.jpg" alt="" />
+                    <figcaption class="visually-hidden">
+                      에네뤼다 손잡이 상세 이미지 3
+                    </figcaption>
+                  </figure>
+                </button>
+              </section>
+
+              <section class="description">
+                <h2 class="visually-hidden">제품설명</h2>
+
+                <header class="description-header">
+                  <p>
+                    클래식한 스타일의 ENERYDA/에네뤼다 걸이는 크롬과 황동, 블랙
+                    색상으로 구성되어 있습니다. 다양한 디자인 중에서 우리 집
+                    인테리어에 꼭 맞는 제품을 선택해보세요.
+                  </p>
+
+                  <div class="badge">
+                    <p>제품번호</p>
+                    <strong class="number">703.475.35</strong>
+                  </div>
+                </header>
+
+                <div class="description-details">
+                  <button
+                    class="modal-trigger-desc"
+                    data-trigger="description"
+                    type="button"
+                  >
+                    <span class="option-title">제품 설명</span>
+
+                    <i class="ic-pre" aria-hidden="true"></i>
+                  </button>
+
+                  <button
+                    class="modal-trigger-desc"
+                    data-trigger="size"
+                    type="button"
+                  >
+                    <span class="option-title">제품 크기</span>
+
+                    <i class="ic-pre" aria-hidden="true"></i>
+                  </button>
+
+                  <button
+                    class="modal-trigger-desc"
+                    data-trigger="review"
+                    type="button"
+                  >
+                    <div class="text">
+                      <span class="option-title">상품평</span>
+                      <div class="review-group">
+                        <div class="star-rating-3" aria-label="평점 3점">
+                          <div>
+                            <i class="ic-star" aria-hidden="true"></i>
+                            <i class="ic-star" aria-hidden="true"></i>
+                          </div>
+                          <div>
+                            <i class="ic-star" aria-hidden="true"></i>
+                            <i class="ic-star" aria-hidden="true"></i>
+                          </div>
+                          <div>
+                            <i class="ic-star" aria-hidden="true"></i>
+                            <i class="ic-star" aria-hidden="true"></i>
+                          </div>
+                          <div>
+                            <i class="ic-star" aria-hidden="true"></i>
+                            <i class="ic-star" aria-hidden="true"></i>
+                          </div>
+                          <div>
+                            <i class="ic-star" aria-hidden="true"></i>
+                            <i class="ic-star" aria-hidden="true"></i>
+                          </div>
+                        </div>
+                        <span class="review-count" aria-level="리뷰 4개"
+                          >(4)</span
+                        >
+                      </div>
+                    </div>
+
+                    <i class="ic-pre" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </section>
+
+              <section class="recommendations">
+                <h2>유사한 제품</h2>
+
+                <div class="slider">
+                  <ul class="slider-list slider-list-tablet">
+                    <li class="slider-item">
+                      <a class="recommendations-link" href="./index.html">
+                        <header class="recommendations-header">
+                          <h5 class="title">BAGGANÄS 바가네스</h5>
+
+                          <p class="category">손잡이, 21mm</p>
+
+                          <div class="highlight">
+                            <div class="price-group">
+                              <strong class="price" aria-label="5000원"
+                                >5,000</strong
+                              >
+                              <strong class="price-bundle" aria-label="2개 묶음"
+                                >2개</strong
+                              >
+                            </div>
+                          </div>
+                        </header>
+
+                        <div class="image-group">
+                          <img
+                            src="./assets/images/img-recommendations-01.jpg"
+                            alt="BAGGANÄS 바가네스"
+                          />
+                          <img
+                            src="./assets/images/img-recommendations-02.jpg"
+                            alt="BAGGANÄS 바가네스"
+                          />
+                        </div>
+
+                        <div class="star-rating">
+                          <div class="star-rating-5" aria-label="평점 5점">
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                          </div>
+
+                          <span aria-label="리뷰 5개">(5)</span>
+                        </div>
+
+                        <span class="option">기타옵션</span>
+                      </a>
+
+                      <div class="like">
+                        <button
+                          type="button"
+                          aria-label="위시리스트에 추가 버튼"
+                        >
+                          <i class="ic-heart"></i>
+                        </button>
+                      </div>
+
+                      <div class="add">
+                        <button class="cart-add" type="button">
+                          <i class="ic-cart-add"></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="slider-item">
+                      <a class="recommendations-link" href="./index.html">
+                        <header class="recommendations-header">
+                          <h5 class="title">ENERYDA 에네뤼다</h5>
+
+                          <p class="category">컵모양 손잡이, 89mm</p>
+
+                          <div class="price-group">
+                            <strong class="price" aria-label="10000원"
+                              >10,000</strong
+                            >
+                            <strong class="price-bundle" aria-label="2개 묶음"
+                              >2개</strong
+                            >
+                          </div>
+                        </header>
+
+                        <div class="image-group">
+                          <img
+                            src="./assets/images/img-recommendations-03.jpg"
+                            alt="ENERYDA 에네뤼다"
+                          />
+                          <img
+                            src="./assets/images/img-recommendations-04.jpg"
+                            alt="ENERYDA 에네뤼다"
+                          />
+                        </div>
+
+                        <div class="star-rating">
+                          <div
+                            class="star-rating-4-half"
+                            aria-label="평점 4.5점"
+                          >
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                          </div>
+
+                          <span aria-label="리뷰 2개">(2)</span>
+                        </div>
+
+                        <span class="option">기타옵션</span>
+                      </a>
+
+                      <div class="like">
+                        <button
+                          type="button"
+                          aria-label="위시리스트에 추가 버튼"
+                        >
+                          <i class="ic-heart"></i>
+                        </button>
+                      </div>
+
+                      <div class="add">
+                        <button class="cart-add" type="button">
+                          <i class="ic-cart-add"></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="slider-item">
+                      <a class="recommendations-link" href="./index.html">
+                        <header class="recommendations-header">
+                          <strong class="new">NEW</strong>
+
+                          <h5 class="title">ÖSTERNÄS 외스테르네스</h5>
+
+                          <p class="category">가죽 손잡이, 153 mm</p>
+
+                          <div class="price-group">
+                            <strong class="price" aria-label="20000원">
+                              20,000
+                            </strong>
+                            <strong class="price-bundle" aria-label="2개 묶음">
+                              2개
+                            </strong>
+                          </div>
+                        </header>
+
+                        <div class="add">
+                          <button class="cart-add" type="button">
+                            <i class="ic-cart-add"></i>
+                          </button>
+                        </div>
+
+                        <div class="image-group">
+                          <img
+                            src="./assets/images/img-recommendations-05.jpg"
+                            alt="ÖSTERNÄS 외스테르네스"
+                          />
+                          <img
+                            src="./assets/images/img-recommendations-06.jpg"
+                            alt="ÖSTERNÄS 외스테르네스"
+                          />
+                        </div>
+
+                        <div class="star-rating">
+                          <div
+                            class="star-rating-4-half"
+                            aria-label="평점 4.5점"
+                          >
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                          </div>
+
+                          <span aria-label="리뷰 4개">(4)</span>
+                        </div>
+
+                        <span class="option">기타옵션</span>
+                      </a>
+
+                      <div class="like">
+                        <button
+                          type="button"
+                          aria-label="위시리스트에 추가 버튼"
+                        >
+                          <i class="ic-heart"></i>
+                        </button>
+                      </div>
+
+                      <div class="add">
+                        <button class="cart-add" type="button">
+                          <i class="ic-cart-add"></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="slider-item">
+                      <a class="recommendations-link" href="./index.html">
+                        <header class="recommendations-header">
+                          <h5 class="title">HEDRA 헤드라</h5>
+
+                          <p class="category">손잡이, 32 mm</p>
+
+                          <div class="price-group">
+                            <strong class="price" aria-label="5000원">
+                              5,000
+                            </strong>
+                            <strong class="price-bundle" aria-label="2개 묶음">
+                              2개
+                            </strong>
+                          </div>
+                        </header>
+
+                        <div class="add">
+                          <button class="cart-add" type="button">
+                            <i class="ic-cart-add"></i>
+                          </button>
+                        </div>
+
+                        <div class="image-group">
+                          <img
+                            src="./assets/images/img-recommendations-07.jpg"
+                            alt="HEDRA 헤드라"
+                          />
+                          <img
+                            src="./assets/images/img-recommendations-08.jpg"
+                            alt="HEDRA 헤드라"
+                          />
+                        </div>
+                      </a>
+
+                      <div class="like">
+                        <button
+                          type="button"
+                          aria-label="위시리스트에 추가 버튼"
+                        >
+                          <i class="ic-heart"></i>
+                        </button>
+                      </div>
+
+                      <div class="add">
+                        <button class="cart-add" type="button">
+                          <i class="ic-cart-add"></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="slider-item">
+                      <a class="recommendations-link" href="./index.html">
+                        <header class="recommendations-header">
+                          <h5 class="title">EDVALLA 에드발라</h5>
+
+                          <p class="category">드롭 핸들, 18 mm</p>
+
+                          <div class="price-group">
+                            <strong class="price" aria-label="10000원">
+                              10,000
+                            </strong>
+                            <strong class="price-bundle" aria-label="2개 묶음">
+                              2개
+                            </strong>
+                          </div>
+                        </header>
+
+                        <div class="add">
+                          <button class="cart-add" type="button">
+                            <i class="ic-cart-add"></i>
+                          </button>
+                        </div>
+
+                        <div class="image-group">
+                          <img
+                            src="./assets/images/img-recommendations-09.jpg"
+                            alt="EDVALLA 에드발라"
+                          />
+                          <img
+                            src="./assets/images/img-recommendations-10.jpg"
+                            alt="EDVALLA 에드발라"
+                          />
+                        </div>
+
+                        <div class="star-rating">
+                          <div class="star-rating-5" aria-label="평점 5점">
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                          </div>
+
+                          <span aria-label="리뷰 1개">(1)</span>
+                        </div>
+
+                        <span class="option">기타옵션</span>
+                      </a>
+
+                      <div class="like">
+                        <button
+                          type="button"
+                          aria-label="위시리스트에 추가 버튼"
+                        >
+                          <i class="ic-heart"></i>
+                        </button>
+                      </div>
+
+                      <div class="add">
+                        <button class="cart-add" type="button">
+                          <i class="ic-cart-add"></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="slider-item">
+                      <a class="recommendations-link" href="./index.html">
+                        <header class="recommendations-header">
+                          <h5 class="title">ORRNÄS 오르네스</h5>
+
+                          <p class="category">손잡이, 17 mm</p>
+
+                          <div class="price-group">
+                            <strong class="price" aria-label="5000원">
+                              5,000
+                            </strong>
+                            <strong class="price-bundle" aria-label="2개 묶음">
+                              2개
+                            </strong>
+                          </div>
+                        </header>
+
+                        <div class="add">
+                          <button class="cart-add" type="button">
+                            <i class="ic-cart-add"></i>
+                          </button>
+                        </div>
+
+                        <div class="image-group">
+                          <img
+                            src="./assets/images/img-recommendations-11.jpg"
+                            alt="ORRNÄS 오르네스"
+                          />
+                          <img
+                            src="./assets/images/img-recommendations-12.jpg"
+                            alt="ORRNÄS 오르네스"
+                          />
+                        </div>
+                      </a>
+
+                      <div class="like">
+                        <button
+                          type="button"
+                          aria-label="위시리스트에 추가 버튼"
+                        >
+                          <i class="ic-heart"></i>
+                        </button>
+                      </div>
+
+                      <div class="add">
+                        <button class="cart-add" type="button">
+                          <i class="ic-cart-add"></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="slider-item">
+                      <a class="recommendations-link" href="./index.html">
+                        <header class="recommendations-header">
+                          <h5 class="title">ENERYDA 에네뤼다</h5>
+
+                          <p class="category">손잡이, 112 mm</p>
+
+                          <div class="price-group">
+                            <strong class="price" aria-label="10000원"
+                              >10,000</strong
+                            >
+                            <strong class="price-bundle" aria-label="2개 묶음"
+                              >2개</strong
+                            >
+                          </div>
+                        </header>
+
+                        <div class="add">
+                          <button class="cart-add" type="button">
+                            <i class="ic-cart-add"></i>
+                          </button>
+                        </div>
+
+                        <div class="image-group">
+                          <img
+                            src="./assets/images/img-recommendations-13.jpg"
+                            alt="ENERYDA 에네뤼다"
+                          />
+                          <img
+                            src="./assets/images/img-recommendations-14.jpg"
+                            alt="ENERYDA 에네뤼다"
+                          />
+                        </div>
+
+                        <div class="star-rating">
+                          <div class="star-rating-5" aria-label="평점 5점">
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                          </div>
+
+                          <span aria-label="리뷰 2개">(2)</span>
+                        </div>
+
+                        <span class="option">기타옵션</span>
+                      </a>
+
+                      <div class="like">
+                        <button
+                          type="button"
+                          aria-label="위시리스트에 추가 버튼"
+                        >
+                          <i class="ic-heart"></i>
+                        </button>
+                      </div>
+
+                      <div class="add">
+                        <button class="cart-add" type="button">
+                          <i class="ic-cart-add"></i>
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <div class="slider-controls">
+                    <button
+                      class="btn-40 prev"
+                      type="button"
+                      aria-label="이전 버튼"
+                    >
+                      <i class="ic-chevron" aria-hidden="true"></i>
+                    </button>
+
+                    <button
+                      class="btn-40 next"
+                      type="button"
+                      aria-label="다음 버튼"
+                    >
+                      <i class="ic-chevron" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+              </section>
+
+              <section class="planner">
+                <a class="card-link" href="./index.html">
+                  <div class="card-info">
+                    <h2>플래너</h2>
+
+                    <p class="card-title">욕실의 갯수를 늘리고 싶으신가요?</p>
+
+                    <p class="card-desc">
+                      욕실의 수도꼭지를 고르고 계신가요? 저희가 도와드릴게요!
+                      <br />
+                      <br />
+                      IKEA 플래닝 툴을 사용해보세요.
+                    </p>
+
+                    <div class="btn-40 btn-secondary fake-button">
+                      <i class="ic-pancel" aria-hidden="true"></i>
+                      욕실 플래너를 사용해보세요.
+                    </div>
+                  </div>
+
+                  <div class="card-image">
+                    <img
+                      src="./assets/images/img-planner.jpg"
+                      alt="욕실 플래너"
+                    />
+                  </div>
+                </a>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-group">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4 col-xl-12">
+              <section class="recommendations with">
+                <h2>함께 본 제품</h2>
+
+                <div class="slider">
+                  <ul class="slider-list slider-list-tablet">
+                    <li class="slider-item">
+                      <a class="recommendations-link" href="./index.html">
+                        <header class="recommendations-header">
+                          <h5 class="title">BAGGANÄS 바가네스</h5>
+
+                          <p class="category">손잡이, 21mm</p>
+
+                          <div class="highlight">
+                            <div class="price-group">
+                              <strong class="price" aria-label="5000원"
+                                >5,000</strong
+                              >
+                              <strong class="price-bundle" aria-label="2개 묶음"
+                                >2개</strong
+                              >
+                            </div>
+                          </div>
+                        </header>
+
+                        <div class="image-group">
+                          <img
+                            src="./assets/images/img-recommendations-01.jpg"
+                            alt="BAGGANÄS 바가네스"
+                          />
+                          <img
+                            src="./assets/images/img-recommendations-02.jpg"
+                            alt="BAGGANÄS 바가네스"
+                          />
+                        </div>
+
+                        <div class="star-rating">
+                          <div class="star-rating-5" aria-label="평점 5점">
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                          </div>
+
+                          <span aria-label="리뷰 5개">(5)</span>
+                        </div>
+
+                        <span class="option">기타옵션</span>
+                      </a>
+
+                      <div class="like">
+                        <button
+                          type="button"
+                          aria-label="위시리스트에 추가 버튼"
+                        >
+                          <i class="ic-heart"></i>
+                        </button>
+                      </div>
+
+                      <div class="add">
+                        <button class="cart-add" type="button">
+                          <i class="ic-cart-add"></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="slider-item">
+                      <a class="recommendations-link" href="./index.html">
+                        <header class="recommendations-header">
+                          <h5 class="title">ENERYDA 에네뤼다</h5>
+
+                          <p class="category">컵모양 손잡이, 89mm</p>
+
+                          <div class="price-group">
+                            <strong class="price" aria-label="10000원"
+                              >10,000</strong
+                            >
+                            <strong class="price-bundle" aria-label="2개 묶음"
+                              >2개</strong
+                            >
+                          </div>
+                        </header>
+
+                        <div class="image-group">
+                          <img
+                            src="./assets/images/img-recommendations-03.jpg"
+                            alt="ENERYDA 에네뤼다"
+                          />
+                          <img
+                            src="./assets/images/img-recommendations-04.jpg"
+                            alt="ENERYDA 에네뤼다"
+                          />
+                        </div>
+
+                        <div class="star-rating">
+                          <div
+                            class="star-rating-4-half"
+                            aria-label="평점 4.5점"
+                          >
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                          </div>
+
+                          <span aria-label="리뷰 2개">(2)</span>
+                        </div>
+
+                        <span class="option">기타옵션</span>
+                      </a>
+
+                      <div class="like">
+                        <button
+                          type="button"
+                          aria-label="위시리스트에 추가 버튼"
+                        >
+                          <i class="ic-heart"></i>
+                        </button>
+                      </div>
+
+                      <div class="add">
+                        <button class="cart-add" type="button">
+                          <i class="ic-cart-add"></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="slider-item">
+                      <a class="recommendations-link" href="./index.html">
+                        <header class="recommendations-header">
+                          <strong class="new">NEW</strong>
+
+                          <h5 class="title">ÖSTERNÄS 외스테르네스</h5>
+
+                          <p class="category">가죽 손잡이, 153 mm</p>
+
+                          <div class="price-group">
+                            <strong class="price" aria-label="20000원">
+                              20,000
+                            </strong>
+                            <strong class="price-bundle" aria-label="2개 묶음">
+                              2개
+                            </strong>
+                          </div>
+                        </header>
+
+                        <div class="add">
+                          <button class="cart-add" type="button">
+                            <i class="ic-cart-add"></i>
+                          </button>
+                        </div>
+
+                        <div class="image-group">
+                          <img
+                            src="./assets/images/img-recommendations-05.jpg"
+                            alt="ÖSTERNÄS 외스테르네스"
+                          />
+                          <img
+                            src="./assets/images/img-recommendations-06.jpg"
+                            alt="ÖSTERNÄS 외스테르네스"
+                          />
+                        </div>
+
+                        <div class="star-rating">
+                          <div
+                            class="star-rating-4-half"
+                            aria-label="평점 4.5점"
+                          >
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                          </div>
+
+                          <span aria-label="리뷰 4개">(4)</span>
+                        </div>
+
+                        <span class="option">기타옵션</span>
+                      </a>
+
+                      <div class="like">
+                        <button
+                          type="button"
+                          aria-label="위시리스트에 추가 버튼"
+                        >
+                          <i class="ic-heart"></i>
+                        </button>
+                      </div>
+
+                      <div class="add">
+                        <button class="cart-add" type="button">
+                          <i class="ic-cart-add"></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="slider-item">
+                      <a class="recommendations-link" href="./index.html">
+                        <header class="recommendations-header">
+                          <h5 class="title">HEDRA 헤드라</h5>
+
+                          <p class="category">손잡이, 32 mm</p>
+
+                          <div class="price-group">
+                            <strong class="price" aria-label="5000원">
+                              5,000
+                            </strong>
+                            <strong class="price-bundle" aria-label="2개 묶음">
+                              2개
+                            </strong>
+                          </div>
+                        </header>
+
+                        <div class="add">
+                          <button class="cart-add" type="button">
+                            <i class="ic-cart-add"></i>
+                          </button>
+                        </div>
+
+                        <div class="image-group">
+                          <img
+                            src="./assets/images/img-recommendations-07.jpg"
+                            alt="HEDRA 헤드라"
+                          />
+                          <img
+                            src="./assets/images/img-recommendations-08.jpg"
+                            alt="HEDRA 헤드라"
+                          />
+                        </div>
+                      </a>
+
+                      <div class="like">
+                        <button
+                          type="button"
+                          aria-label="위시리스트에 추가 버튼"
+                        >
+                          <i class="ic-heart"></i>
+                        </button>
+                      </div>
+
+                      <div class="add">
+                        <button class="cart-add" type="button">
+                          <i class="ic-cart-add"></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="slider-item">
+                      <a class="recommendations-link" href="./index.html">
+                        <header class="recommendations-header">
+                          <h5 class="title">EDVALLA 에드발라</h5>
+
+                          <p class="category">드롭 핸들, 18 mm</p>
+
+                          <div class="price-group">
+                            <strong class="price" aria-label="10000원">
+                              10,000
+                            </strong>
+                            <strong class="price-bundle" aria-label="2개 묶음">
+                              2개
+                            </strong>
+                          </div>
+                        </header>
+
+                        <div class="add">
+                          <button class="cart-add" type="button">
+                            <i class="ic-cart-add"></i>
+                          </button>
+                        </div>
+
+                        <div class="image-group">
+                          <img
+                            src="./assets/images/img-recommendations-09.jpg"
+                            alt="EDVALLA 에드발라"
+                          />
+                          <img
+                            src="./assets/images/img-recommendations-10.jpg"
+                            alt="EDVALLA 에드발라"
+                          />
+                        </div>
+
+                        <div class="star-rating">
+                          <div class="star-rating-5" aria-label="평점 5점">
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                          </div>
+
+                          <span aria-label="리뷰 1개">(1)</span>
+                        </div>
+
+                        <span class="option">기타옵션</span>
+                      </a>
+
+                      <div class="like">
+                        <button
+                          type="button"
+                          aria-label="위시리스트에 추가 버튼"
+                        >
+                          <i class="ic-heart"></i>
+                        </button>
+                      </div>
+
+                      <div class="add">
+                        <button class="cart-add" type="button">
+                          <i class="ic-cart-add"></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="slider-item">
+                      <a class="recommendations-link" href="./index.html">
+                        <header class="recommendations-header">
+                          <h5 class="title">ORRNÄS 오르네스</h5>
+
+                          <p class="category">손잡이, 17 mm</p>
+
+                          <div class="price-group">
+                            <strong class="price" aria-label="5000원">
+                              5,000
+                            </strong>
+                            <strong class="price-bundle" aria-label="2개 묶음">
+                              2개
+                            </strong>
+                          </div>
+                        </header>
+
+                        <div class="add">
+                          <button class="cart-add" type="button">
+                            <i class="ic-cart-add"></i>
+                          </button>
+                        </div>
+
+                        <div class="image-group">
+                          <img
+                            src="./assets/images/img-recommendations-11.jpg"
+                            alt="ORRNÄS 오르네스"
+                          />
+                          <img
+                            src="./assets/images/img-recommendations-12.jpg"
+                            alt="ORRNÄS 오르네스"
+                          />
+                        </div>
+                      </a>
+
+                      <div class="like">
+                        <button
+                          type="button"
+                          aria-label="위시리스트에 추가 버튼"
+                        >
+                          <i class="ic-heart"></i>
+                        </button>
+                      </div>
+
+                      <div class="add">
+                        <button class="cart-add" type="button">
+                          <i class="ic-cart-add"></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="slider-item">
+                      <a class="recommendations-link" href="./index.html">
+                        <header class="recommendations-header">
+                          <h5 class="title">ENERYDA 에네뤼다</h5>
+
+                          <p class="category">손잡이, 112 mm</p>
+
+                          <div class="price-group">
+                            <strong class="price" aria-label="10000원"
+                              >10,000</strong
+                            >
+                            <strong class="price-bundle" aria-label="2개 묶음"
+                              >2개</strong
+                            >
+                          </div>
+                        </header>
+
+                        <div class="add">
+                          <button class="cart-add" type="button">
+                            <i class="ic-cart-add"></i>
+                          </button>
+                        </div>
+
+                        <div class="image-group">
+                          <img
+                            src="./assets/images/img-recommendations-13.jpg"
+                            alt="ENERYDA 에네뤼다"
+                          />
+                          <img
+                            src="./assets/images/img-recommendations-14.jpg"
+                            alt="ENERYDA 에네뤼다"
+                          />
+                        </div>
+
+                        <div class="star-rating">
+                          <div class="star-rating-5" aria-label="평점 5점">
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                          </div>
+
+                          <span aria-label="리뷰 2개">(2)</span>
+                        </div>
+
+                        <span class="option">기타옵션</span>
+                      </a>
+
+                      <div class="like">
+                        <button
+                          type="button"
+                          aria-label="위시리스트에 추가 버튼"
+                        >
+                          <i class="ic-heart"></i>
+                        </button>
+                      </div>
+
+                      <div class="add">
+                        <button class="cart-add" type="button">
+                          <i class="ic-cart-add"></i>
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <div class="slider-controls">
+                    <button
+                      class="btn-40 prev"
+                      type="button"
+                      aria-label="이전 버튼"
+                    >
+                      <i class="ic-chevron" aria-hidden="true"></i>
+                    </button>
+
+                    <button
+                      class="btn-40 next"
+                      type="button"
+                      aria-label="다음 버튼"
+                    >
+                      <i class="ic-chevron" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+              </section>
+
+              <section class="recommendations match">
+                <h2>잘 어울리는 제품</h2>
+
+                <div class="slider">
+                  <ul class="slider-list slider-list-tablet">
+                    <li class="slider-item">
+                      <a class="recommendations-link" href="./index.html">
+                        <header class="recommendations-header">
+                          <h5 class="title">BAGGANÄS 바가네스</h5>
+
+                          <p class="category">손잡이, 21mm</p>
+
+                          <div class="highlight">
+                            <div class="price-group">
+                              <strong class="price" aria-label="5000원"
+                                >5,000</strong
+                              >
+                              <strong class="price-bundle" aria-label="2개 묶음"
+                                >2개</strong
+                              >
+                            </div>
+                          </div>
+                        </header>
+
+                        <div class="image-group">
+                          <img
+                            src="./assets/images/img-recommendations-01.jpg"
+                            alt="BAGGANÄS 바가네스"
+                          />
+                          <img
+                            src="./assets/images/img-recommendations-02.jpg"
+                            alt="BAGGANÄS 바가네스"
+                          />
+                        </div>
+
+                        <div class="star-rating">
+                          <div class="star-rating-5" aria-label="평점 5점">
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                          </div>
+
+                          <span aria-label="리뷰 5개">(5)</span>
+                        </div>
+
+                        <span class="option">기타옵션</span>
+                      </a>
+
+                      <div class="like">
+                        <button
+                          type="button"
+                          aria-label="위시리스트에 추가 버튼"
+                        >
+                          <i class="ic-heart"></i>
+                        </button>
+                      </div>
+
+                      <div class="add">
+                        <button class="cart-add" type="button">
+                          <i class="ic-cart-add"></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="slider-item">
+                      <a class="recommendations-link" href="./index.html">
+                        <header class="recommendations-header">
+                          <h5 class="title">ENERYDA 에네뤼다</h5>
+
+                          <p class="category">컵모양 손잡이, 89mm</p>
+
+                          <div class="price-group">
+                            <strong class="price" aria-label="10000원"
+                              >10,000</strong
+                            >
+                            <strong class="price-bundle" aria-label="2개 묶음"
+                              >2개</strong
+                            >
+                          </div>
+                        </header>
+
+                        <div class="image-group">
+                          <img
+                            src="./assets/images/img-recommendations-03.jpg"
+                            alt="ENERYDA 에네뤼다"
+                          />
+                          <img
+                            src="./assets/images/img-recommendations-04.jpg"
+                            alt="ENERYDA 에네뤼다"
+                          />
+                        </div>
+
+                        <div class="star-rating">
+                          <div
+                            class="star-rating-4-half"
+                            aria-label="평점 4.5점"
+                          >
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                          </div>
+
+                          <span aria-label="리뷰 2개">(2)</span>
+                        </div>
+
+                        <span class="option">기타옵션</span>
+                      </a>
+
+                      <div class="like">
+                        <button
+                          type="button"
+                          aria-label="위시리스트에 추가 버튼"
+                        >
+                          <i class="ic-heart"></i>
+                        </button>
+                      </div>
+
+                      <div class="add">
+                        <button class="cart-add" type="button">
+                          <i class="ic-cart-add"></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="slider-item">
+                      <a class="recommendations-link" href="./index.html">
+                        <header class="recommendations-header">
+                          <strong class="new">NEW</strong>
+
+                          <h5 class="title">ÖSTERNÄS 외스테르네스</h5>
+
+                          <p class="category">가죽 손잡이, 153 mm</p>
+
+                          <div class="price-group">
+                            <strong class="price" aria-label="20000원">
+                              20,000
+                            </strong>
+                            <strong class="price-bundle" aria-label="2개 묶음">
+                              2개
+                            </strong>
+                          </div>
+                        </header>
+
+                        <div class="add">
+                          <button class="cart-add" type="button">
+                            <i class="ic-cart-add"></i>
+                          </button>
+                        </div>
+
+                        <div class="image-group">
+                          <img
+                            src="./assets/images/img-recommendations-05.jpg"
+                            alt="ÖSTERNÄS 외스테르네스"
+                          />
+                          <img
+                            src="./assets/images/img-recommendations-06.jpg"
+                            alt="ÖSTERNÄS 외스테르네스"
+                          />
+                        </div>
+
+                        <div class="star-rating">
+                          <div
+                            class="star-rating-4-half"
+                            aria-label="평점 4.5점"
+                          >
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                          </div>
+
+                          <span aria-label="리뷰 4개">(4)</span>
+                        </div>
+
+                        <span class="option">기타옵션</span>
+                      </a>
+
+                      <div class="like">
+                        <button
+                          type="button"
+                          aria-label="위시리스트에 추가 버튼"
+                        >
+                          <i class="ic-heart"></i>
+                        </button>
+                      </div>
+
+                      <div class="add">
+                        <button class="cart-add" type="button">
+                          <i class="ic-cart-add"></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="slider-item">
+                      <a class="recommendations-link" href="./index.html">
+                        <header class="recommendations-header">
+                          <h5 class="title">HEDRA 헤드라</h5>
+
+                          <p class="category">손잡이, 32 mm</p>
+
+                          <div class="price-group">
+                            <strong class="price" aria-label="5000원">
+                              5,000
+                            </strong>
+                            <strong class="price-bundle" aria-label="2개 묶음">
+                              2개
+                            </strong>
+                          </div>
+                        </header>
+
+                        <div class="add">
+                          <button class="cart-add" type="button">
+                            <i class="ic-cart-add"></i>
+                          </button>
+                        </div>
+
+                        <div class="image-group">
+                          <img
+                            src="./assets/images/img-recommendations-07.jpg"
+                            alt="HEDRA 헤드라"
+                          />
+                          <img
+                            src="./assets/images/img-recommendations-08.jpg"
+                            alt="HEDRA 헤드라"
+                          />
+                        </div>
+                      </a>
+
+                      <div class="like">
+                        <button
+                          type="button"
+                          aria-label="위시리스트에 추가 버튼"
+                        >
+                          <i class="ic-heart"></i>
+                        </button>
+                      </div>
+
+                      <div class="add">
+                        <button class="cart-add" type="button">
+                          <i class="ic-cart-add"></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="slider-item">
+                      <a class="recommendations-link" href="./index.html">
+                        <header class="recommendations-header">
+                          <h5 class="title">EDVALLA 에드발라</h5>
+
+                          <p class="category">드롭 핸들, 18 mm</p>
+
+                          <div class="price-group">
+                            <strong class="price" aria-label="10000원">
+                              10,000
+                            </strong>
+                            <strong class="price-bundle" aria-label="2개 묶음">
+                              2개
+                            </strong>
+                          </div>
+                        </header>
+
+                        <div class="add">
+                          <button class="cart-add" type="button">
+                            <i class="ic-cart-add"></i>
+                          </button>
+                        </div>
+
+                        <div class="image-group">
+                          <img
+                            src="./assets/images/img-recommendations-09.jpg"
+                            alt="EDVALLA 에드발라"
+                          />
+                          <img
+                            src="./assets/images/img-recommendations-10.jpg"
+                            alt="EDVALLA 에드발라"
+                          />
+                        </div>
+
+                        <div class="star-rating">
+                          <div class="star-rating-5" aria-label="평점 5점">
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                          </div>
+
+                          <span aria-label="리뷰 1개">(1)</span>
+                        </div>
+
+                        <span class="option">기타옵션</span>
+                      </a>
+
+                      <div class="like">
+                        <button
+                          type="button"
+                          aria-label="위시리스트에 추가 버튼"
+                        >
+                          <i class="ic-heart"></i>
+                        </button>
+                      </div>
+
+                      <div class="add">
+                        <button class="cart-add" type="button">
+                          <i class="ic-cart-add"></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="slider-item">
+                      <a class="recommendations-link" href="./index.html">
+                        <header class="recommendations-header">
+                          <h5 class="title">ORRNÄS 오르네스</h5>
+
+                          <p class="category">손잡이, 17 mm</p>
+
+                          <div class="price-group">
+                            <strong class="price" aria-label="5000원">
+                              5,000
+                            </strong>
+                            <strong class="price-bundle" aria-label="2개 묶음">
+                              2개
+                            </strong>
+                          </div>
+                        </header>
+
+                        <div class="add">
+                          <button class="cart-add" type="button">
+                            <i class="ic-cart-add"></i>
+                          </button>
+                        </div>
+
+                        <div class="image-group">
+                          <img
+                            src="./assets/images/img-recommendations-11.jpg"
+                            alt="ORRNÄS 오르네스"
+                          />
+                          <img
+                            src="./assets/images/img-recommendations-12.jpg"
+                            alt="ORRNÄS 오르네스"
+                          />
+                        </div>
+                      </a>
+
+                      <div class="like">
+                        <button
+                          type="button"
+                          aria-label="위시리스트에 추가 버튼"
+                        >
+                          <i class="ic-heart"></i>
+                        </button>
+                      </div>
+
+                      <div class="add">
+                        <button class="cart-add" type="button">
+                          <i class="ic-cart-add"></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="slider-item">
+                      <a class="recommendations-link" href="./index.html">
+                        <header class="recommendations-header">
+                          <h5 class="title">ENERYDA 에네뤼다</h5>
+
+                          <p class="category">손잡이, 112 mm</p>
+
+                          <div class="price-group">
+                            <strong class="price" aria-label="10000원"
+                              >10,000</strong
+                            >
+                            <strong class="price-bundle" aria-label="2개 묶음"
+                              >2개</strong
+                            >
+                          </div>
+                        </header>
+
+                        <div class="add">
+                          <button class="cart-add" type="button">
+                            <i class="ic-cart-add"></i>
+                          </button>
+                        </div>
+
+                        <div class="image-group">
+                          <img
+                            src="./assets/images/img-recommendations-13.jpg"
+                            alt="ENERYDA 에네뤼다"
+                          />
+                          <img
+                            src="./assets/images/img-recommendations-14.jpg"
+                            alt="ENERYDA 에네뤼다"
+                          />
+                        </div>
+
+                        <div class="star-rating">
+                          <div class="star-rating-5" aria-label="평점 5점">
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                          </div>
+
+                          <span aria-label="리뷰 2개">(2)</span>
+                        </div>
+
+                        <span class="option">기타옵션</span>
+                      </a>
+
+                      <div class="like">
+                        <button
+                          type="button"
+                          aria-label="위시리스트에 추가 버튼"
+                        >
+                          <i class="ic-heart"></i>
+                        </button>
+                      </div>
+
+                      <div class="add">
+                        <button class="cart-add" type="button">
+                          <i class="ic-cart-add"></i>
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <div class="slider-controls">
+                    <button
+                      class="btn-40 prev"
+                      type="button"
+                      aria-label="이전 버튼"
+                    >
+                      <i class="ic-chevron" aria-hidden="true"></i>
+                    </button>
+
+                    <button
+                      class="btn-40 next"
+                      type="button"
+                      aria-label="다음 버튼"
+                    >
+                      <i class="ic-chevron" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+              </section>
+
+              <section class="recommendations more">
+                <h2>시리즈 제품 더 보기 - ENHET/엔헤트 욕실 손잡이</h2>
+
+                <div class="slider">
+                  <ul class="slider-list slider-list-tablet">
+                    <li class="slider-item">
+                      <a class="recommendations-link" href="./index.html">
+                        <header class="recommendations-header">
+                          <h5 class="title">BAGGANÄS 바가네스</h5>
+
+                          <p class="category">손잡이, 21mm</p>
+
+                          <div class="highlight">
+                            <div class="price-group">
+                              <strong class="price" aria-label="5000원"
+                                >5,000</strong
+                              >
+                              <strong class="price-bundle" aria-label="2개 묶음"
+                                >2개</strong
+                              >
+                            </div>
+                          </div>
+                        </header>
+
+                        <div class="image-group">
+                          <img
+                            src="./assets/images/img-recommendations-01.jpg"
+                            alt="BAGGANÄS 바가네스"
+                          />
+                          <img
+                            src="./assets/images/img-recommendations-02.jpg"
+                            alt="BAGGANÄS 바가네스"
+                          />
+                        </div>
+
+                        <div class="star-rating">
+                          <div class="star-rating-5" aria-label="평점 5점">
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                          </div>
+
+                          <span aria-label="리뷰 5개">(5)</span>
+                        </div>
+
+                        <span class="option">기타옵션</span>
+                      </a>
+
+                      <div class="like">
+                        <button
+                          type="button"
+                          aria-label="위시리스트에 추가 버튼"
+                        >
+                          <i class="ic-heart"></i>
+                        </button>
+                      </div>
+
+                      <div class="add">
+                        <button class="cart-add" type="button">
+                          <i class="ic-cart-add"></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="slider-item">
+                      <a class="recommendations-link" href="./index.html">
+                        <header class="recommendations-header">
+                          <h5 class="title">ENERYDA 에네뤼다</h5>
+
+                          <p class="category">컵모양 손잡이, 89mm</p>
+
+                          <div class="price-group">
+                            <strong class="price" aria-label="10000원"
+                              >10,000</strong
+                            >
+                            <strong class="price-bundle" aria-label="2개 묶음"
+                              >2개</strong
+                            >
+                          </div>
+                        </header>
+
+                        <div class="image-group">
+                          <img
+                            src="./assets/images/img-recommendations-03.jpg"
+                            alt="ENERYDA 에네뤼다"
+                          />
+                          <img
+                            src="./assets/images/img-recommendations-04.jpg"
+                            alt="ENERYDA 에네뤼다"
+                          />
+                        </div>
+
+                        <div class="star-rating">
+                          <div
+                            class="star-rating-4-half"
+                            aria-label="평점 4.5점"
+                          >
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                          </div>
+
+                          <span aria-label="리뷰 2개">(2)</span>
+                        </div>
+
+                        <span class="option">기타옵션</span>
+                      </a>
+
+                      <div class="like">
+                        <button
+                          type="button"
+                          aria-label="위시리스트에 추가 버튼"
+                        >
+                          <i class="ic-heart"></i>
+                        </button>
+                      </div>
+
+                      <div class="add">
+                        <button class="cart-add" type="button">
+                          <i class="ic-cart-add"></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="slider-item">
+                      <a class="recommendations-link" href="./index.html">
+                        <header class="recommendations-header">
+                          <strong class="new">NEW</strong>
+
+                          <h5 class="title">ÖSTERNÄS 외스테르네스</h5>
+
+                          <p class="category">가죽 손잡이, 153 mm</p>
+
+                          <div class="price-group">
+                            <strong class="price" aria-label="20000원">
+                              20,000
+                            </strong>
+                            <strong class="price-bundle" aria-label="2개 묶음">
+                              2개
+                            </strong>
+                          </div>
+                        </header>
+
+                        <div class="add">
+                          <button class="cart-add" type="button">
+                            <i class="ic-cart-add"></i>
+                          </button>
+                        </div>
+
+                        <div class="image-group">
+                          <img
+                            src="./assets/images/img-recommendations-05.jpg"
+                            alt="ÖSTERNÄS 외스테르네스"
+                          />
+                          <img
+                            src="./assets/images/img-recommendations-06.jpg"
+                            alt="ÖSTERNÄS 외스테르네스"
+                          />
+                        </div>
+
+                        <div class="star-rating">
+                          <div
+                            class="star-rating-4-half"
+                            aria-label="평점 4.5점"
+                          >
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                          </div>
+
+                          <span aria-label="리뷰 4개">(4)</span>
+                        </div>
+
+                        <span class="option">기타옵션</span>
+                      </a>
+
+                      <div class="like">
+                        <button
+                          type="button"
+                          aria-label="위시리스트에 추가 버튼"
+                        >
+                          <i class="ic-heart"></i>
+                        </button>
+                      </div>
+
+                      <div class="add">
+                        <button class="cart-add" type="button">
+                          <i class="ic-cart-add"></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="slider-item">
+                      <a class="recommendations-link" href="./index.html">
+                        <header class="recommendations-header">
+                          <h5 class="title">HEDRA 헤드라</h5>
+
+                          <p class="category">손잡이, 32 mm</p>
+
+                          <div class="price-group">
+                            <strong class="price" aria-label="5000원">
+                              5,000
+                            </strong>
+                            <strong class="price-bundle" aria-label="2개 묶음">
+                              2개
+                            </strong>
+                          </div>
+                        </header>
+
+                        <div class="add">
+                          <button class="cart-add" type="button">
+                            <i class="ic-cart-add"></i>
+                          </button>
+                        </div>
+
+                        <div class="image-group">
+                          <img
+                            src="./assets/images/img-recommendations-07.jpg"
+                            alt="HEDRA 헤드라"
+                          />
+                          <img
+                            src="./assets/images/img-recommendations-08.jpg"
+                            alt="HEDRA 헤드라"
+                          />
+                        </div>
+                      </a>
+
+                      <div class="like">
+                        <button
+                          type="button"
+                          aria-label="위시리스트에 추가 버튼"
+                        >
+                          <i class="ic-heart"></i>
+                        </button>
+                      </div>
+
+                      <div class="add">
+                        <button class="cart-add" type="button">
+                          <i class="ic-cart-add"></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="slider-item">
+                      <a class="recommendations-link" href="./index.html">
+                        <header class="recommendations-header">
+                          <h5 class="title">EDVALLA 에드발라</h5>
+
+                          <p class="category">드롭 핸들, 18 mm</p>
+
+                          <div class="price-group">
+                            <strong class="price" aria-label="10000원">
+                              10,000
+                            </strong>
+                            <strong class="price-bundle" aria-label="2개 묶음">
+                              2개
+                            </strong>
+                          </div>
+                        </header>
+
+                        <div class="add">
+                          <button class="cart-add" type="button">
+                            <i class="ic-cart-add"></i>
+                          </button>
+                        </div>
+
+                        <div class="image-group">
+                          <img
+                            src="./assets/images/img-recommendations-09.jpg"
+                            alt="EDVALLA 에드발라"
+                          />
+                          <img
+                            src="./assets/images/img-recommendations-10.jpg"
+                            alt="EDVALLA 에드발라"
+                          />
+                        </div>
+
+                        <div class="star-rating">
+                          <div class="star-rating-5" aria-label="평점 5점">
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                          </div>
+
+                          <span aria-label="리뷰 1개">(1)</span>
+                        </div>
+
+                        <span class="option">기타옵션</span>
+                      </a>
+
+                      <div class="like">
+                        <button
+                          type="button"
+                          aria-label="위시리스트에 추가 버튼"
+                        >
+                          <i class="ic-heart"></i>
+                        </button>
+                      </div>
+
+                      <div class="add">
+                        <button class="cart-add" type="button">
+                          <i class="ic-cart-add"></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="slider-item">
+                      <a class="recommendations-link" href="./index.html">
+                        <header class="recommendations-header">
+                          <h5 class="title">ORRNÄS 오르네스</h5>
+
+                          <p class="category">손잡이, 17 mm</p>
+
+                          <div class="price-group">
+                            <strong class="price" aria-label="5000원">
+                              5,000
+                            </strong>
+                            <strong class="price-bundle" aria-label="2개 묶음">
+                              2개
+                            </strong>
+                          </div>
+                        </header>
+
+                        <div class="add">
+                          <button class="cart-add" type="button">
+                            <i class="ic-cart-add"></i>
+                          </button>
+                        </div>
+
+                        <div class="image-group">
+                          <img
+                            src="./assets/images/img-recommendations-11.jpg"
+                            alt="ORRNÄS 오르네스"
+                          />
+                          <img
+                            src="./assets/images/img-recommendations-12.jpg"
+                            alt="ORRNÄS 오르네스"
+                          />
+                        </div>
+                      </a>
+
+                      <div class="like">
+                        <button
+                          type="button"
+                          aria-label="위시리스트에 추가 버튼"
+                        >
+                          <i class="ic-heart"></i>
+                        </button>
+                      </div>
+
+                      <div class="add">
+                        <button class="cart-add" type="button">
+                          <i class="ic-cart-add"></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="slider-item">
+                      <a class="recommendations-link" href="./index.html">
+                        <header class="recommendations-header">
+                          <h5 class="title">ENERYDA 에네뤼다</h5>
+
+                          <p class="category">손잡이, 112 mm</p>
+
+                          <div class="price-group">
+                            <strong class="price" aria-label="10000원"
+                              >10,000</strong
+                            >
+                            <strong class="price-bundle" aria-label="2개 묶음"
+                              >2개</strong
+                            >
+                          </div>
+                        </header>
+
+                        <div class="add">
+                          <button class="cart-add" type="button">
+                            <i class="ic-cart-add"></i>
+                          </button>
+                        </div>
+
+                        <div class="image-group">
+                          <img
+                            src="./assets/images/img-recommendations-13.jpg"
+                            alt="ENERYDA 에네뤼다"
+                          />
+                          <img
+                            src="./assets/images/img-recommendations-14.jpg"
+                            alt="ENERYDA 에네뤼다"
+                          />
+                        </div>
+
+                        <div class="star-rating">
+                          <div class="star-rating-5" aria-label="평점 5점">
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                              <i class="ic-star" aria-hidden="true"></i>
+                              <i class="ic-star" aria-hidden="true"></i>
+                            </div>
+                          </div>
+
+                          <span aria-label="리뷰 2개">(2)</span>
+                        </div>
+
+                        <span class="option">기타옵션</span>
+                      </a>
+
+                      <div class="like">
+                        <button
+                          type="button"
+                          aria-label="위시리스트에 추가 버튼"
+                        >
+                          <i class="ic-heart"></i>
+                        </button>
+                      </div>
+
+                      <div class="add">
+                        <button class="cart-add" type="button">
+                          <i class="ic-cart-add"></i>
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <div class="slider-controls">
+                    <button
+                      class="btn-40 prev"
+                      type="button"
+                      aria-label="이전 버튼"
+                    >
+                      <i class="ic-chevron" aria-hidden="true"></i>
+                    </button>
+
+                    <button
+                      class="btn-40 next"
+                      type="button"
+                      aria-label="다음 버튼"
+                    >
+                      <i class="ic-chevron" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="global-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 col-xl-12">
+            <div class="footer-top">
+              <header class="footer-header">
+                <h2 class="title">IKEA Family</h2>
+
+                <p>
+                  지금 IKEA Family에 무료로 가입하고
+                  <br />
+                  다양한 멤버 전용 혜택을 누리세요.
+                  <a href="./index.html">자세히 보기</a>
+                </p>
+
+                <a
+                  class="btn-42 btn-secondary sign-in-button"
+                  href="./index.html"
+                >
+                  IKEA Family 가입하기
+                </a>
+              </header>
+
+              <nav class="footer-drawer">
+                <h3 class="visually-hidden">푸터 메뉴</h3>
+
+                <ul class="drawer-list">
+                  <li class="drawer-item">
+                    <div class="customer-sevice">
+                      <!-- NOTE: 모바일부터 태블릿용 Drawer 트리거 -->
+                      <button
+                        class="modal-trigger-details lg-hidden xl-hidden"
+                        data-drawer-open="customer-sevice"
+                        type="button"
+                      >
+                        <p>고객문의</p>
+                        <i class="ic-chevron" aria-hidden="true"></i>
+                      </button>
+
+                      <div class="drawer-content">
+                        <!-- NOTE: 태블릿(PRO)부터 데스크탑용 Title -->
+                        <p class="sm-hidden md-hidden title">고객문의</p>
+
+                        <ul class="footer-nav-list">
+                          <li class="footer-nav-item">
+                            <a href="./index.html">고객지원</a>
+                          </li>
+                          <li class="footer-nav-item">
+                            <a href="./index.html">자주 묻는 질문</a>
+                          </li>
+                          <li class="footer-nav-item">
+                            <a href="./index.html">문의하기</a>
+                          </li>
+                          <li class="footer-nav-item">
+                            <a href="./index.html">배송조회</a>
+                          </li>
+                          <li class="footer-nav-item">
+                            <a href="./index.html">교환환불</a>
+                          </li>
+                          <li class="footer-nav-item">
+                            <a href="./index.html">품질보증</a>
+                          </li>
+                          <li class="footer-nav-item">
+                            <a href="./index.html">제품리콜</a>
+                          </li>
+                          <li class="footer-nav-item">
+                            <a href="./index.html">제품 구매 가이드</a>
+                          </li>
+                          <li class="footer-nav-item">
+                            <a href="./index.html">브로슈어</a>
+                          </li>
+                          <li class="footer-nav-item">
+                            <a href="./index.html">피드백</a>
+                          </li>
+                          <li class="footer-nav-item">
+                            <a href="./index.html">부품 신청</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="drawer-item">
+                    <div class="shopping">
+                      <!-- NOTE: 모바일부터 태블릿용 Drawer 트리거 -->
+                      <button
+                        class="modal-trigger-details lg-hidden xl-hidden"
+                        data-drawer-open="shopping"
+                        type="button"
+                      >
+                        <p>쇼핑하기</p>
+                        <i class="ic-chevron" aria-hidden="true"></i>
+                      </button>
+
+                      <div class="drawer-content">
+                        <!-- NOTE: 태블릿(PRO)부터 데스크탑용 Title -->
+                        <p class="sm-hidden md-hidden title">쇼핑하기</p>
+
+                        <ul class="footer-nav-list">
+                          <li class="footer-nav-item">
+                            <a href="./index.html">쇼핑하기</a>
+                          </li>
+                          <li class="footer-nav-item">
+                            <a href="./index.html">전화 주문</a>
+                          </li>
+                          <li class="footer-nav-item">
+                            <a href="./index.html">IKEA for Business</a>
+                          </li>
+                          <li class="footer-nav-item">
+                            <a href="./index.html">셀프 플래닝</a>
+                          </li>
+                          <li class="footer-nav-item">
+                            <a href="./index.html">IKEA 모바일 앱</a>
+                          </li>
+                          <li class="footer-nav-item">
+                            <a href="./index.html">제품 사용 팁/가이드</a>
+                          </li>
+                          <li class="footer-nav-item">
+                            <a href="./index.html">결제 옵션</a>
+                          </li>
+                          <li class="footer-nav-item">
+                            <a href="./index.html">기프트 카드</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="drawer-item">
+                    <div class="service">
+                      <!-- NOTE: 모바일부터 태블릿용 Drawer 트리거 -->
+                      <button
+                        class="modal-trigger-details lg-hidden xl-hidden"
+                        data-drawer-open="service"
+                        type="button"
+                      >
+                        <p>서비스</p>
+                        <i class="ic-chevron" aria-hidden="true"></i>
+                      </button>
+
+                      <div class="drawer-content">
+                        <!-- NOTE: 태블릿(PRO)부터 데스크탑용 Title -->
+                        <p class="sm-hidden md-hidden title">서비스</p>
+
+                        <ul class="footer-nav-list">
+                          <li class="footer-nav-item">
+                            <a href="./index.html">IKEA 서비스</a>
+                          </li>
+                          <li class="footer-nav-item">
+                            <a href="./index.html">배송 서비스</a>
+                          </li>
+                          <li class="footer-nav-item">
+                            <a href="./index.html">조립 서비스</a>
+                          </li>
+                          <li class="footer-nav-item">
+                            <a href="./index.html">설치 서비스</a>
+                          </li>
+                          <li class="footer-nav-item">
+                            <a href="./index.html">주방 서비스</a>
+                          </li>
+                          <li class="footer-nav-item">
+                            <a href="./index.html">홈퍼니싱 플래닝 서비스</a>
+                          </li>
+                          <li class="footer-nav-item">
+                            <a href="./index.html">인테리어 디자인 서비스</a>
+                          </li>
+                          <li class="footer-nav-item">
+                            <a href="./index.html">바이백 서비스</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="drawer-item">
+                    <div class="ikea-story">
+                      <!-- NOTE: 모바일부터 태블릿용 Drawer 트리거 -->
+                      <button
+                        class="modal-trigger-details lg-hidden xl-hidden"
+                        data-drawer-open="ikea-story"
+                        type="button"
+                      >
+                        <p>IKEA 이야기</p>
+                        <i class="ic-chevron" aria-hidden="true"></i>
+                      </button>
+
+                      <div class="drawer-content">
+                        <!-- NOTE: 태블릿(PRO)부터 데스크탑용 Title -->
+                        <p class="sm-hidden md-hidden title">IKEA 이야기</p>
+
+                        <ul class="footer-nav-list">
+                          <li class="footer-nav-item">
+                            <a href="./index.html">브랜드 소개</a>
+                          </li>
+                          <li class="footer-nav-item">
+                            <a href="./index.html">집에서의 삶</a>
+                          </li>
+                          <li class="footer-nav-item">
+                            <a href="./index.html">지속가능한 생활</a>
+                          </li>
+                          <li class="footer-nav-item">
+                            <a href="./index.html"
+                              >내가 아끼는 집, 나를 아끼는 집</a
+                            >
+                          </li>
+                          <li class="footer-nav-item">
+                            <a href="./index.html">뉴스</a>
+                          </li>
+                          <li class="footer-nav-item">
+                            <a href="./index.html">채용정보</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="footer-middle">
+              <div class="footer-contact">
+                <a
+                  class="btn-outlined btn-34"
+                  href="./index.html"
+                  aria-label="페이스북 페이지로 이동"
+                >
+                  <i class="ic-facebook"></i>
+                </a>
+
+                <a
+                  class="btn-outlined btn-34"
+                  href="./index.html"
+                  aria-label="인스타그램 페이지로 이동"
+                >
+                  <i class="ic-instagram"></i>
+                </a>
+
+                <a
+                  class="btn-outlined btn-34"
+                  href="./index.html"
+                  aria-label="유튜브 페이지로 이동"
+                >
+                  <i class="ic-youtube"></i>
+                </a>
+
+                <a
+                  class="btn-outlined btn-34"
+                  href="./index.html"
+                  aria-label="카카오 페이지로 이동"
+                >
+                  <i class="ic-kakao"></i>
+                </a>
+              </div>
+
+              <form class="footer-language" action="POST">
+                <a class="btn-40 btn-outlined" href="./index.html">
+                  <i class="ic-country"></i>
+                  국가 변경
+                </a>
+
+                <div class="select-group">
+                  <select class="btn-40 btn-outlined" name="language">
+                    <option value="kr">한국어</option>
+                    <option value="en">English</option>
+                  </select>
+                  <i class="ic-chevron"></i>
+                </div>
+              </form>
+            </div>
+
+            <div class="footer-bottom">
+              <p class="copyright">&copy; Inter IKEA Systems B.V 1999-2021</p>
+
+              <div class="footer-policy">
+                <ul class="policy-list">
+                  <li class="policy-item">
+                    <a href="./index.html">개인정보처리방침</a>
+                  </li>
+                  <li class="policy-item">
+                    <a href="./index.html">쿠키 정책</a>
+                  </li>
+                  <li class="policy-item">
+                    <a href="./index.html">쿠키 설정</a>
+                  </li>
+                  <li class="policy-item">
+                    <a href="./index.html">웹사이트 이용약관</a>
+                  </li>
+                  <li class="policy-item">
+                    <a href="./index.html">Responsible disclosure</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="footer-info">
+              <dl class="info-list">
+                <div class="info-item">
+                  <dt class="visually-hidden">상호</dt>
+                  <dd>IKEA 코리아</dd>
+                </div>
+                <div class="info-item">
+                  <dt>주소</dt>
+                  <dd>(우) 14352 경기도 광명시 일직로 17 IKEA광명점</dd>
+                </div>
+                <div class="info-item">
+                  <dt>사업자 등록번호</dt>
+                  <dd>
+                    106-86-82871 <a href="./index.html">사업자정보확인</a>
+                  </dd>
+                </div>
+                <div class="info-item">
+                  <dt>대표자</dt>
+                  <dd>프레드릭 요한손</dd>
+                </div>
+                <div class="info-item">
+                  <dt>통신판매업 신고</dt>
+                  <dd>2018-경기광명-0209</dd>
+                </div>
+                <div class="info-item">
+                  <dt>TEL</dt>
+                  <dd>1670-4532</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- NOTE: MODALs -->
+    <aside class="sidebar">
+      <h1 class="visually-hidden">사이드 바</h1>
+
+      <header class="sidebar-header">
+        <h1 class="sidebar-header-logo">
+          <a href="./index.html" aria-label="홈으로 이동">
+            <img src="./assets/images/Logo.svg" alt="로고" />
+          </a>
+        </h1>
+
+        <div class="sidebar-header-button">
+          <button
+            class="btn-ghost btn-40 close-button"
+            data-close="menu"
+            type="button"
+            aria-label="창 닫기"
+          >
+            <i class="ic-close" aria-hidden="true"></i>
+          </button>
+        </div>
+      </header>
+
+      <nav class="sidebar-nav">
+        <h2 class="visually-hidden">메뉴</h2>
+
+        <div class="sidebar-nav-list-group">
+          <ul class="sidebar-nav-menu-list">
+            <li class="sidebar-nav-menu-item is-main">
+              <a href="./index.html">모든 제품</a>
+            </li>
+            <li class="sidebar-nav-menu-item is-main">
+              <a href="./index.html">디지털 쇼룸</a>
+            </li>
+            <li class="sidebar-nav-menu-item">
+              <a href="./index.html">할인 중</a>
+            </li>
+            <li class="sidebar-nav-menu-item">
+              <a href="./index.html">신제품</a>
+            </li>
+            <li class="sidebar-nav-menu-item">
+              <a href="./index.html">더 낮은 새로운 가격</a>
+            </li>
+            <li class="sidebar-nav-menu-item">
+              <a href="./index.html">아이디어</a>
+            </li>
+            <li class="sidebar-nav-menu-item">
+              <a href="./index.html">IKEA Live</a>
+            </li>
+            <li class="sidebar-nav-menu-item">
+              <a href="./index.html">새로운 소식</a>
+            </li>
+          </ul>
+
+          <ul class="sidebar-nav-aux-list">
+            <li class="sidebar-nav-aux-item">
+              <a href="./index.html">매장안내</a>
+            </li>
+            <li class="sidebar-nav-aux-item">
+              <a href="./index.html">IKEA Family</a>
+            </li>
+            <li class="sidebar-nav-aux-item">
+              <a href="./index.html">고객지원</a>
+            </li>
+            <li class="sidebar-nav-aux-item">
+              <a href="./index.html">배송조회</a>
+            </li>
+            <li class="sidebar-nav-aux-item">
+              <a href="./index.html">내 프로필</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <footer class="sidebar-footer">
+        <div class="sidebar-footer-language">
+          <select class="sidebar-footer-language-select btn-outlined btn-40">
+            <option value="">한국어</option>
+            <option value="">English</option>
+          </select>
+          <i class="ic-chevron" aria-hidden="true"></i>
+        </div>
+
+        <div class="sidebar-footer-country">
+          <a
+            class="sidebar-footer-country-link btn-outlined btn-40"
+            href="./index.html"
+          >
+            <i class="ic-country" aria-hidden="true"></i>
+            국가 변경
+          </a>
+        </div>
+      </footer>
+    </aside>
+
+    <section class="carousel-modal">
+      <h1 class="visually-hidden">상품 슬라이더 상세 이미지 창</h1>
+
+      <header class="modal-header">
+        <button
+          class="btn-ghost btn-40 close-button"
+          data-close="carousel"
+          type="button"
+          aria-label="창 닫기 버튼"
+        >
+          <i class="ic-close" aria-hidden="true"></i>
+        </button>
+      </header>
+
+      <div class="modal-contents">
+        <div class="slider">
+          <ul class="slider-list">
+            <li class="slider-item">
+              <button type="button">
+                <figure>
+                  <img src="./assets/images/img-slider-01.jpg" alt="" />
+                  <figcaption class="visually-hidden">
+                    에네뤼다 손잡이 상세 이미지 1
+                  </figcaption>
+                </figure>
+              </button>
+            </li>
+            <li class="slider-item">
+              <button type="button">
+                <figure>
+                  <img src="./assets/images/img-slider-02.jpg" alt="" />
+                  <figcaption class="visually-hidden">
+                    에네뤼다 손잡이 상세 이미지 2
+                  </figcaption>
+                </figure>
+              </button>
+            </li>
+            <li class="slider-item">
+              <button type="button">
+                <figure>
+                  <img src="./assets/images/img-slider-03.jpg" alt="" />
+                  <figcaption class="visually-hidden">
+                    에네뤼다 손잡이 상세 이미지 3
+                  </figcaption>
+                </figure>
+              </button>
+            </li>
+          </ul>
+
+          <div class="slider-controls">
+            <button
+              class="btn-40 prev"
+              type="button"
+              aria-label="이전 이미지로 넘김 버튼"
+            >
+              <i class="ic-chevron" aria-hidden="true"></i>
+            </button>
+
+            <button
+              class="btn-40 next"
+              type="button"
+              aria-label="다음 이미지로 넘김 버튼"
+            >
+              <i class="ic-chevron" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="pagenation">
+          <button type="button"></button>
+          <button type="button"></button>
+          <button type="button"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="size-option-modal">
+      <h1 class="visually-hidden">규격 옵션 선택 창</h1>
+
+      <header class="modal-header">
+        <button
+          class="btn-ghost btn-40 close-button"
+          data-close="sizeOption"
+          type="button"
+          aria-label="창 닫기 버튼"
+        >
+          <i class="ic-close" aria-hidden="true"></i>
+        </button>
+      </header>
+
+      <div class="modal-contents">
+        <article class="option-size">
+          <h2>규격</h2>
+
+          <div>
+            <a class="option-link" href="./index.html">
+              <div class="option">20 <span aria-label="밀리미터">mm</span></div>
+              <div class="secondary-price">
+                <span aria-label="공제">-</span>
+                <span aria-hidden="true">￦</span>
+                <span aria-label="2500원">2,500</span>
+              </div>
+            </a>
+
+            <a
+              class="option-link is-selected"
+              href="./index.html"
+              aria-current="page"
+            >
+              <div class="option">27 <span aria-label="밀리미터">mm</span></div>
+            </a>
+
+            <a class="option-link" href="./index.html">
+              <div class="option">35 <span aria-label="밀리미터">mm</span></div>
+              <div class="secondary-price">
+                <span aria-label="추가">+</span>
+                <span aria-hidden="true">￦</span>
+                <span aria-label="2500원">2,500</span>
+              </div>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="color-option-modal">
+      <h1 class="visually-hidden">색상 옵션 선택 창</h1>
+
+      <header class="modal-header">
+        <button
+          class="btn-ghost btn-40 close-button"
+          data-close="colorOption"
+          type="button"
+          aria-label="창 닫기 버튼"
+        >
+          <i class="ic-close" aria-hidden="true"></i>
+        </button>
+      </header>
+
+      <div class="modal-contents">
+        <article class="option-color">
+          <h2>색상</h2>
+
+          <div>
+            <a
+              class="option-link is-selected"
+              href="./index.html"
+              aria-current="page"
+            >
+              <span class="option">크롬도금</span>
+              <img src="./assets/images/img-option-01.jpg" alt="크롬도금" />
+            </a>
+
+            <a class="option-link" href="./index.html">
+              <span class="option">황동색</span>
+              <img src="./assets/images/img-option-02.jpg" alt="황동색" />
+            </a>
+
+            <a class="option-link" href="./index.html">
+              <span class="option">블랙</span>
+              <img src="./assets/images/img-option-03.jpg" alt="블랙" />
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="description-modal">
+      <h1 class="visually-hidden">제품 설명 창</h1>
+
+      <header class="modal-header">
+        <button
+          class="btn-ghost btn-40 close-button"
+          data-close="description"
+          type="button"
+          arial-label="창 닫기 버튼"
+        >
+          <i class="ic-close" aria-hidden="true"></i>
+        </button>
+      </header>
+
+      <div class="modal-contents">
+        <article class="description">
+          <h2>제품 설명</h2>
+
+          <div class="description-info">
+            <div class="desc-summary">
+              <p>
+                클래식한 스타일의 ENERYDA/에네뤼다 걸이는 크롬과 황동, 블랙
+                색상으로 구성되어 있습니다. 다양한 디자인 중에서 우리 집
+                인테리어에 꼭 맞는 제품을 선택해보세요.
+              </p>
+
+              <p>두께 16-21 mm 문에 사용하기 적합합니다.</p>
+            </div>
+
+            <div class="desc-etc">
+              <button type="button" data-open="desc-hidden">자세히 보기</button>
+
+              <div class="desc-hidden">
+                <p>나사 포함.</p>
+
+                <dl>
+                  <dt>디자이너</dt>
+                  <dd>Francis Cayouette</dd>
+                </dl>
+              </div>
+            </div>
+
+            <div class="badge">
+              <p>제품 번호</p>
+              <strong class="number">703.475.35</strong>
+            </div>
+          </div>
+
+          <div class="drawer">
+            <ol class="drawer-list">
+              <li class="drawer-item">
+                <div class="material">
+                  <button
+                    class="modal-trigger-details"
+                    data-drawer-open="material"
+                    type="button"
+                  >
+                    <span class="option-title">소재 & 관리</span>
+                    <i class="ic-chevron" aria-hidden="true"></i>
+                  </button>
+
+                  <div class="drawer-contents">
+                    <div>
+                      <p>알루미늄, 크롬도금</p>
+
+                      <p>
+                        순한 세제에 적신 천으로 닦으세요.<br />
+                        깨끗한 천으로 물기를 닦아주세요.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="drawer-item">
+                <div class="package">
+                  <button
+                    class="modal-trigger-details"
+                    data-drawer-open="package"
+                    type="button"
+                  >
+                    <span class="option-title">포장</span>
+                    <i class="ic-chevron" aria-hidden="true"></i>
+                  </button>
+
+                  <div class="drawer-contents">
+                    <header>
+                      <h3>ENERYDA 에네뤼다</h3>
+                      <span>손잡이</span>
+                    </header>
+
+                    <div class="badge">
+                      <p>제품 번호</p>
+                      <strong class="number">703.475.35</strong>
+                    </div>
+
+                    <dl>
+                      <div>
+                        <dt>폭</dt>
+                        <dd>10 cm</dd>
+                      </div>
+                      <div>
+                        <dt>높이</dt>
+                        <dd>3 cm</dd>
+                      </div>
+                      <div>
+                        <dt>길이</dt>
+                        <dd>11 cm</dd>
+                      </div>
+                      <div>
+                        <dt>무게</dt>
+                        <dd>0.05 kg</dd>
+                      </div>
+                      <div>
+                        <dt>패키지</dt>
+                        <dd>1</dd>
+                      </div>
+                    </dl>
+                  </div>
+                </div>
+              </li>
+              <li class="drawer-item">
+                <div class="compliance">
+                  <button
+                    class="modal-trigger-details"
+                    data-drawer-open="compliance"
+                    type="button"
+                  >
+                    <span class="option-title">고시 정보</span>
+                    <i class="ic-chevron" aria-hidden="true"></i>
+                  </button>
+
+                  <div class="drawer-contents">
+                    <dl>
+                      <div>
+                        <dt>인증필 유무</dt>
+                        <dd>KC 안전기준을 충족합니다.</dd>
+                      </div>
+                      <div>
+                        <dt>색상</dt>
+                        <dd>제품명 또는 이미지 참조</dd>
+                      </div>
+                      <div>
+                        <dt>구성품</dt>
+                        <dd>포장 탭 참조</dd>
+                      </div>
+                      <div>
+                        <dt>크기</dt>
+                        <dd>제품 크기 탭 참조</dd>
+                      </div>
+                      <div>
+                        <dt>중량</dt>
+                        <dd>포장 탭 참조</dd>
+                      </div>
+                      <div>
+                        <dt>재질</dt>
+                        <dd>소재 & 관리 탭 참조</dd>
+                      </div>
+                      <div>
+                        <dt>제조사</dt>
+                        <dd>IKEA of Sweden AB</dd>
+                      </div>
+                      <div>
+                        <dt>제조국</dt>
+                        <dd>중국</dd>
+                      </div>
+                      <div>
+                        <dt>수입자</dt>
+                        <dd>이케아코리아 유한회사</dd>
+                      </div>
+                      <div>
+                        <dt>배송&설치비용</dt>
+                        <dd>이케아 서비스 페이지 참조</dd>
+                      </div>
+                      <div>
+                        <dt>품질보증</dt>
+                        <dd>
+                          IKEA 품질 보증 기준을 따릅니다. 홈페이지에서 IKEA 품질
+                          보증을 확인 하세요.
+                        </dd>
+                      </div>
+                      <div>
+                        <dt>교환 환불 책임자와 전화 번호</dt>
+                        <dd>이케아코리아 유한회사/ 1670-4532</dd>
+                      </div>
+                      <div>
+                        <dt>동일모델의 출시년월</dt>
+                        <dd>8/1/2017</dd>
+                      </div>
+                      <div>
+                        <dt>취급시 주의 사항(세탁방법 및 사용 연령)</dt>
+                        <dd>소재 & 관리 탭 참조</dd>
+                      </div>
+                      <div>
+                        <dt>제조년월</dt>
+                        <dd>
+                          제조일자: 포장면 참조 (예:1246=2012년 46번째 주
+                          생산제품)
+                        </dd>
+                      </div>
+                    </dl>
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="size-modal">
+      <h1 class="visually-hidden">제품 크기 창</h1>
+
+      <header class="modal-header">
+        <button
+          class="btn-ghost btn-40 close-button"
+          data-close="size"
+          type="button"
+          arial-label="창 닫기 버튼"
+        >
+          <i class="ic-close" aria-hidden="true"></i>
+        </button>
+      </header>
+
+      <div class="modal-contents">
+        <article class="size">
+          <h2>제품 크기</h2>
+
+          <dl>
+            <div>
+              <dt>길이</dt>
+              <dd aria-label="21 밀리미터">21mm</dd>
+            </div>
+            <div>
+              <dt>지름</dt>
+              <dd aria-label="27 밀리미터">27 mm</dd>
+            </div>
+            <div>
+              <dt>나사구멍 지름</dt>
+              <dd aria-label="5 밀리미터">5 mm</dd>
+            </div>
+            <div>
+              <dt>개수</dt>
+              <dd>2 개</dd>
+            </div>
+          </dl>
+
+          <img
+            src="./assets/images/img-slider-01.jpg"
+            alt="ENERYDA 에네뤼다 손잡이, 크롬도금, 27밀리미터"
+          />
+        </article>
+      </div>
+    </section>
+
+    <section class="review-modal">
+      <h1 class="visually-hidden">상품 리뷰 창</h1>
+
+      <header class="modal-header">
+        <button
+          class="btn-ghost btn-40 close-button"
+          data-close="review"
+          type="button"
+          arial-label="창 닫기 버튼"
+        >
+          <i class="ic-close" aria-hidden="true"></i>
+        </button>
+      </header>
+
+      <div class="modal-contents">
+        <article class="review">
+          <h2>상품평</h2>
+
+          <div class="summary">
+            <div class="grade-point">
+              <div class="rating">3</div>
+
+              <div class="star-rating">
+                <div class="star-rating-3" aria-label="평점 3점">
+                  <div>
+                    <i class="ic-star" aria-hidden="true"></i>
+                    <i class="ic-star" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <i class="ic-star" aria-hidden="true"></i>
+                    <i class="ic-star" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <i class="ic-star" aria-hidden="true"></i>
+                    <i class="ic-star" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <i class="ic-star" aria-hidden="true"></i>
+                    <i class="ic-star" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <i class="ic-star" aria-hidden="true"></i>
+                    <i class="ic-star" aria-hidden="true"></i>
+                  </div>
+                </div>
+
+                <div class="review-count">(4)</div>
+              </div>
+            </div>
+
+            <div class="evaluation">
+              <div class="evaluation-title">평점</div>
+
+              <dl class="evaluation-list">
+                <div class="evaluation-item">
+                  <dt>총 평점</dt>
+                  <dd class="point">3</dd>
+                  <dd class="bar">
+                    <div class="star-rating-3" aria-label="평점 3점">
+                      <div>
+                        <i class="ic-star" aria-hidden="true"></i>
+                        <i class="ic-star" aria-hidden="true"></i>
+                      </div>
+                      <div>
+                        <i class="ic-star" aria-hidden="true"></i>
+                        <i class="ic-star" aria-hidden="true"></i>
+                      </div>
+                      <div>
+                        <i class="ic-star" aria-hidden="true"></i>
+                        <i class="ic-star" aria-hidden="true"></i>
+                      </div>
+                      <div>
+                        <i class="ic-star" aria-hidden="true"></i>
+                        <i class="ic-star" aria-hidden="true"></i>
+                      </div>
+                      <div>
+                        <i class="ic-star" aria-hidden="true"></i>
+                        <i class="ic-star" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </dd>
+                </div>
+                <div class="evaluation-item">
+                  <dt>손쉬운 조립 / 설명</dt>
+                  <dd class="point">3</dd>
+                  <dd class="bar">
+                    <div class="rating-bar-3">
+                      <div class="rating-bar-dot">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                      </div>
+                    </div>
+                  </dd>
+                </div>
+                <div class="evaluation-item">
+                  <dt>제품 가성비</dt>
+                  <dd class="point">3</dd>
+                  <dd class="bar">
+                    <div class="rating-bar-3-8">
+                      <div class="rating-bar-dot">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                      </div>
+                    </div>
+                  </dd>
+                </div>
+                <div class="evaluation-item">
+                  <dt>제품 품질</dt>
+                  <dd class="point">3</dd>
+                  <dd class="bar">
+                    <div class="rating-bar-3">
+                      <div class="rating-bar-dot">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                      </div>
+                    </div>
+                  </dd>
+                </div>
+                <div class="evaluation-item">
+                  <dt>제품 외관</dt>
+                  <dd class="point">4.5</dd>
+                  <dd class="bar">
+                    <div class="rating-bar-4-5">
+                      <div class="rating-bar-dot">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                      </div>
+                    </div>
+                  </dd>
+                </div>
+                <div class="evaluation-item">
+                  <dt>제품 기능</dt>
+                  <dd class="point">3</dd>
+                  <dd class="bar">
+                    <div class="rating-bar-3">
+                      <div class="rating-bar-dot">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                      </div>
+                    </div>
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+          <ol class="review-list">
+            <li class="review-item">
+              <header class="review-header">
+                <div class="star-rating">
+                  <div class="star-rating-5" aria-label="평점 5점">
+                    <div>
+                      <i class="ic-star" aria-hidden="true"></i>
+                      <i class="ic-star" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                      <i class="ic-star" aria-hidden="true"></i>
+                      <i class="ic-star" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                      <i class="ic-star" aria-hidden="true"></i>
+                      <i class="ic-star" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                      <i class="ic-star" aria-hidden="true"></i>
+                      <i class="ic-star" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                      <i class="ic-star" aria-hidden="true"></i>
+                      <i class="ic-star" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="date">
+                  인증된 구매자 -
+                  <time datetime="2021-06-10">2021/06/10</time>
+                </div>
+              </header>
+
+              <div class="review-content">
+                <div class="review">
+                  <h5>서랍 손잡이..</h5>
+                  <p>귀엽고 좋아요.</p>
+                </div>
+
+                <div class="recommandation">
+                  <i class="ic-check" aria-hidden="true"></i>
+                  추천
+                </div>
+
+                <dl class="evaluation-list">
+                  <div class="evaluation-item">
+                    <dt>손쉬운 조립 / 설명</dt>
+                    <dd class="point">5</dd>
+                    <dd class="bar">
+                      <div class="rating-bar-5" aria-label="5점">
+                        <div class="rating-bar-dot">
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                        </div>
+                      </div>
+                    </dd>
+                  </div>
+                  <div class="evaluation-item">
+                    <dt>제품 가성비</dt>
+                    <dd class="point">5</dd>
+                    <dd class="bar">
+                      <div class="rating-bar-5" aria-label="5점">
+                        <div class="rating-bar-dot">
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                        </div>
+                      </div>
+                    </dd>
+                  </div>
+                  <div class="evaluation-item">
+                    <dt>제품 품질</dt>
+                    <dd class="point">5</dd>
+                    <dd class="bar">
+                      <div class="rating-bar-5" aria-label="5점">
+                        <div class="rating-bar-dot">
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                        </div>
+                      </div>
+                    </dd>
+                  </div>
+                  <div class="evaluation-item">
+                    <dt>제품 외관</dt>
+                    <dd class="point">5</dd>
+                    <dd class="bar">
+                      <div class="rating-bar-5" aria-label="5점">
+                        <div class="rating-bar-dot">
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                        </div>
+                      </div>
+                    </dd>
+                  </div>
+                  <div class="evaluation-item">
+                    <dt>제품 기능</dt>
+                    <dd class="point">5</dd>
+                    <dd class="bar">
+                      <div class="rating-bar-5" aria-label="5점">
+                        <div class="rating-bar-dot">
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                        </div>
+                      </div>
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </li>
+            <li class="review-item">
+              <header class="review-header">
+                <div class="star-rating">
+                  <div class="star-rating-1" aria-label="평점 1점">
+                    <div>
+                      <i class="ic-star" aria-hidden="true"></i>
+                      <i class="ic-star" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                      <i class="ic-star" aria-hidden="true"></i>
+                      <i class="ic-star" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                      <i class="ic-star" aria-hidden="true"></i>
+                      <i class="ic-star" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                      <i class="ic-star" aria-hidden="true"></i>
+                      <i class="ic-star" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                      <i class="ic-star" aria-hidden="true"></i>
+                      <i class="ic-star" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="date">
+                  인증된 구매자 -
+                  <time datetime="2021-12-09">2021/12/09</time>
+                </div>
+              </header>
+
+              <div class="review-content">
+                <div class="review">
+                  <h5>나사가 짧아요</h5>
+                  <p>
+                    나사가 짧아서 원래 사용하려곳에 사용 못하고 두개중 한개는
+                    반품 했어요
+                  </p>
+                </div>
+
+                <div class="recommandation">
+                  <i class="ic-close" aria-hidden="true"></i>
+                  아니요, 이 제품을 추천하지 않습니다.
+                </div>
+
+                <dl class="evaluation-list">
+                  <div class="evaluation-item">
+                    <dt>손쉬운 조립 / 설명</dt>
+                    <dd class="point">1</dd>
+                    <dd class="bar">
+                      <div class="rating-bar-1" aria-label="1점">
+                        <div class="rating-bar-dot">
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                        </div>
+                      </div>
+                    </dd>
+                  </div>
+                  <div class="evaluation-item">
+                    <dt>제품 가성비</dt>
+                    <dd class="point">4</dd>
+                    <dd class="bar">
+                      <div class="rating-bar-4" aria-label="4점">
+                        <div class="rating-bar-dot">
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                        </div>
+                      </div>
+                    </dd>
+                  </div>
+                  <div class="evaluation-item">
+                    <dt>제품 품질</dt>
+                    <dd class="point">1</dd>
+                    <dd class="bar">
+                      <div class="rating-bar-1" aria-label="1점">
+                        <div class="rating-bar-dot">
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                        </div>
+                      </div>
+                    </dd>
+                  </div>
+                  <div class="evaluation-item">
+                    <dt>제품 외관</dt>
+                    <dd class="point">5</dd>
+                    <dd class="bar">
+                      <div class="rating-bar-5" aria-label="5점">
+                        <div class="rating-bar-dot">
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                        </div>
+                      </div>
+                    </dd>
+                  </div>
+                  <div class="evaluation-item">
+                    <dt>제품 기능</dt>
+                    <dd class="point">1</dd>
+                    <dd class="bar">
+                      <div class="rating-bar-1" aria-label="5점">
+                        <div class="rating-bar-dot">
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                        </div>
+                      </div>
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </li>
+            <li class="review-item">
+              <header class="review-header">
+                <div class="star-rating">
+                  <div class="star-rating-5" aria-label="평점 5점">
+                    <div>
+                      <i class="ic-star" aria-hidden="true"></i>
+                      <i class="ic-star" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                      <i class="ic-star" aria-hidden="true"></i>
+                      <i class="ic-star" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                      <i class="ic-star" aria-hidden="true"></i>
+                      <i class="ic-star" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                      <i class="ic-star" aria-hidden="true"></i>
+                      <i class="ic-star" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                      <i class="ic-star" aria-hidden="true"></i>
+                      <i class="ic-star" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="date">
+                  임이꼼하 -
+                  <time datetime="2020-04-07">2020/04/07</time>
+                </div>
+              </header>
+
+              <div class="review-content">
+                <div class="review">
+                  <h5>정말 예쁜 반짝반짝 손잡이</h5>
+                  <p>
+                    크녹스훌트 싱크대에 설치했어요 문고리닷컴이나 다른 쇼핑몰의
+                    손잡이도 많이 봤지만, 이케아가 손잡이는 역시 예쁩니다.
+                    반짝반짝, 황금색에 고급스러운 마감처리 하얀색이나 진한 색상
+                    바탕의 가구에 찰떡이에요~
+                  </p>
+                </div>
+
+                <div class="recommandation">
+                  <i class="ic-check" aria-hidden="true"></i>
+                  추천
+                </div>
+
+                <dl class="evaluation-list">
+                  <div class="evaluation-item">
+                    <dt>제품 가성비</dt>
+                    <dd class="point">5</dd>
+                    <dd class="bar">
+                      <div class="rating-bar-5" aria-label="5점">
+                        <div class="rating-bar-dot">
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                        </div>
+                      </div>
+                    </dd>
+                  </div>
+                  <div class="evaluation-item">
+                    <dt>제품 품질</dt>
+                    <dd class="point">5</dd>
+                    <dd class="bar">
+                      <div class="rating-bar-5" aria-label="5점">
+                        <div class="rating-bar-dot">
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                        </div>
+                      </div>
+                    </dd>
+                  </div>
+                  <div class="evaluation-item">
+                    <dt>제품 외관</dt>
+                    <dd class="point">5</dd>
+                    <dd class="bar">
+                      <div class="rating-bar-5" aria-label="5점">
+                        <div class="rating-bar-dot">
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                        </div>
+                      </div>
+                    </dd>
+                  </div>
+                  <div class="evaluation-item">
+                    <dt>제품 기능</dt>
+                    <dd class="point">5</dd>
+                    <dd class="bar">
+                      <div class="rating-bar-5" aria-label="5점">
+                        <div class="rating-bar-dot">
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                        </div>
+                      </div>
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </li>
+            <li class="review-item">
+              <header class="review-header">
+                <div class="star-rating">
+                  <div class="star-rating-1" aria-label="평점 1점">
+                    <div>
+                      <i class="ic-star" aria-hidden="true"></i>
+                      <i class="ic-star" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                      <i class="ic-star" aria-hidden="true"></i>
+                      <i class="ic-star" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                      <i class="ic-star" aria-hidden="true"></i>
+                      <i class="ic-star" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                      <i class="ic-star" aria-hidden="true"></i>
+                      <i class="ic-star" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                      <i class="ic-star" aria-hidden="true"></i>
+                      <i class="ic-star" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="date">
+                  코스모스꽃 -
+                  <time datetime="2017-09-19">2017/09/19</time>
+                </div>
+              </header>
+
+              <div class="review-content">
+                <div class="review">
+                  <h5>너무 번거롭습니다</h5>
+                  <p>
+                    손잡이를 사러 여러번 방문하게 되네요.. 물건 수량을 좀더
+                    여유있게 하셨음 좋겠습니다...
+                  </p>
+                </div>
+
+                <div class="recommandation">
+                  <i class="ic-close" aria-hidden="true"></i>
+                  아니요, 이 제품을 추천하지 않습니다.
+                </div>
+
+                <dl class="evaluation-list">
+                  <div class="evaluation-item">
+                    <dt>손쉬운 조립 / 설명</dt>
+                    <dd class="point">2</dd>
+                    <dd class="bar">
+                      <div class="rating-bar-2" aria-label="2점">
+                        <div class="rating-bar-dot">
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                        </div>
+                      </div>
+                    </dd>
+                  </div>
+                  <div class="evaluation-item">
+                    <dt>제품 품질</dt>
+                    <dd class="point">1</dd>
+                    <dd class="bar">
+                      <div class="rating-bar-1" aria-label="1점">
+                        <div class="rating-bar-dot">
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                        </div>
+                      </div>
+                    </dd>
+                  </div>
+                  <div class="evaluation-item">
+                    <dt>제품 외관</dt>
+                    <dd class="point">3</dd>
+                    <dd class="bar">
+                      <div class="rating-bar-3" aria-label="3점">
+                        <div class="rating-bar-dot">
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                        </div>
+                      </div>
+                    </dd>
+                  </div>
+                  <div class="evaluation-item">
+                    <dt>제품 기능</dt>
+                    <dd class="point">1</dd>
+                    <dd class="bar">
+                      <div class="rating-bar-1" aria-label="1점">
+                        <div class="rating-bar-dot">
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                        </div>
+                      </div>
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </li>
+          </ol>
+        </article>
+      </div>
+    </section>
+
+    <div class="overlay"></div>
+
+    <script src="./js/_gnb.js"></script>
+    <script src="./js/_modal.js"></script>
+    <script src="./js/_drawer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="./js/_product-carousel.js"></script>
+    <script src="./js/_slider.js"></script>
+    <script src="./js/_search-modal.js"></script>
+  </body>
+</html>
